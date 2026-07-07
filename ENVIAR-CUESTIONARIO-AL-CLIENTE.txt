@@ -1,0 +1,35 @@
+================================================================================
+  CÓMO ENVIAR EL CUESTIONARIO A 24SHOOTSMEDIA
+================================================================================
+
+IMPORTANTE: Esto NO va dentro de la web. Es un formulario aparte que
+mandáis al cliente (24Shoots) para saber qué quieren ANTES de diseñar.
+
+
+OPCIÓN 1 — TALLY (la más fácil, recomendada)
+--------------------------------------------
+  1. https://tally.so → registro gratis
+  2. Crear formulario con 8-10 preguntas cortas
+  3. Enviar enlace por WhatsApp a 24Shoots
+  4. Ver respuestas en Tally → pasármelas en Cursor
+
+  Guía detallada: herramientas/cuestionario-cliente/LEEME.txt
+
+
+OPCIÓN 2 — GOOGLE FORMS
+-----------------------
+  1. https://forms.google.com
+  2. Mismas preguntas
+  3. Enlace por WhatsApp
+  4. Respuestas en Google Sheets
+
+
+MENSAJE LISTO PARA WHATSAPP
+---------------------------
+  Hola! Para personalizar vuestra web, rellenad este brief (3 min):
+
+  👉 [vuestro enlace Tally o Google Forms]
+
+  Logo y fotos aparte por WhatsApp/Drive. ¡Gracias!
+
+================================================================================

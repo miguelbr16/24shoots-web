@@ -1,0 +1,42 @@
+{
+  "name": "24Shoots",
+  "tagline": {
+    "es": "Domina el impacto",
+    "en": "Master the impact"
+  },
+  "description": {
+    "es": "Producción audiovisual, fotografía y contenido para redes en Valencia. Vídeo, bodas, eventos, dron y community management.",
+    "en": "Audiovisual production, photography and social content in Valencia. Video, weddings, events, drone and community management."
+  },
+  "url": "https://24shoots.vercel.app",
+  "locale": {
+    "default": "es",
+    "supported": ["es", "en"]
+  },
+  "theme": {
+    "background": "#141414",
+    "foreground": "#F0EBE4",
+    "accent": "#E8833A",
+    "accentHover": "#D4722F",
+    "muted": "#9A948C",
+    "surface": "#1C1C1C",
+    "border": "#2A2622",
+    "premium": "#C4A574"
+  },
+  "contact": {
+    "whatsapp": "+34XXXXXXXXX",
+    "email": "hola@24shootsmedia.com",
+    "instagram": "https://www.instagram.com/24shootsmedia/",
+    "location": {
+      "es": "Valencia, España",
+      "en": "Valencia, Spain"
+    }
+  },
+  "legal": {
+    "companyName": "[RAZÓN SOCIAL — PENDIENTE]",
+    "cif": "[CIF — PENDIENTE]",
+    "address": "[DIRECCIÓN FISCAL — PENDIENTE]"
+  },
+  "logo": "/logo.svg",
+  "heroVideo": "/imagenes_insta/ig-reel-2.mp4"
+}

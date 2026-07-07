@@ -1,0 +1,113 @@
+================================================================================
+ROADMAP 8 SEMANAS — MARCA PERSONAL + PRODUCTO
+================================================================================
+
+SEMANA 1 — MARCA Y WEB (MVP)
+----------------------------
+[ ] Elegir nombre de marca + eslogan
+[ ] Definir 3 paquetes de venta (Starter / Pro / Auto)
+[ ] Clonar plantilla: npm run new-site -- mi-marca
+[ ] Home + servicios + contacto + legal
+[ ] Deploy Vercel + dominio o *.vercel.app
+[ ] Crear perfil Instagram negocio
+
+Entregable: web propia online + bio IG con link.
+
+
+SEMANA 2 — CONTENIDO Y PRIMEROS LEADS
+-------------------------------------
+[ ] 4 posts IG (educativo + oferta)
+[ ] Stories: detrás del código, tips web
+[ ] Formulario conectado a email (Resend)
+[ ] Enviar cuestionario general a 5 contactos potenciales
+[ ] 1 caso mockup (antes/después ficticio o 24Shoots anonimizado si permiten)
+
+Entregable: pipeline de contenido + primeros contactos.
+
+
+SEMANA 3 — CERRAR 24SHOOTS + CASO DE ESTUDIO
+--------------------------------------------
+[ ] Publicar web 24Shoots (cliente)
+[ ] Documentar proceso como caso (sin datos sensibles)
+[ ] Post IG: "Así montamos una web que vende"
+[ ] Actualizar web propia con sección casos
+
+Entregable: 1 caso real publicable.
+
+
+SEMANA 4 — OFERTA CLARA Y VENTA ACTIVA
+--------------------------------------
+[ ] Página /servicios con paquetes y rangos
+[ ] PDF o Notion con propuesta tipo
+[ ] 10 mensajes directos a prospectos (restaurantes, creadores, etc.)
+[ ] 4 posts IG más
+[ ] Objetivo: 1 cliente de pago cerrado
+
+Entregable: primera venta o propuesta formal enviada.
+
+
+SEMANA 5 — CRM LEADS V1
+----------------------
+[ ] Modelo datos: lead (nombre, email, servicio, estado, fecha)
+[ ] API POST /api/leads
+[ ] Listado simple (página admin o Notion sync)
+[ ] Estados: nuevo → contactado → propuesta → cerrado/perdido
+
+Entregable: no perder ningún lead del formulario.
+
+
+SEMANA 6 — PRESUPUESTADOR V1
+----------------------------
+[ ] Reglas: tipo web + idiomas + páginas + extras
+[ ] Salida: rango min-max € + texto propuesta
+[ ] Integrar en formulario o página /presupuesto
+[ ] Post IG: "Cuánto cuesta una web" (educativo)
+
+Entregable: herramienta diferenciadora en la web.
+
+
+SEMANA 7 — AUTOMATIZACIÓN EMAIL Y SEGUIMIENTO
+---------------------------------------------
+[ ] Email auto al lead: "Hemos recibido tu solicitud"
+[ ] Email interno a ti con brief completo
+[ ] Recordatorio si lead sin respuesta 48h (cron o manual checklist)
+[ ] Plantilla propuesta PDF desde datos del lead
+
+Entregable: flujo comercial sin Zapier de pago.
+
+
+SEMANA 8 — CONSOLIDACIÓN Y ESCALA
+---------------------------------
+[ ] Dashboard: leads/mes, conversión, origen
+[ ] Documentar "Cómo entrego una web en 10 días" (playbook interno)
+[ ] Revisar precios según tiempo real invertido
+[ ] Objetivo: 2º cliente o pack mantenimiento recurrente
+[ ] Planificar Fase 2 producto (white-label para otros freelancers)
+
+Entregable: sistema repetible + ingreso recurrente si posible.
+
+
+================================================================================
+CHECKLIST SEMANAL (SIEMPRE)
+================================================================================
+[ ] 1 mejora plantilla base
+[ ] 1 mejora automatización interna
+[ ] 1 pieza contenido (post/story/reel)
+[ ] 1 acción venta (mensaje, llamada, follow-up)
+
+
+================================================================================
+SI VAS CON RETRASO
+================================================================================
+Prioridad absoluta:
+1) Web propia online
+2) Instagram con link y 8+ posts
+3) Formulario que funcione
+4) 1 cliente de pago
+
+Todo lo demás puede esperar una semana.
+
+
+================================================================================
+FIN
+================================================================================

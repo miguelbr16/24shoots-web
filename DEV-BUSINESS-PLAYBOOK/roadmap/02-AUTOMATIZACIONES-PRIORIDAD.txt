@@ -1,0 +1,81 @@
+================================================================================
+PRIORIDAD AUTOMATIZACIONES — QUÉ CONSTRUIR TÚ (ORDEN)
+================================================================================
+
+NIVEL 0 — YA TIENES (plantilla 24shoots)
+----------------------------------------
+[x] Formulario web → API /api/contact
+[x] Log de envío en servidor
+[x] WhatsApp flotante
+[x] Contenido editable JSON
+[x] Script clonar web: npm run new-site
+
+
+NIVEL 1 — SEMANA 1-2 (hacer primero)
+------------------------------------
+[ ] Resend: email al cliente + email a ti al enviar formulario
+[ ] Plantilla email HTML reutilizable
+[ ] .env.local documentado (RESEND_API_KEY, CONTACT_TO)
+
+Archivos a tocar:
+- src/app/api/contact/route.ts
+- emails/lead-received.tsx (crear)
+- emails/lead-notification.tsx (crear)
+
+Tiempo estimado: 4-6 horas
+
+
+NIVEL 2 — SEMANA 3-4 (CRM mínimo)
+---------------------------------
+[ ] Tabla leads (Supabase free o SQLite local + API)
+[ ] Campos: id, name, email, phone, service, message, status, created_at
+[ ] POST formulario → guardar en DB + email
+[ ] Página /admin/leads protegida (password simple o Vercel auth)
+
+Tiempo estimado: 8-12 horas
+
+
+NIVEL 3 — SEMANA 5-6 (presupuestador)
+-------------------------------------
+[ ] config/pricing-rules.json
+[ ] Página /presupuesto o wizard en contacto
+[ ] Inputs: tipo negocio, páginas, idiomas, extras (blog, CRM, etc.)
+[ ] Output: rango € + resumen para copiar/pegar en propuesta
+
+Tiempo estimado: 10-15 horas
+
+
+NIVEL 4 — SEMANA 7-8 (seguimiento)
+----------------------------------
+[ ] Cron o botón "recordar leads sin respuesta 48h"
+[ ] Generar PDF propuesta desde template (react-pdf o HTML print)
+[ ] Dashboard simple: leads esta semana, por estado, por servicio
+
+Tiempo estimado: 12-16 horas
+
+
+NO CONSTRUIR AÚN (esperar demanda real)
+---------------------------------------
+- Chatbot IA complejo
+- Portal cliente con login multi-tenant
+- Integración Instagram API publicación
+- Facturación integrada
+- App móvil
+
+
+REGLA BUILD VS BUY
+------------------
+Construye tú:
+- Flujo lead → seguimiento → propuesta
+- Presupuestador por reglas
+- Plantillas email/PDF
+
+Compra/externaliza solo:
+- Dominio, hosting, email transaccional volumen alto
+- Pasarela pago si vendes packs online
+- Asesoría legal textos definitivos
+
+
+================================================================================
+FIN
+================================================================================

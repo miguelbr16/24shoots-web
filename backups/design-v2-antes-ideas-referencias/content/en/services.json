@@ -1,0 +1,107 @@
+[
+  {
+    "id": "produccion-video",
+    "slug": "video-production",
+    "title": "Video production",
+    "shortDescription": "Corporate, promotional and narrative videos with cinematic quality.",
+    "description": "From concept to final delivery, we create audiovisual pieces that communicate, engage and convert. Spots, corporate videos, promos and brand content.",
+    "icon": "video",
+    "featured": true,
+    "highlights": [
+      "Script and storyboard",
+      "Professional filming",
+      "Editing and color grading",
+      "Web and social formats"
+    ]
+  },
+  {
+    "id": "fotografia",
+    "slug": "photography",
+    "title": "Photography",
+    "shortDescription": "Product, portrait, event and brand photography with a premium aesthetic.",
+    "description": "We capture your brand's essence with standout imagery. Product shoots, corporate portraits, event coverage and editorial photography.",
+    "icon": "camera",
+    "featured": true,
+    "highlights": [
+      "Studio or on-location sessions",
+      "Professional retouching",
+      "Web-optimized delivery",
+      "Art direction"
+    ]
+  },
+  {
+    "id": "contenido-redes",
+    "slug": "social-content",
+    "title": "Social content",
+    "shortDescription": "Reels, stories and content packs designed for engagement and sales.",
+    "description": "Content that stops the scroll and drives results. Reels, carousels, stories and monthly packs tailored to each platform and audience.",
+    "icon": "social",
+    "featured": true,
+    "highlights": [
+      "Reels and short-form",
+      "Editorial calendar",
+      "Multi-platform adaptation",
+      "Trends and viral formats"
+    ]
+  },
+  {
+    "id": "community-management",
+    "slug": "community-management",
+    "title": "Community management",
+    "shortDescription": "Full social media management with strategy and measurable results.",
+    "description": "We don't just post — we build community. Strategy, content creation, publishing, engagement and monthly reporting.",
+    "icon": "community",
+    "featured": true,
+    "highlights": [
+      "Content strategy",
+      "Scheduled publishing",
+      "Community engagement",
+      "Performance reports"
+    ]
+  },
+  {
+    "id": "eventos",
+    "slug": "events",
+    "title": "Events",
+    "shortDescription": "Audiovisual coverage for corporate events, concerts and launches.",
+    "description": "We immortalize your event with professional video and photo. Aftermovies, live coverage, interviews and post-event social content.",
+    "icon": "event",
+    "featured": true,
+    "highlights": [
+      "Multi-camera coverage",
+      "Dynamic aftermovie",
+      "Fast delivery",
+      "Social media content"
+    ]
+  },
+  {
+    "id": "bodas",
+    "slug": "weddings",
+    "title": "Weddings",
+    "shortDescription": "Wedding video and photo with a cinematic, emotional style.",
+    "description": "Every wedding is unique. We document your day with sensitivity and cinematic quality so you can relive every moment again and again.",
+    "icon": "wedding",
+    "featured": true,
+    "highlights": [
+      "Cinematic video",
+      "Artistic photography",
+      "Trailer and highlight reel",
+      "Personalized delivery"
+    ]
+  },
+  {
+    "id": "dron",
+    "slug": "drone",
+    "title": "Drone",
+    "shortDescription": "Spectacular aerial shots for brands, events and real estate projects.",
+    "description": "Unique perspectives from the sky. Certified drone aerial filming for corporate videos, weddings, events and real estate promotions.",
+    "icon": "drone",
+    "featured": false,
+    "highlights": [
+      "Certified operator",
+      "4K and stabilization",
+      "Ground video integration",
+      "Permits and insurance"
+    ]
+  }
+]

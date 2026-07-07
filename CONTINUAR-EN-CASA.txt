@@ -1,0 +1,448 @@
+================================================================================
+  24SHOOTS — DOCUMENTO DE CONTINUIDAD
+  Para retomar el proyecto en otro ordenador sin perder contexto
+  Fecha: 7 de julio de 2026
+  Carpeta del proyecto: C:\Users\mborras\Downloads\24shoots
+================================================================================
+
+
+================================================================================
+1. QUÉ ES ESTE PROYECTO
+================================================================================
+
+Web profesional para 24Shoots Media (@24shootsmedia en Instagram).
+Productora audiovisual y agencia de contenido en Valencia.
+Eslogan: "DOMINA EL IMPACTO"
+Logo: fondo negro, texto blanco, acento naranja.
+
+Objetivos de la web:
+  - Impacto visual (estética cinematográfica / premium)
+  - Generar leads y ventas (formulario + WhatsApp)
+  - SEO local (Valencia, servicios audiovisuales)
+  - Fácil de mantener y REUTILIZABLE para futuras webs de clientes
+  - Español + inglés
+  - Funciona en móvil, tablet y escritorio
+  - Stack mayormente GRATUITO (Vercel, JSON, sin CMS de pago)
+
+
+================================================================================
+2. DECISIONES YA CERRADAS (NO REPLANTEAR)
+================================================================================
+
+DECISIÓN 1 — DOMINIO
+  - Aún no lo tienen. Usar URL provisional: 24shoots.vercel.app
+  - Cuando lo tengan: conectar DNS en Vercel + actualizar config/site.json
+
+DECISIÓN 2 — SERVICIOS (7)
+  1. Producción de vídeo
+  2. Fotografía
+  3. Contenido para redes
+  4. Community management
+  5. Eventos
+  6. Bodas
+  7. Dron
+
+DECISIÓN 2b — PRECIOS
+  - Web MVP: solo "Solicitar presupuesto" (sin precios fijos)
+  - Fase 2: packs visibles si fijan precios
+  - Fase 2+: packs a medida vía chat/automatización para clientes especiales
+
+DECISIÓN 3 — PORTFOLIO
+  - Material principal: Instagram (~41 posts), más contenido por llegar
+  - Organización: filtros por SERVICIO y por SECTOR
+  - Formato recomendado: thumbnail + vídeo en la web (no redirigir a IG)
+  - Enlace a Instagram como secundario
+  - Editable sin código vía JSON
+
+DECISIÓN 4 — IDIOMAS
+  - Español (por defecto) + inglés
+  - URLs: /es/... y /en/...
+
+DECISIÓN 5 — CONTACTO
+  - Prioridad 1: WhatsApp (botón flotante)
+  - Prioridad 2: Formulario brief (CTA principal)
+  - Prioridad 3: Email (footer)
+  - Calendly: NO visible al inicio (en España llaman/escriben directo)
+  - Calendly: opción fase 2 / solo si el cliente lo pide
+
+DECISIÓN 6 — LOGO
+  - Placeholder actual en public/logo.jpg
+  - Cliente enviará logo HD (SVG o PNG grande)
+
+DECISIÓN 7 — LEGAL
+  - Placeholders en aviso legal, privacidad, cookies
+  - Cliente aportará razón social, CIF, dirección antes de publicar
+
+DECISIÓN ARQUITECTURA — BASE REUTILIZABLE
+  - NO CMS pesado (Sanity, WordPress)
+  - SÍ: Next.js + contenido en JSON + config/site.json
+  - El desarrollador (tú) sabes código — JSON/YAML editable
+  - Script npm run new-site para clonar a otros clientes
+  - Misma base para webs futuras de empresas
+
+
+================================================================================
+3. ESTADO ACTUAL DEL DESARROLLO (FASE 1 MVP — CÓDIGO CREADO)
+================================================================================
+
+YA ESTÁ HECHO en la carpeta 24shoots:
+
+  [x] Proyecto Next.js 15 + Tailwind 4 + TypeScript
+  [x] Estructura i18n /es y /en
+  [x] config/site.json (marca, contacto, tema, legal placeholders)
+  [x] content/es/ y content/en/ (services, portfolio, pages JSON)
+  [x] 7 servicios con páginas individuales
+  [x] Home con hero, servicios, portfolio destacado, por qué 24Shoots, CTA
+  [x] Portfolio con filtros dobles (servicio + sector)
+  [x] Contacto con formulario brief
+  [x] Sobre nosotros
+  [x] Páginas legales (aviso legal, privacidad, cookies)
+  [x] Header + Footer + WhatsApp flotante + banner cookies
+  [x] SEO: meta tags, sitemap.xml, robots.txt, schema LocalBusiness
+  [x] API contacto (MVP: log en consola; conectar Resend en producción)
+  [x] Script scripts/new-site.mjs para nuevas webs
+  [x] README.md con instrucciones
+  [x] CUESTIONARIO-CLIENTE-24SHOOTS.txt
+  [x] Este archivo CONTINUAR-EN-CASA.txt
+
+NO ESTÁ HECHO / PENDIENTE:
+
+  [ ] npm install (requiere Node.js — PC empresa no lo permite)
+  [ ] npm run dev — probar en local
+  [ ] Datos reales del cliente (WhatsApp, email, legal, logo HD)
+  [ ] Portfolio real (41 posts IG catalogados en JSON)
+  [ ] Vídeo hero en portada
+  [ ] Deploy en Vercel
+  [ ] Conectar dominio cuando lo tengan
+  [ ] Email automático formulario (Resend — gratis hasta 3000/mes)
+  [ ] Fase 2: packs, chat, blog, analytics, import IG automatizado
+
+
+================================================================================
+4. ESTRUCTURA DE ARCHIVOS DEL PROYECTO
+================================================================================
+
+24shoots/
+├── config/
+│   └── site.json              ← Marca, contacto, tema, legal, URL
+├── content/
+│   ├── es/
+│   │   ├── services.json      ← 7 servicios (añadir/quitar aquí)
+│   │   ├── portfolio.json     ← Proyectos galería
+│   │   └── pages.json         ← Textos de todas las páginas
+│   └── en/
+│       ├── services.json
+│       ├── portfolio.json
+│       └── pages.json
+├── public/
+│   ├── logo.jpg               ← Logo (sustituir cuando llegue HD)
+│   └── portfolio/             ← Imágenes/vídeos de proyectos
+├── scripts/
+│   └── new-site.mjs           ← Crear web nueva: npm run new-site -- nombre
+├── src/
+│   ├── app/
+│   │   ├── [locale]/          ← Páginas por idioma
+│   │   │   ├── page.tsx       ← Home
+│   │   │   ├── servicios/     ← ES: listado + [slug]
+│   │   │   ├── services/      ← EN: listado + [slug]
+│   │   │   ├── portfolio/
+│   │   │   ├── contacto/ contact/
+│   │   │   ├── sobre-nosotros/ about/
+│   │   │   └── aviso-legal, privacidad, cookies...
+│   │   ├── api/contact/       ← Formulario
+│   │   ├── sitemap.ts
+│   │   └── robots.ts
+│   ├── components/            ← UI reutilizable
+│   └── lib/                   ← content.ts, i18n.ts, seo.ts, types.ts
+├── package.json
+├── README.md
+├── CUESTIONARIO-CLIENTE-24SHOOTS.txt
+└── CONTINUAR-EN-CASA.txt      ← ESTE ARCHIVO
+
+
+================================================================================
+5. CÓMO EDITAR SIN TOCAR CÓDIGO REACT
+================================================================================
+
+  Qué cambiar                    Archivo
+  ─────────────────────────────────────────────────────────
+  WhatsApp, email, Instagram     config/site.json
+  Añadir/quitar servicio         content/es/services.json
+                                 content/en/services.json
+  Portfolio                      content/es/portfolio.json
+                                 content/en/portfolio.json
+  Textos de páginas              content/es/pages.json
+                                 content/en/pages.json
+  Logo                           public/logo.jpg (o actualizar ruta en site.json)
+  URL del sitio                  config/site.json → "url"
+
+
+================================================================================
+6. FASES DEL PROYECTO (PLAN COMPLETO)
+================================================================================
+
+FASE 0 — DISCOVERY [EN CURSO]
+  - Cuestionario al cliente (CUESTIONARIO-CLIENTE-24SHOOTS.txt)
+  - Recopilar logo HD, contacto, legal, portfolio
+  - Duración estimada: 1-2 días (depende del cliente)
+
+FASE 1 — MVP WEB [CÓDIGO LISTO — FALTA INSTALAR Y PROBAR]
+  - Home, 7 servicios, portfolio, contacto, about, legal
+  - ES + EN, formulario, WhatsApp, SEO base
+  - Deploy staging en Vercel
+  - Duración estimada: 1-2 semanas (incluye contenido real)
+
+FASE 2 — CONVERSIÓN Y AUTOMATIZACIÓN
+  - Email automático al enviar formulario (Resend)
+  - Entrada leads en Notion/Airtable (Make/Zapier gratis limitado)
+  - Packs con precio si el cliente los define
+  - Feed o import de Instagram
+  - Google Business Profile enlazado
+  - Analytics (GA4 gratis)
+  - Pixel Meta (opcional)
+
+FASE 3 — CRECIMIENTO
+  - Blog SEO (artículos tipo "cuánto cuesta un reel")
+  - Landings por servicio + ciudad
+  - Testimonios en vídeo
+  - Chat/bot para packs a medida
+  - Portal estado de proyecto para clientes (opcional)
+
+
+================================================================================
+7. STACK TÉCNICO (GRATIS AL INICIO)
+================================================================================
+
+  Capa              Herramienta           Coste
+  ─────────────────────────────────────────────────
+  Frontend          Next.js 15            Gratis
+  Estilos           Tailwind CSS 4        Gratis
+  Hosting           Vercel (Hobby)        Gratis
+  URL temporal      *.vercel.app          Gratis
+  SSL               Incluido Vercel       Gratis
+  Contenido         JSON en repo          Gratis
+  Repo              GitHub                Gratis
+  Formulario        API propia            Gratis
+  Email envío       Resend (3000/mes)     Gratis al inicio
+  WhatsApp          Enlace directo        Gratis
+  Analytics         Google Analytics 4    Gratis
+  Dominio propio    .es / .com            ~10-15 €/año (único gasto recomendado)
+  Email corporativo Zoho Mail free        Gratis (1 usuario) o ~5€/mes
+
+
+================================================================================
+8. PASOS PARA CONTINUAR EN CASA (ORDEN EXACTO)
+================================================================================
+
+PASO 1 — Llevar el proyecto al PC de casa
+  - Copiar toda la carpeta 24shoots (USB, OneDrive, Google Drive, zip)
+  - Incluir: código + CUESTIONARIO + este CONTINUAR-EN-CASA.txt
+  - El logo original: 470950536_484370707661416_6724443183514597849_n.jpg
+    (también copiado como public/logo.jpg)
+
+PASO 2 — Instalar Node.js en casa
+  - Descargar LTS: https://nodejs.org/
+  - Verificar en terminal: node -v  y  npm -v
+
+PASO 3 — Instalar dependencias y arrancar
+  cd ruta/a/24shoots
+  npm install
+  npm run dev
+  Abrir: http://localhost:3000  (redirige a /es)
+
+PASO 4 — Enviar cuestionario al cliente
+  - Archivo: CUESTIONARIO-CLIENTE-24SHOOTS.txt
+  - Pedir mínimo: logo HD, WhatsApp, email, legal, 6-9 proyectos portfolio
+
+PASO 5 — Integrar respuestas del cliente
+  - config/site.json → contacto, legal, url
+  - content/*/portfolio.json → proyectos reales
+  - content/*/pages.json → textos personalizados si los envían
+  - public/logo.jpg → logo HD
+
+PASO 6 — Probar en dispositivos
+  - Chrome, Safari, móvil (responsive)
+  - Formulario de contacto
+  - Botón WhatsApp
+  - Cambio ES/EN
+
+PASO 7 — Deploy en Vercel (gratis)
+  - Subir a GitHub (repo privado o público)
+  - vercel.com → Import project → conectar repo
+  - URL: 24shoots.vercel.app (o similar)
+  - Actualizar config/site.json con la URL real de Vercel
+
+PASO 8 — Cuando tengan dominio
+  - Vercel → Settings → Domains → añadir dominio
+  - En el registrador del dominio: apuntar DNS a Vercel (CNAME o A)
+  - Actualizar config/site.json → "url": "https://tudominio.com"
+  - Redeploy
+
+PASO 9 — Producción formulario email
+  - Crear cuenta Resend (gratis): https://resend.com
+  - API key en .env.local: RESEND_API_KEY=...
+  - Actualizar src/app/api/contact/route.ts para enviar email
+
+PASO 10 — Fase 2 según respuestas del cliente
+
+
+================================================================================
+9. AUTOMATIZACIONES PLANEADAS (FUTURO)
+================================================================================
+
+INTERNAS (operativa 24Shoots):
+  - Lead formulario → email + Notion/Airtable
+  - Brief automático estructurado
+  - Recordatorios entrega proyectos
+  - Informe mensual community management
+
+EN LA WEB (visitante):
+  - Calculadora presupuesto orientativa
+  - Chat/packs a medida (fase 2, no Calendly al inicio)
+  - Descarga media kit a cambio de email
+
+HERRAMIENTAS CURSOR / MCP (cuando aplique):
+  - Cursor Agent: desarrollo y mantenimiento
+  - GitHub MCP: repo y deploy
+  - Automations Cursor: deploy al push, checks SEO
+  - Make/Zapier: leads (plan gratis limitado)
+
+SERVICIOS EXTRA SUGERIDOS PARA VENDER:
+  - Pack contenido mensual
+  - Reels restaurantes/retail
+  - Vídeo corporativo + subtítulos
+  - Fotografía producto
+  - Google Business management
+  - Formación contenido móvil
+  - Dron / FPV
+
+
+================================================================================
+10. SEO — KEYWORDS OBJETIVO
+================================================================================
+
+  - producción audiovisual Valencia
+  - agencia contenido redes sociales Valencia
+  - videógrafo empresas Valencia
+  - reels para negocios
+  - community manager Valencia
+  - fotografía producto Valencia
+  - vídeo bodas Valencia
+  - dron Valencia
+
+
+================================================================================
+11. IDENTIDAD VISUAL (DEL LOGO)
+================================================================================
+
+  Fondo:     #0A0A0A / negro
+  Texto:     #FFFFFF / blanco
+  Acento:    #FF6B00 / naranja (ajustar si cliente da hex exacto)
+  Estilo:    Oscuro, cinematográfico, premium, bold sans-serif
+  Eslogan:   DOMINA EL IMPACTO / Master the impact
+
+
+================================================================================
+12. RUTAS DE LA WEB
+================================================================================
+
+  ESPAÑOL (/es)
+  ─────────────────────────────────────
+  /es                          Home
+  /es/servicios                Listado servicios
+  /es/servicios/produccion-video
+  /es/servicios/fotografia
+  /es/servicios/contenido-redes
+  /es/servicios/community-management
+  /es/servicios/eventos
+  /es/servicios/bodas
+  /es/servicios/dron
+  /es/portfolio
+  /es/sobre-nosotros
+  /es/contacto
+  /es/aviso-legal
+  /es/privacidad
+  /es/cookies
+
+  INGLÉS (/en)
+  ─────────────────────────────────────
+  /en                          Home
+  /en/services                 Listado servicios
+  /en/services/video-production
+  /en/services/photography
+  /en/services/social-content
+  /en/services/community-management
+  /en/services/events
+  /en/services/weddings
+  /en/services/drone
+  /en/portfolio
+  /en/about
+  /en/contact
+  /en/legal-notice
+  /en/privacy
+  /en/cookies
+
+
+================================================================================
+13. PLACEHOLDERS ACTUALES (CAMBIAR CON DATOS REALES)
+================================================================================
+
+  config/site.json:
+    whatsapp: +34XXXXXXXXX
+    email: hola@24shootsmedia.com
+    url: https://24shoots.vercel.app
+    legal.companyName: [RAZÓN SOCIAL — PENDIENTE]
+    legal.cif: [CIF — PENDIENTE]
+    legal.address: [DIRECCIÓN FISCAL — PENDIENTE]
+
+  Portfolio: 6 proyectos de ejemplo (no son reales aún)
+  Logo: thumbnail pequeño de Instagram (pedir HD)
+
+
+================================================================================
+14. CREAR WEB NUEVA PARA OTRO CLIENTE (REUTILIZAR BASE)
+================================================================================
+
+  npm run new-site -- nombre-cliente
+
+  Esto copia el proyecto a ../nombre-cliente y resetea site.json.
+  Luego editar content/ y config/ para el nuevo cliente.
+
+
+================================================================================
+15. CONVERSACIÓN CON CURSOR EN CASA
+================================================================================
+
+  Al abrir el proyecto en Cursor en casa, puedes decir:
+
+  "Continúo el proyecto 24Shoots. Lee CONTINUAR-EN-CASA.txt y README.md.
+   Ya tengo Node instalado. Quiero [instalar y probar / integrar datos del
+   cliente / deploy en Vercel / importar portfolio de Instagram]."
+
+  Archivos clave para que el agente recupere contexto:
+  - CONTINUAR-EN-CASA.txt (este archivo)
+  - README.md
+  - config/site.json
+  - CUESTIONARIO-CLIENTE-24SHOOTS.txt
+
+
+================================================================================
+16. CHECKLIST RÁPIDO ANTES DE PUBLICAR
+================================================================================
+
+  [ ] npm run build sin errores
+  [ ] Logo HD en public/
+  [ ] WhatsApp y email reales en config/site.json
+  [ ] Datos legales reales (no placeholders)
+  [ ] Mínimo 6 proyectos portfolio reales con permiso
+  [ ] Textos revisados por el cliente
+  [ ] Probado en móvil y escritorio
+  [ ] Formulario envía notificación (Resend configurado)
+  [ ] Dominio conectado (o URL Vercel aceptada temporalmente)
+  [ ] Google Search Console (opcional pero recomendado)
+  [ ] Cliente ha aprobado versión final
+
+
+================================================================================
+FIN — Copia esta carpeta completa a casa y sigue desde la sección 8.
+================================================================================

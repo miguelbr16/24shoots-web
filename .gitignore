@@ -1,0 +1,13 @@
+node_modules/
+.next/
+.env*.local
+.env
+
+# Copia duplicada de media (la web usa public/imagenes_insta)
+/imagenes_insta/
+
+# Archivos locales / temporales
+ENLACE-PUBLICO.txt
+*.log
+.DS_Store
+Thumbs.db

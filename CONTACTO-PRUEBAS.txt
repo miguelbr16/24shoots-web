@@ -1,0 +1,29 @@
+================================================================================
+  CONTACTO TEMPORAL (pruebas) — 24Shoots
+================================================================================
+
+Sí, puedes poner TU WhatsApp y TU email para probar.
+Cuando el cliente esté listo, sustituyes por los suyos.
+
+Edita este archivo:  config/site.json
+
+  "contact": {
+    "whatsapp": "+34612345678",     ← tu móvil con prefijo España (+34)
+    "email": "tu@email.com",        ← tu email de prueba
+    ...
+  }
+
+FORMATO WHATSAPP:
+  - Con prefijo internacional: +34600111222
+  - Sin espacios ni guiones (el botón flotante los limpia solo)
+
+DÓNDE SE USA:
+  - Botón verde flotante (abajo derecha)
+  - Página de contacto
+  - Footer
+  - Formulario (envía a email configurado)
+
+NOTA: hola@24shootsmedia.com puede quedarse como email del cliente
+      cuando publiquéis; de momento pon el tuyo para ver que llega.
+
+================================================================================

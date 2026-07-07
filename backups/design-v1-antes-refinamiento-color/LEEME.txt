@@ -1,0 +1,36 @@
+# Backup diseño V1 — antes del refinamiento de color
+
+**Fecha:** julio 2026  
+**Motivo:** conservar la paleta original que te gustaba antes de aplicar tonos más cálidos y profundos.
+
+## Qué incluye este backup
+
+| Archivo | Descripción |
+|---------|-------------|
+| `globals.css` | Variables de color y estilos globales |
+| `site.json` | Tema en configuración (`#0A0A0A`, `#E8833A`, etc.) |
+| `layout.tsx` | `themeColor` del navegador móvil |
+
+## Paleta V1 (original)
+
+- Fondo: `#080808`
+- Texto: `#f5f5f5`
+- Acento: `#e8833a`
+- Muted: `#8a8a8a`
+- Surface: `#111111`
+- Border: `#222222`
+
+## Cómo restaurar
+
+1. Doble clic en **`RESTAURAR-DISEÑO-V1.bat`**
+2. Ejecuta **`reiniciar-web.bat`** en la raíz del proyecto
+3. Recarga `http://localhost:3000/es`
+
+## Nota sobre fotos y vídeos
+
+Este backup guarda **colores y tema**, no los archivos de `public/imagenes_insta/`.  
+Las fotos y vídeos que añadiste siguen en su sitio; solo cambia la paleta visual.
+
+## Diseño V2 (refinamiento)
+
+Tras restaurar, si quieres volver al refinamiento, avisa y se reaplica la paleta cálida.

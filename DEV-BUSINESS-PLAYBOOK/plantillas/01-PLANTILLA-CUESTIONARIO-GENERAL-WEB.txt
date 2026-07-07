@@ -1,0 +1,109 @@
+================================================================================
+PLANTILLA GENERAL — DESCUBRIMIENTO CLIENTE WEB
+Uso: copiar/pegar para cualquier cliente nuevo
+================================================================================
+
+1) NEGOCIO Y OBJETIVO
+---------------------
+1. Nombre comercial:
+2. Que vendes exactamente:
+3. Objetivo principal de la web:
+   [ ] Captar leads
+   [ ] Vender online
+   [ ] Branding / credibilidad
+   [ ] Portfolio
+4. KPI principal (ej: leads/mes):
+5. Fecha objetivo de lanzamiento:
+
+
+2) PUBLICO Y MENSAJE
+--------------------
+1. Cliente ideal:
+2. Zona geografica:
+3. Problema que resuelves:
+4. Propuesta de valor en 1 frase:
+5. 3 competidores o referencias:
+
+
+3) CONTENIDO
+------------
+1. Servicios/productos a mostrar:
+2. Servicio estrella:
+3. Tienes portfolio/casos:
+4. Tienes testimonios verificables:
+5. Idiomas:
+   [ ] ES
+   [ ] EN
+   [ ] Otros
+
+
+4) CONVERSION
+-------------
+1. Canal principal:
+   [ ] WhatsApp
+   [ ] Formulario
+   [ ] Telefono
+   [ ] Email
+2. Datos de contacto reales:
+3. Tiempo de respuesta prometido:
+4. Campos obligatorios del formulario:
+5. Quieres calendario de reservas:
+   [ ] Si
+   [ ] No
+   [ ] Solo opcional
+
+
+5) DISENO Y MARCA
+-----------------
+1. Logo en alta (SVG/PNG):
+2. Colores de marca:
+3. Tipografias:
+4. Estilo deseado (3 palabras):
+5. Material visual disponible (fotos/videos):
+
+
+6) SEO Y POSICIONAMIENTO
+------------------------
+1. 5 busquedas que quieres posicionar:
+2. Ciudad/area SEO:
+3. Tienes Google Business:
+4. Tienes blog o quieres blog:
+
+
+7) OPERATIVA Y MANTENIMIENTO
+----------------------------
+1. Quien actualiza la web despues:
+2. Frecuencia de cambios:
+3. Quieres editar sin tocar codigo:
+4. Integraciones necesarias:
+
+
+8) LEGAL Y PUBLICACION
+----------------------
+1. Razon social:
+2. CIF/NIF:
+3. Direccion fiscal:
+4. Politicas legales disponibles:
+5. Dominio:
+6. Acceso DNS:
+
+
+9) PRESUPUESTO Y ALCANCE
+------------------------
+1. Rango de presupuesto:
+2. Que es imprescindible en MVP:
+3. Que puede ir a fase 2:
+4. Que NO quieres en esta fase:
+
+
+10) CHECKLIST MINIMO ANTES DE PUBLICAR
+--------------------------------------
+[ ] Logo en alta
+[ ] Contacto real (whatsapp/email)
+[ ] Legal real (razon social/CIF/direccion)
+[ ] Contenido minimo paginas clave
+[ ] Formulario probado
+[ ] Responsive probado movil/tablet/escritorio
+[ ] Dominio o URL temporal aceptada
+
+================================================================================

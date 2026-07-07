@@ -1,0 +1,75 @@
+================================================================================
+PAQUETES BASE — SERVICIOS WEB + AUTOMATIZACION
+Nota: rangos orientativos para arrancar, ajustar por mercado/valor
+================================================================================
+
+PAQUETE 1 — WEB STARTER
+-----------------------
+Ideal para: negocio local que necesita presencia y leads.
+Incluye:
+- Home + servicios + contacto + legal
+- Responsive completo
+- SEO tecnico base
+- Formulario + WhatsApp
+- Deploy en Vercel
+
+Tiempo estimado: 5-8 dias
+Rango precio orientativo: 700 - 1.400 EUR
+
+
+PAQUETE 2 — WEB CONVERSION PRO
+------------------------------
+Ideal para: negocio que quiere vender mas y medir resultados.
+Incluye todo lo anterior +:
+- ES/EN
+- Portfolio/casos
+- Estructura de landings
+- Analitica base (GA4)
+- Mejoras de copy CTA
+
+Tiempo estimado: 8-12 dias
+Rango precio orientativo: 1.400 - 2.500 EUR
+
+
+PAQUETE 3 — WEB + AUTOMATIZACION LEADS
+--------------------------------------
+Ideal para: negocio que quiere flujo comercial mas automatico.
+Incluye todo lo anterior +:
+- Pipeline de leads (estado: nuevo/contactado/propuesta/cerrado)
+- Notificaciones internas
+- Plantilla propuesta/seguimiento
+- Dashboard basico de conversion
+
+Tiempo estimado: 12-20 dias
+Rango precio orientativo: 2.500 - 5.000 EUR
+
+
+SERVICIOS RECURRENTES (MENSUAL)
+-------------------------------
+1) Mantenimiento tecnico:
+   80 - 250 EUR/mes
+2) Soporte de contenido:
+   120 - 400 EUR/mes
+3) SEO contenido y mejoras:
+   250 - 900 EUR/mes
+4) Automatizaciones iterativas:
+   250 - 1.200 EUR/mes
+
+
+REGLA DE SCOPING
+----------------
+Siempre separar en:
+- MVP (obligatorio para lanzar)
+- Fase 2 (conversion/automatizacion)
+- Fase 3 (escalado/producto)
+
+No regalar extras fuera de alcance sin cambio de presupuesto/plazo.
+
+
+SCRIPT DE VENTA CORTO
+---------------------
+"Te propongo lanzar primero un MVP que capte clientes ya,
+y en fase 2 automatizamos presupuesto, seguimiento y reportes.
+Asi recuperas inversion antes y escalamos con datos reales."
+
+================================================================================

@@ -1,0 +1,80 @@
+================================================================================
+  CUESTIONARIO PARA 24SHOOTSMEDIA — NO ES PARTE DE LA WEB
+================================================================================
+
+QUÉ ES ESTO
+-----------
+  Herramienta SOLO para vosotros (desarrolladores) → se la mandáis a 24Shoots
+  para saber QUÉ QUIEREN en su web antes de diseñarla.
+
+  NO va en la web pública. Los visitantes de 24shoots.com NO lo verán.
+
+
+LA FORMA MÁS FÁCIL (RECOMENDADA): TALLY.SO
+------------------------------------------
+  1. Entrá en https://tally.so → cuenta gratis
+  2. "Create form" → título: "24Shoots — Brief web"
+  3. Añadid preguntas cortas (copiad de CUESTIONARIO-CLIENTE-24SHOOTS.txt
+     o usad solo estas 8):
+
+     - Nombre
+     - WhatsApp
+     - Email
+     - Servicios (multiple choice: vídeo, foto, redes, bodas, eventos, dron...)
+     - Servicio estrella (dropdown)
+     - Zona de trabajo (Valencia / España)
+     - Dominio (texto corto)
+     - Describid 24Shoots en 3 frases (párrafo)
+     - Notas libres (opcional)
+
+  4. Tally os da un enlace: https://tally.so/r/XXXXXX
+  5. Mandáis ese enlace por WhatsApp a 24Shoots
+  6. Las respuestas aparecen en el panel de Tally (o en vuestro email)
+  7. Me pasáis las respuestas a Cursor → integramos en la web
+
+  Ventajas: bonito, rápido, el cliente solo abre un enlace, vosotros recibís
+  todo sin archivos TXT.
+
+
+ALTERNATIVA: FORMSPREE + HTML LOCAL
+------------------------------------
+  Carpeta: herramientas/cuestionario-cliente/index.html
+
+  1. Cuenta gratis en https://formspree.io
+  2. Crear formulario → copiar ID (ej: xyzabcde)
+  3. En index.html cambiar YOUR_FORM_ID por vuestro ID
+  4. Subir el HTML a Netlify Drop (gratis) o enviar ZIP al cliente
+  5. Respuestas llegan a vuestro email
+
+  Archivo: herramientas/cuestionario-cliente/index.html
+
+
+MENSAJE WHATSAPP PARA 24SHOOTS (copiar y pegar)
+------------------------------------------------
+  Hola! Para diseñar vuestra web necesitamos unos datos.
+  Son 3-5 minutos, solo tocáis botones:
+
+  👉 [ENLACE DE TALLY O FORMULARIO]
+
+  Logo, fotos y vídeos del portfolio mandadlos aparte por Drive o WhatsApp.
+  Si no sabéis algo, poned "pendiente".
+  ¡Gracias!
+
+
+QUÉ HACER CON LAS RESPUESTAS
+-----------------------------
+  Cuando 24Shoots responda, pasadme en Cursor:
+  - Captura del panel Tally, o
+  - Export CSV de Tally, o
+  - El email de Formspree
+
+  Y decís: "Integra las respuestas del cuestionario del cliente"
+
+
+LO QUE NO ES
+------------
+  ✗ No es una página de la web de 24Shoots
+  ✗ No es el formulario de contacto para sus clientes
+  ✗ No hace falta descargar archivos .txt
+
+================================================================================

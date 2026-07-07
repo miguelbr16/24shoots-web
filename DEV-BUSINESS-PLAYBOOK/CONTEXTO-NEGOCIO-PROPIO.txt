@@ -1,0 +1,146 @@
+================================================================================
+CONTEXTO NEGOCIO PROPIO — MARCA PERSONAL WEB + AUTOMATIZACIONES
+Fecha: 2026-07-07
+Autor: mborras
+================================================================================
+
+QUIÉN SOY
+---------
+- Científico de datos con perfil técnico.
+- Desarrollador web en formación/práctica (Next.js, TypeScript, Tailwind).
+- Quiero vender servicios digitales y construir producto propio reutilizable.
+- Trabajo desde España. Objetivo: clientes locales + remoto.
+
+
+QUÉ QUIERO VENDER
+-----------------
+1) WEBS ORIENTADAS A CONVERSIÓN
+   - Para pymes, autónomos, creadores, agencias pequeñas
+   - Enfoque: útil, rápida, SEO base, móvil primero, fácil de mantener
+
+2) AUTOMATIZACIONES
+   - Captura de leads (formulario → email/CRM)
+   - Brief automático para clientes
+   - Presupuestos orientativos por reglas
+   - Reporting mensual (community, web, campañas)
+   - Flujos Make/Zapier o propios según escale
+
+3) HERRAMIENTAS PROPIAS (FUTURO)
+   - CRM leads ligero
+   - Motor de presupuestos
+   - Panel de seguimiento de proyectos
+   - Plantilla clonable para nuevos clientes (npm run new-site)
+
+
+DIFERENCIAL
+-----------
+- No solo "hago webs bonitas": webs que venden + automatización operativa.
+- Base reutilizable: entrego más rápido que agencia tradicional.
+- Mantenimiento.
+- Perfil híbrido data + dev: puedo medir y optimizar con datos.
+
+
+CLIENTE IDEAL
+-------------
+- Negocio local o digital que necesita presencia web seria YA.
+- Tiene Instagram pero web floja o inexistente.
+- Quiere leads (WhatsApp, formulario), no solo "tarjeta de visita".
+- Presupuesto limitado pero valora calidad y claridad.
+- Ejemplos: productoras, restaurantes, clínicas, inmobiliarias, coaches.
+
+
+LO QUE NO QUIERO (AL INICIO)
+----------------------------
+- WordPress pesado para todo.
+- Depender de CMS de pago para cada cliente.
+- Prometer SEO milagroso en 1 semana.
+- Construir app móvil nativa.
+- Automatizaciones complejas antes de tener 3 clientes reales.
+
+
+STACK PREFERIDO
+---------------
+- Frontend: Next.js 15 + Tailwind + TypeScript
+- Contenido: JSON (config/site.json, content/es, content/en)
+- Hosting: Vercel (gratis al inicio)
+- Repo: GitHub
+- Email: Resend (gratis hasta 3000/mes)
+- DB futura: PostgreSQL (Supabase/Neon free tier)
+- Jobs: cron + API routes o worker simple
+
+
+ESTRUCTURA WEB PROPIA (PROPUESTA)
+---------------------------------
+/                     Home — propuesta de valor + CTA
+/servicios            Webs, automatizaciones, mantenimiento
+/casos                Portfolio / antes-después (cuando haya)
+/proceso              Cómo trabajo (brief → MVP → iteración)
+/recursos             Guías cortas o checklist (SEO, leads)
+/sobre-mi             Perfil técnico + enfoque data-driven
+/contacto             Formulario + WhatsApp
+/legal                Aviso legal, privacidad, cookies
+
+Idiomas: ES primero, EN opcional fase 2.
+
+
+INSTAGRAM — LÍNEAS DE CONTENIDO
+-------------------------------
+1) EDUCATIVO: "Qué debe tener tu web para vender" (carruseles)
+2) CASOS: Antes/después, mockups, resultados (cuando existan)
+3) DETRÁS: Cómo trabajo, stack, automatizaciones (humanizar)
+4) OFERTA: Paquetes, CTA DM "WEB" o "AUTO"
+5) PRUEBA SOCIAL: Testimonios, métricas, entregas
+
+Frecuencia objetivo: 3 posts/semana + stories.
+Primer mes: 12 posts planificados (ver roadmap).
+
+
+AUTOMATIZACIONES — ORDEN DE CONSTRUCCIÓN
+----------------------------------------
+PRIORIDAD 1 (semanas 1-2):
+  - Formulario web → email + log en JSON/DB
+  - Plantilla respuesta automática al lead
+
+PRIORIDAD 2 (semanas 3-4):
+  - Tabla leads con estados (nuevo, contactado, propuesta, cerrado)
+  - Vista simple en panel o Notion sync
+
+PRIORIDAD 3 (semanas 5-6):
+  - Motor presupuesto: servicio + extras → rango €
+  - Export PDF propuesta básica
+
+PRIORIDAD 4 (semanas 7-8):
+  - Dashboard métricas: leads, conversión, origen
+  - Reporting plantilla mensual cliente
+
+
+MÉTRICAS DE ÉXITO (90 DÍAS)
+---------------------------
+- Web propia publicada
+- Instagram activo (min. 30 posts/stories combinados)
+- 3+ clientes de pago (web o pack)
+- Plantilla reutilizable documentada
+- 1 automatización propia en producción
+
+
+RELACIÓN CON PROYECTO 24SHOOTS
+------------------------------
+- 24Shoots = cliente entrega (otro agente / otro foco).
+- Este negocio = tu marca y tu producto.
+- La plantilla nació con 24Shoots pero es tuya para reutilizar.
+- No mezclar repos ni conversaciones sin necesidad.
+
+
+ARCHIVOS RELACIONADOS EN ESTA CARPETA
+-------------------------------------
+- 00-PLAN-MAESTRO.txt
+- INICIO-NUEVO-AGENTE.txt          ← prompt para nuevo chat
+- plantillas/01-PLANTILLA-CUESTIONARIO-GENERAL-WEB.txt
+- ventas/01-PAQUETES-Y-PRECIOS-BASE.txt
+- roadmap/01-ROADMAP-8-SEMANAS.txt
+- instagram/01-PLAN-CONTENIDO-MES-1.txt
+
+
+================================================================================
+FIN
+================================================================================

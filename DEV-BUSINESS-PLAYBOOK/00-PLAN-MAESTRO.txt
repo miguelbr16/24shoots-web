@@ -1,0 +1,122 @@
+================================================================================
+PLAN MAESTRO — NEGOCIO WEB + AUTOMATIZACIONES (PERSONAL)
+Autor: mborras
+Fecha: 2026-07-07
+================================================================================
+
+OBJETIVO
+--------
+Montar una oferta profesional de:
+1) Diseno web orientado a conversion.
+2) Automatizaciones para pymes y creadores.
+3) Plantilla reutilizable para entregar rapido.
+
+Este documento sirve para no perder foco entre:
+- Proyecto cliente 24Shoots.
+- Tu propia marca personal (Instagram + web propia).
+
+
+ESTIMACIONES REALISTAS (TU PERFIL: cientifico de datos + nuevo dev web)
+-------------------------------------------------------------------------
+1) WEB 24SHOOTS (MVP ya montado en codigo):
+   - Integrar datos reales cliente: 1-2 dias
+   - QA responsive + correcciones: 1-2 dias
+   - Deploy + dominio + ajustes: 0.5-1 dia
+   - Total restante estimado: 3 a 5 dias efectivos
+
+2) WEB PROPIA (marca personal para vender servicios):
+   - Branding base + copy + servicios: 2-3 dias
+   - Implementacion sobre misma plantilla: 2-3 dias
+   - Casos/portfolio + formulario + legal: 1-2 dias
+   - Total: 5 a 8 dias efectivos
+
+3) CORE DE AUTOMATIZACIONES (v1 propia):
+   - CRM leads minimo (DB + estados): 5-7 dias
+   - Motor presupuesto simple (reglas): 4-6 dias
+   - Email/pipeline automatizado: 3-5 dias
+   - Dashboard basico: 4-6 dias
+   - Total: 3 a 5 semanas (part-time)
+
+
+QUE ES DE PAGO VS QUE PUEDES HACER TU
+--------------------------------------
+Puedes desarrollar tu:
+- Plantilla web base (ya iniciada).
+- Formulario + API + flujo de leads.
+- Motor de presupuesto por reglas.
+- Panel interno simple de seguimiento.
+- Reporting mensual semi-automatico.
+
+Normalmente de pago externo:
+- Dominio (.com/.es): ~10-15 EUR/anio.
+- Email corporativo (si no usas free): ~5 EUR/mes.
+- Servicios email transaccional al escalar.
+- Herramientas no core (cuando te ahorren tiempo).
+
+
+ROADMAP RECOMENDADO (8 SEMANAS)
+-------------------------------
+SEMANA 1-2
+- Cerrar 24Shoots en produccion.
+- Documentar checklist de entrega.
+- Publicar 1 caso de estudio (antes/despues).
+
+SEMANA 3-4
+- Lanzar tu web propia.
+- Crear oferta clara en 3 paquetes.
+- Publicar 5 contenidos en Instagram.
+
+SEMANA 5-6
+- Construir CRM leads v1.
+- Conectar formularios de tus clientes al CRM.
+- Crear plantilla de propuesta automatizada.
+
+SEMANA 7-8
+- Motor presupuesto v1.
+- Dashboard pipeline.
+- Manual operativo para delegar soporte.
+
+
+MODO DE TRABAJO (NO DEPENDER DE TERCEROS)
+-----------------------------------------
+Regla:
+- Build (propio): lo que te diferencia y vendes siempre.
+- Buy (externo): infraestructura compleja no diferencial.
+
+Build recomendado:
+- Captura de lead.
+- Pipeline comercial.
+- Presupuestador.
+- Reportes de cliente.
+
+Buy recomendado:
+- Hosting/CDN.
+- Correo transaccional al escalar.
+- Pasarela de pago (si vendes online).
+
+
+METRICA DE EXITO (NEGOCIO)
+--------------------------
+Objetivo 90 dias:
+- 3 clientes cerrados/mes.
+- Tiempo medio entrega web <= 10 dias.
+- >= 30% leads a llamada/reunion.
+- >= 20% llamada a propuesta aceptada.
+
+
+CHECKLIST DE ENFOQUE SEMANAL
+----------------------------
+[ ] 1 mejora a plantilla base
+[ ] 1 mejora a automatizacion interna
+[ ] 1 activo comercial (post, reel, caso)
+[ ] 1 accion de venta directa (mensaje, contacto, follow-up)
+
+
+NOTA ESTRATEGICA
+----------------
+Crear un nuevo agente para tu negocio personal es buena idea.
+Asi separas contexto:
+- Agente A: entrega cliente (24Shoots).
+- Agente B: crecimiento negocio propio + producto.
+
+================================================================================

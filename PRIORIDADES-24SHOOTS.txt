@@ -1,0 +1,146 @@
+================================================================================
+  24SHOOTS — PRIORIDADES Y HOJA DE RUTA
+  Actualizado: julio 2026
+================================================================================
+
+Este documento guarda TODAS las prioridades acordadas:
+  - AHORA: mejoras visuales, código, estabilidad, vender rápido
+  - FUTURO: SEO, diferenciación, landings, contenido (pasos posteriores)
+
+--------------------------------------------------------------------------------
+BACKUPS DISPONIBLES (por si quieres volver atrás)
+--------------------------------------------------------------------------------
+
+  V1  backups/design-v1-antes-refinamiento-color/
+      Paleta original fría (#080808). RESTAURAR-DISEÑO-V1.bat
+
+  V2  backups/design-v2-antes-ideas-referencias/
+      Color refinado + fotos/vídeos, sin modal ni metadatos. RESTAURAR-DISEÑO-V2.bat
+
+--------------------------------------------------------------------------------
+█ AHORA — IMPLEMENTAR PRIMERO (visual + código + estabilidad + venta rápida)
+--------------------------------------------------------------------------------
+
+[ ] Estabilidad y que la web no falle
+    - reiniciar-web.bat si error 500 (borra caché .next)
+    - Comprimir vídeos en public/imagenes_insta/ (muchos >15 MB ralentizan)
+    - Vídeos: preload="metadata" en modales, no autoplay agresivo
+    - Publicar en Vercel/Cloudflare con dominio propio (no solo trycloudflare)
+    - Monitorizar: Search Console + Analytics cuando haya dominio
+
+[ ] Claridad para vender rápido
+    - WhatsApp y email REALES en config/site.json (ahora placeholder)
+    - CTA "Pedir presupuesto" visible en modal de portfolio (HECHO)
+    - Formulario contacto + WhatsApp flotante siempre accesible
+    - Textos que hablen de EVENTOS + NEGOCIOS + BODAS (no solo bodas)
+
+[ ] Mejoras visuales en curso / recientes
+    - Modal portfolio: vídeo a la izquierda, narrativa a la derecha (HECHO)
+    - Reels 9:16 en columna estrecha sin tapar el título (HECHO)
+    - Páginas de servicio con hero, imagen, highlights en tarjetas,
+      proyectos relacionados y CTA (HECHO)
+    - Tarjetas de servicios en listado con foto y bullets (HECHO)
+    - Paleta cálida refinada V2 (HECHO)
+
+[ ] Pendiente visual inmediato
+    - Revisar todos los reels en modal (algunos llevan logo de terceros en el mp4)
+    - Más fotos/vídeos reales rotando en portfolio y servicios
+    - og:image al compartir en WhatsApp (frame de proyecto o logo HD)
+    - Foto del equipo en Sobre nosotros (credibilidad B2B)
+
+[ ] Código y optimización
+    - Excluir carpeta backups/ del build (HECHO en tsconfig)
+    - Lazy load de vídeos fuera del viewport
+    - Versiones comprimidas de reels (H.264, 1080p max para web)
+    - Revisar next.config imágenes si añadís CDN
+    - Git init + commits cuando quieras historial seguro
+
+--------------------------------------------------------------------------------
+█ FUTURO — PASOS POSTERIORES (SEO, diferenciación, crecimiento)
+    No implementar hasta cerrar bloque "AHORA"
+--------------------------------------------------------------------------------
+
+--- Fase A: SEO local y posicionamiento ---
+
+[ ] Dominio propio (24shootsmedia.com o similar) + HTTPS
+[ ] Google Business Profile optimizado (Valencia)
+[ ] Landings por intención de búsqueda:
+      - /productora-video-valencia
+      - /video-corporativo-valencia
+      - /video-bodas-valencia
+      - /reels-restaurante-valencia
+      - /video-eventos-valencia
+[ ] URLs propias por caso: /portfolio/boda-valencia (no solo modal)
+[ ] Schema: VideoObject, FAQPage, Review, Service ampliado
+[ ] og:image por página
+[ ] Enlaces internos: servicio → caso → contacto
+[ ] Sustituir placeholders legales (CIF, dirección)
+
+--- Fase B: Diferenciación (Behance / MELTED / Synima) ---
+
+[ ] Showreel dedicado 60 s (página o hero)
+[ ] Split navegación: Bodas | Negocios | Eventos (entradas claras)
+[ ] Logos de clientes (cuando los tengáis)
+[ ] Métricas reales en casos ("+12k views", "entrega en 48h")
+[ ] Metadatos rodaje ampliados en casos (plazo, equipo, formato)
+[ ] Tabla visual "24Shoots vs. productora + agencia por separado"
+[ ] Proceso con plazos orientativos por tipo de proyecto
+[ ] Behind the scenes / foto equipo
+
+--- Fase C: Conversión avanzada ---
+
+[ ] Rangos de precio orientativos o packs (reel / boda / mensual)
+[ ] Selector "¿Qué necesitas?" → contacto pre-rellenado
+[ ] Reseñas por sector junto a cada tipo de proyecto
+[ ] Sticky bar móvil: WhatsApp + Presupuesto
+[ ] CTA en casos: "Quiero algo así"
+
+--- Fase D: Contenido SEO (medio plazo) ---
+
+[ ] Blog o guías:
+      - Cuánto cuesta un vídeo corporativo en Valencia
+      - Pack reels para restaurantes
+      - Vídeo corporativo vs. reels
+[ ] FAQ ampliado por cada servicio (indexable)
+[ ] Enlazar posts de Instagram a casos en la web
+
+--- Referencias Behance / webs (ideas guardadas) ---
+
+  Jaime Peña      → vídeo fullscreen, galería foto aparte, CMS
+  Bitter Creek    → metadatos timecode/formato como identidad (parcial HECHO)
+  MELTED          → click proyecto reproduce + proceso brief→pantalla (parcial HECHO)
+  Synima          → casos por sector + resultados medibles
+  Creative Director → quiet luxury, jerarquía, menos ruido
+  Jason Bergh     → paleta cálida, scroll cinematográfico (color HECHO)
+  Frameshift      → web como pieza de cine (solo inspiración, no copiar)
+  DORIN VORNICES  → grain/noir solo como acento, no B2B completo
+
+--------------------------------------------------------------------------------
+█ CÓMO VER LA NARRATIVA DE CASO (portfolio)
+--------------------------------------------------------------------------------
+
+  1. Ir a Portfolio (o sección portfolio en home)
+  2. Clic en imagen o "Ver proyecto"
+  3. Modal: vídeo izquierda | Reto · Enfoque · Entregables · Resultado derecha
+  4. Editar textos en content/es/portfolio.json
+
+--------------------------------------------------------------------------------
+█ MENSAJE CLAVE DE MARCA (para todo el copy)
+--------------------------------------------------------------------------------
+
+  "Un solo equipo en Valencia: vídeo, foto, redes y eventos.
+   No productora por un lado y agencia por otro.
+   Del rodaje al post con criterio cinematográfico."
+
+  Públicos: hostelería, bodas, empresas, retail, inmobiliaria, EVENTOS.
+
+--------------------------------------------------------------------------------
+█ COMANDOS ÚTILES
+--------------------------------------------------------------------------------
+
+  iniciar-web.bat       → servidor local
+  reiniciar-web.bat     → si error 500
+  compartir-web.bat     → enlace temporal para amigos (requiere web activa)
+  npm run build         → comprobar que compila antes de publicar
+
+================================================================================

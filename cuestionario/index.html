@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuestionario 24Shoots — Brief web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card: #141414;
+      --border: #2a2a2a;
+      --orange: #ff6b00;
+      --white: #fff;
+      --gray: #a3a3a3;
+      --danger: #ef4444;
+      --ok: #22c55e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 24px 20px 80px; }
+    .brand {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .brand h1 { font-size: 1.5rem; font-weight: 700; }
+    .brand p { color: var(--gray); font-size: 14px; margin-top: 6px; }
+    .brand .tag { color: var(--orange); font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+    .progress-wrap { margin-bottom: 24px; }
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+    .progress-bar {
+      height: 6px;
+      background: var(--border);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--orange);
+      width: 0%;
+      transition: width 0.3s;
+    }
+    .step { display: none; }
+    .step.active { display: block; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 24px;
+    }
+    .card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+    }
+    .card .hint {
+      color: var(--gray);
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .badge.req { background: rgba(239,68,68,0.15); color: #f87171; }
+    .badge.opt { background: rgba(163,163,163,0.15); color: var(--gray); }
+    .field { margin-bottom: 20px; }
+    .field label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .field .sub { font-size: 12px; color: var(--gray); font-weight: 400; margin-top: 4px; }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="url"], textarea, select {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: var(--white);
+      font-family: inherit;
+      font-size: 14px;
+    }
+    textarea { min-height: 80px; resize: vertical; }
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--orange);
+    }
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: border-color 0.2s;
+    }
+    .option:has(input:checked) { border-color: var(--orange); background: rgba(255,107,0,0.08); }
+    .option input { margin-top: 2px; accent-color: var(--orange); }
+    .checks { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    @media (max-width: 500px) { .checks { grid-template-columns: 1fr; } }
+    .nav-btns {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .btn {
+      flex: 1;
+      padding: 14px 20px;
+      border-radius: 10px;
+      border: none;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.9; }
+    .btn-back { background: var(--border); color: var(--white); flex: 0 0 auto; padding-inline: 20px; }
+    .btn-next { background: var(--orange); color: #000; }
+    .btn-save { background: var(--ok); color: #000; }
+    .project-block {
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .project-block h4 { font-size: 14px; margin-bottom: 12px; color: var(--orange); }
+    .btn-small {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--gray);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 8px;
+    }
+    .btn-small:hover { border-color: var(--orange); color: var(--white); }
+    .done {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .done .icon { font-size: 48px; margin-bottom: 16px; }
+    .done p { color: var(--gray); margin-bottom: 20px; font-size: 14px; }
+    .export-btns { display: flex; flex-direction: column; gap: 10px; }
+    .note {
+      background: rgba(255,107,0,0.1);
+      border: 1px solid rgba(255,107,0,0.3);
+      border-radius: 10px;
+      padding: 14px;
+      font-size: 13px;
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+    .saved-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--ok);
+      color: #000;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      display: none;
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">
+      <div class="tag">24Shoots Media</div>
+      <h1>Brief para tu web</h1>
+      <p>15–20 min · Guarda al cerrar · Si no sabes algo, escribe PENDIENTE</p>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span id="stepLabel">Paso 1 de 8</span>
+        <span id="pctLabel">0%</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <form id="form">
+      <!-- PASO 1: Empresa -->
+      <div class="step active" data-step="1">
+        <div class="card">
+          <span class="badge req">Obligatorio para publicar</span>
+          <h2>Datos de la empresa</h2>
+          <p class="hint">Para la web y las páginas legales.</p>
+
+          <div class="field"><label>Nombre comercial exacto</label><input name="nombre_comercial" type="text" placeholder="24Shoots" /></div>
+          <div class="field"><label>Razón social completa</label><input name="razon_social" type="text" /></div>
+          <div class="field"><label>CIF / NIF</label><input name="cif" type="text" /></div>
+          <div class="field"><label>Dirección fiscal (calle, CP, ciudad, provincia)</label><textarea name="direccion_fiscal"></textarea></div>
+          <div class="field"><label>Persona de contacto (nombre + rol)</label><input name="contacto_persona" type="text" /></div>
+          <div class="field"><label>¿Quién aprueba textos y diseño final?</label><input name="aprobador" type="text" /></div>
+        </div>
+      </div>
+
+      <!-- PASO 2: Contacto -->
+      <div class="step" data-step="2">
+        <div class="card">
+          <span class="badge req">Obligatorio para publicar</span>
+          <h2>Contacto y WhatsApp</h2>
+          <p class="hint">Cómo os contactarán desde la web.</p>
+
+          <div class="field"><label>WhatsApp Business (+34...)</label><input name="whatsapp" type="tel" placeholder="+34 600 000 000" /></div>
+          <div class="field"><label>Email para solicitudes del formulario</label><input name="email" type="email" placeholder="hola@24shootsmedia.com" /></div>
+          <div class="field"><label>¿Quién responde? ¿Horario?</label><textarea name="horario_atencion" placeholder="Ej: Lun–Vie 9–19h"></textarea></div>
+          <div class="field"><label>Tiempo de respuesta en la web</label><input name="tiempo_respuesta" type="text" placeholder="24–48 horas" /></div>
+          <div class="field">
+            <label>¿Teléfono obligatorio en el formulario?</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="tel_obligatorio" value="si" /> Sí</label>
+              <label class="option"><input type="radio" name="tel_obligatorio" value="no" checked /> No</label>
+            </div>
+          </div>
+          <div class="field"><label>Mensaje al abrir WhatsApp desde la web</label><textarea name="mensaje_whatsapp" placeholder="Hola, me interesa un presupuesto para..."></textarea></div>
+          <div class="field">
+            <label>¿Reserva de llamada (Calendly) en el futuro?</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="calendly" value="inicio" /> Sí, desde el inicio</label>
+              <label class="option"><input type="radio" name="calendly" value="secundario" /> Solo como opción secundaria</label>
+              <label class="option"><input type="radio" name="calendly" value="no" checked /> No por ahora</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASO 3: Dominio -->
+      <div class="step" data-step="3">
+        <div class="card">
+          <span class="badge opt">Técnico</span>
+          <h2>Dominio y accesos</h2>
+
+          <div class="field"><label>¿Tenéis dominio? ¿Cuál?</label><input name="dominio" type="text" placeholder="24shoots.com o PENDIENTE" /></div>
+          <div class="field"><label>¿Dónde está registrado?</label><input name="registrador" type="text" placeholder="GoDaddy, Nominalia..." /></div>
+          <div class="field">
+            <label>¿Tenéis acceso al panel del dominio?</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="acceso_dominio" value="si" /> Sí</label>
+              <label class="option"><input type="radio" name="acceso_dominio" value="no" /> No</label>
+              <label class="option"><input type="radio" name="acceso_dominio" value="pendiente" checked /> Pendiente</label>
+            </div>
+          </div>
+          <div class="field"><label>Email corporativo o Gmail personal</label><input name="tipo_email" type="text" /></div>
+          <div class="field">
+            <label>¿Ficha de Google Business (Maps)?</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="google_business" value="si" /> Sí</label>
+              <label class="option"><input type="radio" name="google_business" value="no" /> No</label>
+              <label class="option"><input type="radio" name="google_business" value="pendiente" checked /> Pendiente</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASO 4: Marca -->
+      <div class="step" data-step="4">
+        <div class="card">
+          <span class="badge req">Importante</span>
+          <h2>Marca e identidad</h2>
+          <div class="note">Los archivos (logo, vídeo) enviadlos por WhatsApp, Drive o WeTransfer. Aquí solo indicad si los tenéis.</div>
+
+          <div class="field">
+            <label>Logo alta resolución (SVG/PNG)</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="logo_hd" value="adjunto" /> Lo envío / adjunto</label>
+              <label class="option"><input type="radio" name="logo_hd" value="pendiente" checked /> Pendiente</label>
+            </div>
+          </div>
+          <div class="field">
+            <label>¿Logo sobre negro y sobre blanco?</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="logo_variantes" value="si" /> Sí</label>
+              <label class="option"><input type="radio" name="logo_variantes" value="no" checked /> Solo uno</label>
+            </div>
+          </div>
+          <div class="field"><label>Color naranja exacto (hex)</label><input name="color_hex" type="text" placeholder="#FF6B00 o PENDIENTE" /></div>
+          <div class="field"><label>Tipografías oficiales</label><input name="tipografias" type="text" placeholder="PENDIENTE" /></div>
+          <div class="field"><label>Manual de marca (enlace o PDF)</label><input name="manual_marca" type="text" /></div>
+          <div class="field">
+            <label>Vídeo/reel para portada (10–30 seg)</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="hero_video" value="si" /> Sí, lo envío</label>
+              <label class="option"><input type="radio" name="hero_video" value="no" /> No</label>
+              <label class="option"><input type="radio" name="hero_video" value="pendiente" checked /> Pendiente</label>
+            </div>
+          </div>
+          <div class="field">
+            <label>Fotos del equipo</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="fotos_equipo" value="si" /> Sí</label>
+              <label class="option"><input type="radio" name="fotos_equipo" value="no" /> No</label>
+              <label class="option"><input type="radio" name="fotos_equipo" value="pendiente" checked /> Pendiente</label>
+            </div>
+          </div>
+          <div class="field"><label>¿Algo que NO queréis en la web?</label><textarea name="no_queremos"></textarea></div>
+        </div>
+      </div>
+
+      <!-- PASO 5: Servicios -->
+      <div class="step" data-step="5">
+        <div class="card">
+          <h2>Servicios</h2>
+          <p class="hint">Marcad los que ofrecéis.</p>
+
+          <div class="field">
+            <label>Servicios activos</label>
+            <div class="checks">
+              <label class="option"><input type="checkbox" name="servicios" value="video" checked /> Producción de vídeo</label>
+              <label class="option"><input type="checkbox" name="servicios" value="foto" checked /> Fotografía</label>
+              <label class="option"><input type="checkbox" name="servicios" value="redes" checked /> Contenido redes</label>
+              <label class="option"><input type="checkbox" name="servicios" value="community" checked /> Community management</label>
+              <label class="option"><input type="checkbox" name="servicios" value="eventos" checked /> Eventos</label>
+              <label class="option"><input type="checkbox" name="servicios" value="bodas" checked /> Bodas</label>
+              <label class="option"><input type="checkbox" name="servicios" value="dron" checked /> Dron</label>
+            </div>
+          </div>
+          <div class="field"><label>¿Falta o sobra algún servicio?</label><input name="servicios_otro" type="text" /></div>
+          <div class="field"><label>Servicio estrella (el que más queréis vender)</label><input name="servicio_estrella" type="text" /></div>
+          <div class="field"><label>Zona geográfica</label>
+            <div class="checks">
+              <label class="option"><input type="checkbox" name="zona" value="valencia_ciudad" checked /> Valencia ciudad</label>
+              <label class="option"><input type="checkbox" name="zona" value="provincia" /> Provincia Valencia</label>
+              <label class="option"><input type="checkbox" name="zona" value="espana" checked /> Toda España</label>
+              <label class="option"><input type="checkbox" name="zona" value="internacional" /> Internacional</label>
+            </div>
+          </div>
+          <div class="field"><label>Descripción breve de vuestros servicios (libre)</label><textarea name="descripcion_servicios" rows="5" placeholder="Podéis describir en general o por servicio..."></textarea></div>
+        </div>
+      </div>
+
+      <!-- PASO 6: Precios -->
+      <div class="step" data-step="6">
+        <div class="card">
+          <h2>Precios y packs</h2>
+
+          <div class="field">
+            <label>¿Cómo mostramos precios?</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="modo_precios" value="presupuesto" checked /> Solo "Solicitar presupuesto"</label>
+              <label class="option"><input type="radio" name="modo_precios" value="desde" /> "Desde X€" por servicio</label>
+              <label class="option"><input type="radio" name="modo_precios" value="packs" /> Packs con precio cerrado</label>
+            </div>
+          </div>
+          <div class="field"><label>Si hay packs, describidlos (nombre, incluye, precio)</label><textarea name="packs_detalle" rows="4"></textarea></div>
+          <div class="field">
+            <label>Rangos de presupuesto en formulario</label>
+            <div class="checks">
+              <label class="option"><input type="checkbox" name="rangos" value="500" checked /> Menos de 500€</label>
+              <label class="option"><input type="checkbox" name="rangos" value="1500" checked /> 500–1.500€</label>
+              <label class="option"><input type="checkbox" name="rangos" value="3000" checked /> 1.500–3.000€</label>
+              <label class="option"><input type="checkbox" name="rangos" value="5000" checked /> 3.000–5.000€</label>
+              <label class="option"><input type="checkbox" name="rangos" value="5000plus" checked /> Más de 5.000€</label>
+            </div>
+          </div>
+          <div class="field">
+            <label>¿Pagos fraccionados?</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="pagos_fraccionados" value="si" /> Sí</label>
+              <label class="option"><input type="radio" name="pagos_fraccionados" value="no" checked /> No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASO 7: Portfolio -->
+      <div class="step" data-step="7">
+        <div class="card">
+          <h2>Portfolio</h2>
+          <p class="hint">Añadid vuestros mejores proyectos (mínimo 3, ideal 10–15).</p>
+          <div id="projects"></div>
+          <button type="button" class="btn-small" id="addProject">+ Añadir otro proyecto</button>
+          <div class="field" style="margin-top:20px">
+            <label>¿Mostrar nombre de cliente o solo sector?</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="mostrar_cliente" value="nombre" /> Nombre real</label>
+              <label class="option"><input type="radio" name="mostrar_cliente" value="sector" checked /> Solo sector</label>
+              <label class="option"><input type="radio" name="mostrar_cliente" value="mixto" /> Depende del proyecto</label>
+            </div>
+          </div>
+          <div class="field"><label>Proyectos que NO deben aparecer</label><textarea name="proyectos_excluidos"></textarea></div>
+          <div class="field"><label>Testimonios (texto + nombre + empresa)</label><textarea name="testimonios" rows="4"></textarea></div>
+        </div>
+      </div>
+
+      <!-- PASO 8: Textos + SEO + Legal -->
+      <div class="step" data-step="8">
+        <div class="card">
+          <h2>Textos, SEO y legal</h2>
+
+          <div class="field"><label>Describid 24Shoots en 3 frases</label><textarea name="descripcion_3frases" rows="3"></textarea></div>
+          <div class="field"><label>Historia breve / cuándo empezasteis</label><textarea name="historia"></textarea></div>
+          <div class="field"><label>Equipo (nombres y roles)</label><textarea name="equipo"></textarea></div>
+          <div class="field"><label>¿Qué os diferencia en Valencia?</label><textarea name="diferenciador"></textarea></div>
+          <div class="field"><label>Eslogan oficial</label><input name="eslogan" type="text" value="Domina el impacto" /></div>
+          <div class="field">
+            <label>Idiomas web</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="idiomas" value="es_en" checked /> Español + inglés</label>
+              <label class="option"><input type="radio" name="idiomas" value="es" /> Solo español</label>
+            </div>
+          </div>
+          <div class="field"><label>Cliente ideal (sectores)</label><input name="cliente_ideal" type="text" placeholder="Restaurantes, bodas, empresas..." /></div>
+          <div class="field"><label>¿Qué buscarían en Google?</label><textarea name="keywords" placeholder="videógrafo bodas Valencia, reels restaurante..."></textarea></div>
+          <div class="field">
+            <label>¿Textos legales de gestor/abogado?</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="legal_gestor" value="si" /> Sí, los envío</label>
+              <label class="option"><input type="radio" name="legal_gestor" value="plantilla" checked /> No, usad plantilla con nuestros datos</label>
+            </div>
+          </div>
+          <div class="field">
+            <label>¿Google Analytics en la web?</label>
+            <div class="options">
+              <label class="option"><input type="radio" name="analytics" value="si" checked /> Sí</label>
+              <label class="option"><input type="radio" name="analytics" value="no" /> No por ahora</label>
+            </div>
+          </div>
+          <div class="field"><label>Comentarios finales</label><textarea name="comentarios"></textarea></div>
+        </div>
+      </div>
+
+      <!-- PASO 9: Fin -->
+      <div class="step" data-step="9">
+        <div class="card done">
+          <div class="icon">✅</div>
+          <h2>¡Listo!</h2>
+          <p>Descargad el archivo y enviadlo por WhatsApp o email.<br/>Los archivos (logo, vídeos) enviadlos aparte por Drive o WeTransfer.</p>
+          <div class="export-btns">
+            <button type="button" class="btn btn-save" id="btnDownload">Descargar respuestas (.txt)</button>
+            <button type="button" class="btn btn-next" id="btnCopy">Copiar al portapapeles</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-btns" id="navBtns">
+        <button type="button" class="btn btn-back" id="btnBack" style="display:none">← Atrás</button>
+        <button type="button" class="btn btn-next" id="btnNext">Siguiente →</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="saved-toast" id="toast">Progreso guardado</div>
+
+  <script>
+    const TOTAL_STEPS = 9;
+    const STORAGE_KEY = '24shoots-cuestionario-v1';
+    let current = 1;
+    let projectCount = 0;
+
+    const labels = {
+      1: 'Empresa', 2: 'Contacto', 3: 'Dominio', 4: 'Marca',
+      5: 'Servicios', 6: 'Precios', 7: 'Portfolio', 8: 'Textos y legal', 9: 'Finalizar'
+    };
+
+    function projectHtml(n) {
+      return `<div class="project-block" data-project="${n}">
+        <h4>Proyecto ${n}</h4>
+        <div class="field"><label>Título</label><input name="proj_${n}_titulo" type="text" /></div>
+        <div class="field"><label>Enlace Instagram</label><input name="proj_${n}_ig" type="url" placeholder="https://instagram.com/p/..." /></div>
+        <div class="field"><label>Servicios (vídeo, bodas, dron...)</label><input name="proj_${n}_servicios" type="text" /></div>
+        <div class="field"><label>Sector (hostelería, boda, empresa...)</label><input name="proj_${n}_sector" type="text" /></div>
+        <div class="field">
+          <label>Permiso para web</label>
+          <div class="options">
+            <label class="option"><input type="radio" name="proj_${n}_permiso" value="si" checked /> Sí</label>
+            <label class="option"><input type="radio" name="proj_${n}_permiso" value="no" /> No</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>¿Tenéis archivo HD?</label>
+          <div class="options">
+            <label class="option"><input type="radio" name="proj_${n}_hd" value="si" /> Sí</label>
+            <label class="option"><input type="radio" name="proj_${n}_hd" value="no" checked /> No</label>
+          </div>
+        </div>
+      </div>`;
+    }
+
+    function addProject() {
+      projectCount++;
+      document.getElementById('projects').insertAdjacentHTML('beforeend', projectHtml(projectCount));
+      saveProgress();
+    }
+
+    document.getElementById('addProject').onclick = addProject;
+
+    function updateUI() {
+      document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+      document.querySelector(`[data-step="${current}"]`).classList.add('active');
+      document.getElementById('btnBack').style.display = current > 1 && current < TOTAL_STEPS ? 'block' : 'none';
+      document.getElementById('btnNext').textContent = current === TOTAL_STEPS - 1 ? 'Finalizar ✓' : current === TOTAL_STEPS ? '' : 'Siguiente →';
+      document.getElementById('btnNext').style.display = current === TOTAL_STEPS ? 'none' : 'block';
+      document.getElementById('navBtns').style.display = current === TOTAL_STEPS ? 'none' : 'flex';
+      const pct = Math.round(((current - 1) / (TOTAL_STEPS - 1)) * 100);
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('pctLabel').textContent = pct + '%';
+      document.getElementById('stepLabel').textContent = `Paso ${current} de ${TOTAL_STEPS - 1}: ${labels[current]}`;
+      saveProgress();
+    }
+
+    document.getElementById('btnNext').onclick = () => {
+      if (current < TOTAL_STEPS) { current++; updateUI(); window.scrollTo(0, 0); }
+    };
+    document.getElementById('btnBack').onclick = () => {
+      if (current > 1) { current--; updateUI(); window.scrollTo(0, 0); }
+    };
+
+    function collectData() {
+      const fd = new FormData(document.getElementById('form'));
+      const data = {};
+      for (const [k, v] of fd.entries()) {
+        if (data[k]) {
+          if (!Array.isArray(data[k])) data[k] = [data[k]];
+          data[k].push(v);
+        } else data[k] = v;
+      }
+      return data;
+    }
+
+    function formatExport(data) {
+      const lines = [
+        '='.repeat(72),
+        '  CUESTIONARIO 24SHOOTS — RESPUESTAS',
+        '  Fecha: ' + new Date().toLocaleString('es-ES'),
+        '='.repeat(72), ''
+      ];
+      const sections = {
+        'DATOS EMPRESA': ['nombre_comercial','razon_social','cif','direccion_fiscal','contacto_persona','aprobador'],
+        'CONTACTO': ['whatsapp','email','horario_atencion','tiempo_respuesta','tel_obligatorio','mensaje_whatsapp','calendly'],
+        'DOMINIO': ['dominio','registrador','acceso_dominio','tipo_email','google_business'],
+        'MARCA': ['logo_hd','logo_variantes','color_hex','tipografias','manual_marca','hero_video','fotos_equipo','no_queremos'],
+        'SERVICIOS': ['servicios','servicios_otro','servicio_estrella','zona','descripcion_servicios'],
+        'PRECIOS': ['modo_precios','packs_detalle','rangos','pagos_fraccionados'],
+        'TEXTOS Y SEO': ['descripcion_3frases','historia','equipo','diferenciador','eslogan','idiomas','cliente_ideal','keywords','legal_gestor','analytics','comentarios'],
+        'PORTFOLIO': ['mostrar_cliente','proyectos_excluidos','testimonios']
+      };
+      for (const [title, keys] of Object.entries(sections)) {
+        lines.push('--- ' + title + ' ---');
+        for (const k of keys) {
+          const v = data[k];
+          if (v !== undefined) lines.push(k + ': ' + (Array.isArray(v) ? v.join(', ') : v));
+        }
+        lines.push('');
+      }
+      lines.push('--- PROYECTOS ---');
+      for (let i = 1; i <= projectCount; i++) {
+        lines.push(`Proyecto ${i}:`);
+        ['titulo','ig','servicios','sector','permiso','hd'].forEach(s => {
+          const key = `proj_${i}_${s}`;
+          if (data[key]) lines.push(`  ${s}: ${data[key]}`);
+        });
+        lines.push('');
+      }
+      lines.push('='.repeat(72));
+      return lines.join('\n');
+    }
+
+    function saveProgress() {
+      const data = collectData();
+      data._step = current;
+      data._projectCount = projectCount;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    }
+
+    function loadProgress() {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) { addProject(); addProject(); addProject(); return; }
+      try {
+        const data = JSON.parse(raw);
+        current = data._step || 1;
+        projectCount = 0;
+        const maxProj = data._projectCount || 3;
+        for (let i = 0; i < maxProj; i++) addProject();
+        const form = document.getElementById('form');
+        for (const [k, v] of Object.entries(data)) {
+          if (k.startsWith('_')) continue;
+          const els = form.elements[k];
+          if (!els) continue;
+          if (els instanceof RadioNodeList) {
+            const val = Array.isArray(v) ? v[0] : v;
+            for (const el of els) if (el.value === val) el.checked = true;
+          } else if (els.type === 'checkbox') {
+            const vals = Array.isArray(v) ? v : [v];
+            if (vals.includes(els.value)) els.checked = true;
+          } else {
+            els.value = Array.isArray(v) ? v.join(', ') : v;
+          }
+        }
+      } catch (e) {
+        addProject(); addProject(); addProject();
+      }
+      updateUI();
+    }
+
+    document.getElementById('form').addEventListener('input', () => {
+      saveProgress();
+      const t = document.getElementById('toast');
+      t.style.display = 'block';
+      setTimeout(() => t.style.display = 'none', 1500);
+    });
+
+    document.getElementById('btnDownload').onclick = () => {
+      const text = formatExport(collectData());
+      const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = '24shoots-cuestionario-respuestas.txt';
+      a.click();
+    };
+
+    document.getElementById('btnCopy').onclick = async () => {
+      await navigator.clipboard.writeText(formatExport(collectData()));
+      alert('Copiado al portapapeles. Pegadlo en WhatsApp o email.');
+    };
+
+    loadProgress();
+  </script>
+</body>
+</html>

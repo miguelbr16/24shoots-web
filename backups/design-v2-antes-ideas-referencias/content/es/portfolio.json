@@ -1,0 +1,74 @@
+[
+  {
+    "id": "reel-restaurante",
+    "title": "Reel gastronómico",
+    "description": "Contenido dinámico para restaurante local con enfoque en producto y ambiente.",
+    "services": ["contenido-redes", "produccion-video"],
+    "sectors": ["hosteleria"],
+    "type": "video",
+    "thumbnail": "/imagenes_insta/ig-photo-4.jpg",
+    "videoUrl": "/imagenes_insta/ig-reel-1.mp4",
+    "instagramUrl": "https://www.instagram.com/24shootsmedia/",
+    "featured": true
+  },
+  {
+    "id": "boda-valencia",
+    "title": "Boda en Valencia",
+    "description": "Vídeo cinematográfico y fotografía artística de una boda íntima.",
+    "services": ["bodas", "produccion-video", "fotografia"],
+    "sectors": ["bodas"],
+    "type": "video",
+    "thumbnail": "/imagenes_insta/ig-photo-1.jpg",
+    "videoUrl": "/imagenes_insta/ig-reel-3.mp4",
+    "instagramUrl": "https://www.instagram.com/24shootsmedia/",
+    "featured": true
+  },
+  {
+    "id": "evento-corporativo",
+    "title": "Evento corporativo",
+    "description": "Cobertura audiovisual completa con aftermovie y contenido para redes.",
+    "services": ["eventos", "produccion-video"],
+    "sectors": ["empresas"],
+    "type": "video",
+    "thumbnail": "/imagenes_insta/ig-photo-3.jpg",
+    "videoUrl": "/imagenes_insta/ig-reel-6.mp4",
+    "instagramUrl": "https://www.instagram.com/24shootsmedia/",
+    "featured": true
+  },
+  {
+    "id": "sesion-producto",
+    "title": "Sesión de producto",
+    "description": "Fotografía de producto con estética premium para e-commerce y redes.",
+    "services": ["fotografia"],
+    "sectors": ["retail"],
+    "type": "photo",
+    "thumbnail": "/imagenes_insta/ig-photo-5.jpg",
+    "videoUrl": null,
+    "instagramUrl": "https://www.instagram.com/24shootsmedia/",
+    "featured": false
+  },
+  {
+    "id": "dron-inmobiliaria",
+    "title": "Dron inmobiliario",
+    "description": "Tomas aéreas para promoción de propiedad con integración en vídeo.",
+    "services": ["dron", "produccion-video"],
+    "sectors": ["inmobiliaria"],
+    "type": "video",
+    "thumbnail": "/imagenes_insta/ig-photo-2.jpg",
+    "videoUrl": "/imagenes_insta/ig-reel-8.mp4",
+    "instagramUrl": "https://www.instagram.com/24shootsmedia/",
+    "featured": false
+  },
+  {
+    "id": "pack-redes-mensual",
+    "title": "Pack redes mensual",
+    "description": "Gestión integral de contenido y community management para marca local.",
+    "services": ["contenido-redes", "community-management"],
+    "sectors": ["empresas"],
+    "type": "video",
+    "thumbnail": "/imagenes_insta/ig-photo-4.jpg",
+    "videoUrl": "/imagenes_insta/ig-reel-10.mp4",
+    "instagramUrl": "https://www.instagram.com/24shootsmedia/",
+    "featured": true
+  }
+]

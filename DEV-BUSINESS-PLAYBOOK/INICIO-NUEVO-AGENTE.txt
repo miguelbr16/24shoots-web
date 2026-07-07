@@ -1,0 +1,66 @@
+================================================================================
+PROMPT DE INICIO — NUEVO AGENTE (NEGOCIO PROPIO)
+Copia y pega esto al abrir un chat/agente NUEVO en Cursor
+================================================================================
+
+Hola. Este es un proyecto NUEVO, separado del cliente 24Shoots Media.
+
+CONTEXTO
+--------
+Soy científico de datos y desarrollador web junior/intermedio. Quiero montar mi
+marca personal para vender:
+1) Diseño y desarrollo web orientado a conversión
+2) Automatizaciones para pymes y creadores
+3) Herramientas propias (CRM leads, presupuestador, reporting)
+
+Ya tengo una base técnica reutilizable en otro proyecto (Next.js + JSON + i18n).
+No quiero depender de terceros en lo crítico: quiero construir mi propio core.
+
+ARCHIVOS DE CONTEXTO (léelos primero)
+-------------------------------------
+1) DEV-BUSINESS-PLAYBOOK/00-PLAN-MAESTRO.txt
+2) DEV-BUSINESS-PLAYBOOK/CONTEXTO-NEGOCIO-PROPIO.txt
+3) DEV-BUSINESS-PLAYBOOK/ventas/01-PAQUETES-Y-PRECIOS-BASE.txt
+4) DEV-BUSINESS-PLAYBOOK/plantillas/01-PLANTILLA-CUESTIONARIO-GENERAL-WEB.txt
+5) DEV-BUSINESS-PLAYBOOK/roadmap/01-ROADMAP-8-SEMANAS.txt
+
+OBJETIVO DE ESTE AGENTE
+-----------------------
+Ayudarme a:
+- Definir mi marca personal (nombre, propuesta, tono)
+- Crear mi web de servicios (usando plantilla reutilizable)
+- Planificar mi Instagram de negocio (contenido + calendario)
+- Diseñar el roadmap de automatizaciones propias (CRM, presupuestos, leads)
+- NO mezclar con el proyecto cliente 24Shoots
+
+RESTRICCIONES
+-------------
+- Priorizar stack gratuito al inicio (Vercel, GitHub, JSON)
+- Todo debe ser mantenible por mí (data scientist con base de código)
+- Responsive obligatorio (móvil, tablet, escritorio)
+- Separar siempre: MVP / Fase 2 / Fase 3
+- No sobreingeniería: empezar simple, escalar con datos reales
+
+PRIMER PASO QUE QUIERO
+----------------------
+1) Proponer 3 opciones de nombre de marca + eslogan
+2) Estructura de mi web propia (páginas y secciones)
+3) Plan de contenido Instagram (primer mes, 12 posts)
+4) Lista priorizada de qué automatización construir primero
+
+Empieza leyendo los archivos de contexto y dame un plan accionable.
+
+
+================================================================================
+VARIANTE CORTA (si el agente tiene poco contexto)
+================================================================================
+
+Nuevo proyecto: mi marca personal de diseño web + automatizaciones.
+Lee DEV-BUSINESS-PLAYBOOK/ en la carpeta del repo.
+Objetivo: web propia + Instagram + roadmap automatizaciones propias.
+No es 24Shoots. Propón nombre, estructura web, plan IG 1 mes y prioridad tech.
+
+
+================================================================================
+FIN
+================================================================================

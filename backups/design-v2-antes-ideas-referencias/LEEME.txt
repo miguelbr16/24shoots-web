@@ -1,0 +1,26 @@
+# Backup diseño V2 — antes de ideas de referencias (Behance, MELTED, etc.)
+
+**Fecha:** julio 2026
+
+## Qué incluye
+
+Copia completa de:
+- `src/components/` y `src/app/`
+- `content/es/` y `content/en/`
+- `config/`
+
+Es el diseño con **paleta refinada** (V2) y fotos/vídeos reales, **antes** de:
+- Metadatos de rodaje (Bitter Creek)
+- Modal caso de estudio + vídeo (MELTED)
+- Narrativa cliente/reto/resultado (Synima)
+- Mejoras editoriales
+
+## Restaurar
+
+1. Doble clic en **`RESTAURAR-DISEÑO-V2.bat`**
+2. **`reiniciar-web.bat`**
+3. Recarga `/es`
+
+## Otros backups
+
+- **V1** (paleta original fría): `backups/design-v1-antes-refinamiento-color/`

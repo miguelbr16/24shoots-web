@@ -1,0 +1,391 @@
+================================================================================
+  CUESTIONARIO CLIENTE — 24SHOOTS MEDIA
+  Web: producción audiovisual y contenido para redes (Valencia)
+  Instagram: https://www.instagram.com/24shootsmedia/
+================================================================================
+
+INSTRUCCIONES PARA EL CLIENTE
+-----------------------------
+- Responded con datos concretos (archivos, enlaces, números reales).
+- Si no sabéis algo, escribid "PENDIENTE".
+- Lo marcado como OBLIGATORIO hace falta antes de publicar la web.
+- Podéis responder por WhatsApp en bullet points o rellenar este documento.
+
+
+================================================================================
+SECCIÓN 1 — DATOS DE LA EMPRESA [OBLIGATORIO ANTES DE PUBLICAR]
+================================================================================
+
+1.1  Nombre comercial exacto:
+     Respuesta: _______________________________________________
+
+1.2  Razón social completa:
+     Respuesta: _______________________________________________
+
+1.3  CIF / NIF:
+     Respuesta: _______________________________________________
+
+1.4  Dirección fiscal completa (calle, CP, ciudad, provincia):
+     Respuesta: _______________________________________________
+
+1.5  Persona de contacto para la web (nombre + rol):
+     Respuesta: _______________________________________________
+
+1.6  ¿Quién aprueba textos y diseño final?
+     Respuesta: _______________________________________________
+
+
+================================================================================
+SECCIÓN 2 — CONTACTO Y CONVERSIÓN [OBLIGATORIO ANTES DE PUBLICAR]
+================================================================================
+
+2.1  Número de WhatsApp Business (con prefijo +34):
+     Respuesta: _______________________________________________
+
+2.2  Email donde queréis recibir solicitudes del formulario:
+     Respuesta: _______________________________________________
+
+2.3  ¿Quién responde los mensajes? ¿Horario de atención?
+     Respuesta: _______________________________________________
+
+2.4  ¿Tiempo de respuesta que prometéis en la web? (ej. 24-48 horas)
+     Respuesta: _______________________________________________
+
+2.5  ¿El teléfono debe ser obligatorio en el formulario?
+     [ ] Sí    [ ] No
+
+2.6  Mensaje predefinido al abrir WhatsApp desde la web:
+     Respuesta: _______________________________________________
+
+2.7  ¿Queréis ofrecer reserva de llamada (Calendly) en el futuro?
+     [ ] Sí, desde el inicio
+     [ ] Sí, pero solo como opción secundaria / bajo demanda
+     [ ] No por ahora
+
+
+================================================================================
+SECCIÓN 3 — DOMINIO, EMAIL Y ACCESOS TÉCNICOS
+================================================================================
+
+3.1  ¿Tenéis dominio comprado? ¿Cuál es exactamente?
+     Respuesta: _______________________________________________
+
+3.2  ¿Dónde está registrado? (GoDaddy, Nominalia, Cloudflare, etc.)
+     Respuesta: _______________________________________________
+
+3.3  ¿Tenéis acceso al panel del dominio? ¿Podéis darnos acceso?
+     [ ] Sí    [ ] No    [ ] Pendiente
+
+3.4  ¿Tenéis email corporativo o usáis Gmail personal?
+     Respuesta: _______________________________________________
+
+3.5  ¿Tenéis ficha de Google Business (Google Maps)?
+     [ ] Sí    [ ] No    [ ] Pendiente de crear
+
+
+================================================================================
+SECCIÓN 4 — MARCA E IDENTIDAD VISUAL [OBLIGATORIO PARA BUEN RESULTADO]
+================================================================================
+
+4.1  Logo en alta resolución (SVG o PNG transparente, mín. 1000px):
+     [ ] Adjunto    [ ] Pendiente de enviar
+
+4.2  ¿Tenéis versión del logo sobre negro y sobre blanco?
+     [ ] Sí (adjunto)    [ ] No, solo tenemos uno
+
+4.3  ¿Color naranja exacto del logo? (código hex si lo tenéis)
+     Respuesta: _______________________________________________
+
+4.4  ¿Tipografías oficiales de la marca?
+     Respuesta: _______________________________________________
+
+4.5  ¿Hay manual de marca? (PDF o enlace)
+     Respuesta: _______________________________________________
+
+4.6  ¿Vídeo o reel para la portada de la web? (MP4, 10-30 seg, horizontal)
+     [ ] Sí (adjunto)    [ ] No    [ ] Pendiente
+
+4.7  ¿Fotos del equipo para "Sobre nosotros"?
+     [ ] Sí (adjunto)    [ ] No    [ ] Pendiente
+
+4.8  ¿Hay algo que NO queréis en la web? (colores, estilos, palabras...)
+     Respuesta: _______________________________________________
+
+
+================================================================================
+SECCIÓN 5 — SERVICIOS
+================================================================================
+
+Confirmad la lista de servicios. Marcad los que ofrecéis:
+
+[ ] Producción de vídeo
+[ ] Fotografía
+[ ] Contenido para redes (reels, stories, packs)
+[ ] Community management
+[ ] Eventos
+[ ] Bodas
+[ ] Dron
+[ ] Otro: _______________________________________________
+
+5.1  ¿Falta o sobra algún servicio de la lista?
+     Respuesta: _______________________________________________
+
+5.2  ¿Cuál es vuestro servicio estrella (el que más queréis vender)?
+     Respuesta: _______________________________________________
+
+5.3  Descripción breve de cada servicio (2-3 frases cada uno):
+
+     Producción de vídeo:
+     _______________________________________________
+     _______________________________________________
+
+     Fotografía:
+     _______________________________________________
+     _______________________________________________
+
+     Contenido para redes:
+     _______________________________________________
+     _______________________________________________
+
+     Community management:
+     _______________________________________________
+     _______________________________________________
+
+     Eventos:
+     _______________________________________________
+     _______________________________________________
+
+     Bodas:
+     _______________________________________________
+     _______________________________________________
+
+     Dron:
+     _______________________________________________
+     _______________________________________________
+
+5.4  ¿Qué incluye cada servicio? (entregables: vídeos, fotos, revisiones...)
+     Respuesta: _______________________________________________
+     _______________________________________________
+
+5.5  ¿Zona geográfica de trabajo?
+     [ ] Valencia ciudad    [ ] Provincia de Valencia
+     [ ] Toda España        [ ] Internacional
+
+5.6  ¿Hay servicios que solo hacéis bajo presupuesto a medida?
+     Respuesta: _______________________________________________
+
+
+================================================================================
+SECCIÓN 6 — PRECIOS Y PACKS
+================================================================================
+
+6.1  ¿Cómo mostramos precios en la web?
+     [ ] A) Solo "Solicitar presupuesto" (recomendado al inicio)
+     [ ] B) "Desde X€" por servicio
+     [ ] C) Packs con precio cerrado
+
+6.2  Si hay packs, detallad cada uno (nombre, qué incluye, precio):
+
+     Pack 1: _______________________________________________
+     Incluye: _______________________________________________
+     Precio: _______________________________________________
+
+     Pack 2: _______________________________________________
+     Incluye: _______________________________________________
+     Precio: _______________________________________________
+
+6.3  ¿Os encajan estos rangos en el formulario de presupuesto?
+     [ ] Menos de 500 €
+     [ ] 500 – 1.500 €
+     [ ] 1.500 – 3.000 €
+     [ ] 3.000 – 5.000 €
+     [ ] Más de 5.000 €
+     [ ] Aún no lo sé
+
+6.4  ¿Hay servicios con precio mínimo que no queréis publicar?
+     Respuesta: _______________________________________________
+
+6.5  ¿Aceptáis pagos fraccionados? (solo para saber si lo mencionamos)
+     [ ] Sí    [ ] No
+
+
+================================================================================
+SECCIÓN 7 — PORTFOLIO [CLAVE PARA VENDER]
+================================================================================
+
+7.1  Seleccionad los 10-15 mejores trabajos para la web (enlaces Instagram):
+
+     Proyecto 1:
+     - Enlace Instagram: _______________________________________________
+     - Título: _______________________________________________
+     - Servicios (vídeo/foto/bodas/dron/redes/eventos): _______________
+     - Sector (hostelería/boda/empresa/retail/otro): _________________
+     - ¿Permiso para publicar en web? [ ] Sí  [ ] No
+     - ¿Tenéis archivo HD (MP4/JPG)? [ ] Sí  [ ] No
+
+     Proyecto 2:
+     - Enlace Instagram: _______________________________________________
+     - Título: _______________________________________________
+     - Servicios: _______________________________________________
+     - Sector: _______________________________________________
+     - ¿Permiso? [ ] Sí  [ ] No
+     - ¿Archivo HD? [ ] Sí  [ ] No
+
+     Proyecto 3:
+     - Enlace Instagram: _______________________________________________
+     - Título: _______________________________________________
+     - Servicios: _______________________________________________
+     - Sector: _______________________________________________
+     - ¿Permiso? [ ] Sí  [ ] No
+     - ¿Archivo HD? [ ] Sí  [ ] No
+
+     (Continuar con más proyectos en hoja aparte si hace falta)
+
+7.2  ¿Mostramos nombres de clientes o solo el sector?
+     [ ] Nombre real del cliente
+     [ ] Solo sector (ej. "Restaurante en Valencia")
+     [ ] Depende del proyecto
+
+7.3  ¿Hay proyectos que NO deben aparecer en la web?
+     Respuesta: _______________________________________________
+
+7.4  Testimonios de clientes (texto + nombre + empresa, con permiso):
+
+     Testimonio 1:
+     _______________________________________________
+     — Nombre, Empresa: _______________________________________________
+
+     Testimonio 2:
+     _______________________________________________
+     — Nombre, Empresa: _______________________________________________
+
+
+================================================================================
+SECCIÓN 8 — TEXTOS Y CONTENIDO
+================================================================================
+
+8.1  Describid 24Shoots en 3 frases para alguien que no os conoce:
+     _______________________________________________
+     _______________________________________________
+     _______________________________________________
+
+8.2  ¿Cuándo empezasteis? Historia breve:
+     _______________________________________________
+     _______________________________________________
+
+8.3  ¿Quiénes formáis el equipo? (nombres, roles):
+     _______________________________________________
+
+8.4  ¿Qué os diferencia de otras productoras en Valencia?
+     _______________________________________________
+
+8.5  Logros o números reales que podamos mostrar (solo si son verificables):
+     _______________________________________________
+
+8.6  ¿El eslogan oficial es "Domina el impacto"? ¿Hay otro?
+     Respuesta: _______________________________________________
+
+8.7  Web en español + inglés:
+     [ ] Sí
+     [ ] Solo español
+
+================================================================================
+SECCIÓN 9 — PÚBLICO OBJETIVO Y SEO
+================================================================================
+
+9.1  ¿Cliente ideal? (restaurantes, bodas, empresas, retail, inmobiliaria...)
+     Respuesta: _______________________________________________
+
+9.2  ¿Zona geográfica principal para posicionamiento?
+     Respuesta: _______________________________________________
+
+9.3  ¿Qué buscaría vuestro cliente en Google?
+     Ejemplo: "videógrafo bodas Valencia", "reels restaurante"
+     Respuesta: _______________________________________________
+
+9.4  Competidores que admiráis o de los que queréis diferenciaros (2-3):
+     Respuesta: _______________________________________________
+
+9.5  ¿Queréis aparecer en Google Maps?
+     [ ] Sí    [ ] No    [ ] Ya estamos
+
+
+================================================================================
+SECCIÓN 10 — FUNCIONALIDAD Y MANTENIMIENTO
+================================================================================
+
+10.1  ¿Con qué frecuencia añadiréis proyectos nuevos al portfolio?
+      [ ] Cada semana    [ ] Cada mes    [ ] Cada trimestre    [ ] Cuando haya
+
+10.2  ¿Necesitáis añadir o quitar servicios sin programador?
+      [ ] Sí
+
+10.3  ¿Queréis blog o noticias en el futuro?
+      [ ] Sí    [ ] No    [ ] Más adelante
+
+10.4  ¿Descarga de media kit o dossier desde la web?
+      [ ] Sí    [ ] No
+
+10.5  ¿Integración con Metricool, Mailchimp u otra herramienta?
+      [ ] Ahora    [ ] Después    [ ] No
+
+10.6 ¿Estadísticas de visitas (cuánta gente entra, de dónde)?
+      [ ] Sí    [ ] No por ahora
+
+
+================================================================================
+SECCIÓN 11 — LEGAL Y PRIVACIDAD [OBLIGATORIO ANTES DE PUBLICAR]
+================================================================================
+
+11.1  ¿Tenéis textos legales de un gestor o abogado?
+      [ ] Sí (adjuntar)    [ ] No, usad plantilla con nuestros datos
+
+11.2  Confirmad datos de la sección 1 para aviso legal, privacidad y cookies.
+      [ ] Confirmado
+
+11.3  ¿Usáis cookies de analytics (Google Analytics)?
+      [ ] Sí    [ ] No
+
+11.4  ¿Tratáis datos de menores de edad?
+      [ ] Sí    [ ] No
+
+
+================================================================================
+SECCIÓN 12 — DISPOSITIVOS Y USO
+================================================================================
+
+12.1  ¿Qué porcentaje de clientes os contactan por móvil?
+      Respuesta: _______________________________________________
+
+================================================================================
+ARCHIVOS A ENVIAR (carpeta Drive o WeTransfer)
+================================================================================
+
+  24Shoots-Web/
+  ├── logo.svg o logo.png (alta resolución)
+  ├── logo-negro.png (opcional)
+  ├── logo-blanco.png (opcional)
+  ├── hero-video.mp4 (opcional, 10-30 seg)
+  ├── fotos-equipo/ (opcional)
+  ├── portfolio/ (lista de proyectos o este documento rellenado)
+  ├── textos/ (sobre nosotros, servicios, testimonios)
+  └── legal/ (razón social, CIF, dirección)
+
+
+================================================================================
+MÍNIMO PARA PUBLICAR SIN RIESGO
+================================================================================
+
+  [ ] Logo en alta resolución
+  [ ] WhatsApp Business + email de contacto
+  [ ] Razón social, CIF y dirección fiscal
+  [ ] 6-9 proyectos de portfolio con permiso para publicar
+  [ ] Texto "sobre nosotros" (al menos 1 párrafo)
+  [ ] Confirmación de los 7 servicios
+  [ ] Dominio + acceso al panel DNS (cuando esté disponible)
+  [ ] Revisión de textos legales antes de publicar
+
+
+================================================================================
+FIN DEL CUESTIONARIO
+================================================================================

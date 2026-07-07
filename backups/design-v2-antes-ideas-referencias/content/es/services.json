@@ -1,0 +1,107 @@
+[
+  {
+    "id": "produccion-video",
+    "slug": "produccion-video",
+    "title": "Producción de vídeo",
+    "shortDescription": "Vídeos corporativos, promocionales y narrativos con calidad cinematográfica.",
+    "description": "Desde el concepto hasta la entrega final, creamos piezas audiovisuales que comunican, emocionan y convierten. Spots, vídeos corporativos, promos y contenido de marca.",
+    "icon": "video",
+    "featured": true,
+    "highlights": [
+      "Guion y storyboard",
+      "Rodaje profesional",
+      "Edición y color grading",
+      "Formatos para web y redes"
+    ]
+  },
+  {
+    "id": "fotografia",
+    "slug": "fotografia",
+    "title": "Fotografía",
+    "shortDescription": "Fotografía de producto, retratos, eventos y marca con estética premium.",
+    "description": "Capturamos la esencia de tu marca con imágenes que destacan. Sesiones de producto, retratos corporativos, cobertura de eventos y fotografía editorial.",
+    "icon": "camera",
+    "featured": true,
+    "highlights": [
+      "Sesiones en estudio o exterior",
+      "Retoque profesional",
+      "Entrega optimizada para web",
+      "Dirección de arte"
+    ]
+  },
+  {
+    "id": "contenido-redes",
+    "slug": "contenido-redes",
+    "title": "Contenido para redes",
+    "shortDescription": "Reels, stories y packs de contenido diseñados para engagement y ventas.",
+    "description": "Contenido que para el scroll y genera resultados. Reels, carruseles, stories y packs mensuales adaptados a cada plataforma y audiencia.",
+    "icon": "social",
+    "featured": true,
+    "highlights": [
+      "Reels y short-form",
+      "Calendario editorial",
+      "Adaptación multi-plataforma",
+      "Tendencias y formatos virales"
+    ]
+  },
+  {
+    "id": "community-management",
+    "slug": "community-management",
+    "title": "Community management",
+    "shortDescription": "Gestión integral de redes sociales con estrategia y resultados medibles.",
+    "description": "No solo publicamos: construimos comunidad. Estrategia, creación de contenido, publicación, interacción y reporting mensual.",
+    "icon": "community",
+    "featured": true,
+    "highlights": [
+      "Estrategia de contenido",
+      "Publicación programada",
+      "Gestión de comunidad",
+      "Informes de rendimiento"
+    ]
+  },
+  {
+    "id": "eventos",
+    "slug": "eventos",
+    "title": "Eventos",
+    "shortDescription": "Cobertura audiovisual de eventos corporativos, conciertos y lanzamientos.",
+    "description": "Inmortalizamos tu evento con vídeo y foto profesional. Aftermovies, cobertura en directo, entrevistas y contenido para redes post-evento.",
+    "icon": "event",
+    "featured": true,
+    "highlights": [
+      "Cobertura multi-cámara",
+      "Aftermovie dinámico",
+      "Entrega rápida",
+      "Contenido para redes"
+    ]
+  },
+  {
+    "id": "bodas",
+    "slug": "bodas",
+    "title": "Bodas",
+    "shortDescription": "Vídeo y foto de boda con un estilo cinematográfico y emotivo.",
+    "description": "Cada boda es única. Documentamos vuestro día con sensibilidad y calidad cinematográfica para que reviváis cada momento una y otra vez.",
+    "icon": "wedding",
+    "featured": true,
+    "highlights": [
+      "Vídeo cinematográfico",
+      "Fotografía artística",
+      "Trailer y highlight reel",
+      "Entrega personalizada"
+    ]
+  },
+  {
+    "id": "dron",
+    "slug": "dron",
+    "title": "Dron",
+    "shortDescription": "Tomas aéreas espectaculares para marcas, eventos y proyectos inmobiliarios.",
+    "description": "Perspectivas únicas desde el cielo. Grabación aérea con dron certificado para vídeos corporativos, bodas, eventos y promociones inmobiliarias.",
+    "icon": "drone",
+    "featured": false,
+    "highlights": [
+      "Operador certificado",
+      "4K y estabilización",
+      "Integración con vídeo terrestre",
+      "Permisos y seguros"
+    ]
+  }
+]

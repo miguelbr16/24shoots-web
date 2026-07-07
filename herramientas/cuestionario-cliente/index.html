@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>24Shoots — Brief para la web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#0a0a0a; --card:#141414; --border:#262626; --orange:#ff6b00; --muted:#a3a3a3; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:Inter,system-ui,sans-serif; background:var(--bg); color:#fff; min-height:100vh; }
+    .wrap { max-width:480px; margin:0 auto; padding:24px 20px 48px; }
+    .tag { color:var(--orange); font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; }
+    h1 { font-size:1.5rem; margin:8px 0; }
+    .sub { color:var(--muted); font-size:14px; margin-bottom:24px; line-height:1.5; }
+    .bar { height:4px; background:var(--border); border-radius:99px; margin-bottom:24px; overflow:hidden; }
+    .bar div { height:100%; background:var(--orange); width:0%; transition:.3s; }
+    .step { display:none; } .step.on { display:block; }
+    label { display:block; font-size:13px; font-weight:600; margin-bottom:8px; }
+    input, textarea, select {
+      width:100%; background:var(--card); border:1px solid var(--border); border-radius:12px;
+      padding:14px; color:#fff; font:inherit; font-size:15px; margin-bottom:16px;
+    }
+    input:focus, textarea:focus { outline:none; border-color:var(--orange); }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px; }
+    .chip {
+      border:1px solid var(--border); border-radius:12px; padding:14px 8px; text-align:center;
+      font-size:13px; cursor:pointer; background:var(--card); transition:.2s;
+    }
+    .chip.on { border-color:var(--orange); background:rgba(255,107,0,.12); color:var(--orange); }
+    .chip span { display:block; font-size:22px; margin-bottom:4px; }
+    .row { display:flex; gap:10px; margin-top:8px; }
+    button {
+      flex:1; padding:14px; border:none; border-radius:12px; font:inherit;
+      font-size:15px; font-weight:600; cursor:pointer;
+    }
+    .back { background:var(--border); color:#fff; flex:0 0 56px; }
+    .next { background:var(--orange); color:#000; }
+    .done { text-align:center; padding:40px 0; }
+    .done h2 { font-size:1.5rem; margin:16px 0 8px; }
+    .note { font-size:12px; color:var(--muted); margin-top:16px; line-height:1.5; }
+    .setup { background:rgba(255,107,0,.1); border:1px solid rgba(255,107,0,.3); border-radius:12px; padding:14px; font-size:12px; color:var(--muted); margin-bottom:20px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="tag">Solo para el cliente</p>
+    <h1>Brief web 24Shoots</h1>
+    <p class="sub">3–5 min · Para saber qué queréis en vuestra web · No es la web pública</p>
+    <div class="bar"><div id="prog"></div></div>
+
+    <!-- SOLO TÚ: sustituye YOUR_FORM_ID por tu ID de formspree.io (gratis) -->
+    <form id="f" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+      <div class="step on" data-s="1">
+        <label>¿Cómo te llamas?</label>
+        <input name="nombre" required placeholder="Javier" />
+        <label>WhatsApp (+34)</label>
+        <input name="whatsapp" required type="tel" placeholder="+34 600 000 000" />
+        <label>Email</label>
+        <input name="email" required type="email" placeholder="hola@24shootsmedia.com" />
+        <div class="row"><button type="button" class="next" onclick="go(2)">Siguiente →</button></div>
+      </div>
+
+      <div class="step" data-s="2">
+        <label>¿Qué servicios ofrecéis? (tocad los que apliquen)</label>
+        <div class="grid" id="svc">
+          <div class="chip on" data-v="Vídeo"><span>🎬</span>Vídeo</div>
+          <div class="chip on" data-v="Foto"><span>📸</span>Foto</div>
+          <div class="chip on" data-v="Redes"><span>📱</span>Redes</div>
+          <div class="chip" data-v="Community"><span>💬</span>Community</div>
+          <div class="chip on" data-v="Eventos"><span>🎉</span>Eventos</div>
+          <div class="chip on" data-v="Bodas"><span>💍</span>Bodas</div>
+          <div class="chip" data-v="Dron"><span>🚁</span>Dron</div>
+        </div>
+        <input type="hidden" name="servicios" id="servicios" value="Vídeo, Foto, Redes, Eventos, Bodas" />
+        <label>Servicio estrella (el que más vendéis)</label>
+        <select name="servicio_estrella">
+          <option>Vídeo</option><option>Fotografía</option><option>Redes</option>
+          <option>Eventos</option><option>Bodas</option><option>Dron</option><option>Community</option>
+        </select>
+        <div class="row">
+          <button type="button" class="back" onclick="go(1)">←</button>
+          <button type="button" class="next" onclick="go(3)">Siguiente →</button>
+        </div>
+      </div>
+
+      <div class="step" data-s="3">
+        <label>¿Dónde trabajáis?</label>
+        <select name="zona">
+          <option>Valencia y toda España</option>
+          <option>Solo Valencia</option>
+          <option>Valencia + provincia</option>
+          <option>Internacional</option>
+        </select>
+        <label>¿Cómo mostramos precios?</label>
+        <select name="precios">
+          <option>Solo solicitar presupuesto</option>
+          <option>Desde X€ por servicio</option>
+          <option>Packs con precio</option>
+        </select>
+        <label>Vuestro dominio (si lo tenéis)</label>
+        <input name="dominio" placeholder="ej: 24shoots.com o PENDIENTE" />
+        <div class="row">
+          <button type="button" class="back" onclick="go(2)">←</button>
+          <button type="button" class="next" onclick="go(4)">Siguiente →</button>
+        </div>
+      </div>
+
+      <div class="step" data-s="4">
+        <label>Describid 24Shoots en 2–3 frases</label>
+        <textarea name="descripcion" rows="4" placeholder="Quién sois, qué hacéis, qué os diferencia..."></textarea>
+        <label>Razón social y CIF (para legal, si los tenéis)</label>
+        <input name="razon_social" placeholder="Opcional ahora" />
+        <input name="cif" placeholder="CIF / NIF — opcional" />
+        <label>¿Algo más que debamos saber?</label>
+        <textarea name="notas" rows="2" placeholder="Referencias, cosas que NO queréis, plazos..."></textarea>
+        <p class="note">Logo, fotos y vídeos del portfolio: enviadlos por WhatsApp o Drive después. No hace falta aquí.</p>
+        <div class="row">
+          <button type="button" class="back" onclick="go(3)">←</button>
+          <button type="submit" class="next">Enviar ✓</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="step done" id="thanks" style="display:none">
+      <div style="font-size:48px">✅</div>
+      <h2>¡Enviado!</h2>
+      <p class="sub">Gracias. Revisaremos vuestras respuestas para diseñar la web.</p>
+    </div>
+  </div>
+
+  <script>
+    let step = 1;
+    const chips = document.querySelectorAll('#svc .chip');
+    chips.forEach(c => c.onclick = () => {
+      c.classList.toggle('on');
+      document.getElementById('servicios').value = [...chips].filter(x => x.classList.contains('on')).map(x => x.dataset.v).join(', ');
+    });
+    function go(n) {
+      step = n;
+      document.querySelectorAll('.step[data-s]').forEach(s => s.classList.toggle('on', +s.dataset.s === n));
+      document.getElementById('prog').style.width = ((n-1)/3*100)+'%';
+      window.scrollTo(0,0);
+    }
+    document.getElementById('f').onsubmit = function(e) {
+      if (document.querySelector('form').action.includes('YOUR_FORM_ID')) {
+        e.preventDefault();
+        alert('El desarrollador debe configurar Formspree primero (ver LEEME.txt)');
+        return false;
+      }
+    };
+  </script>
+</body>
+</html>

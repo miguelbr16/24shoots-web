@@ -181,8 +181,10 @@ export function PortfolioCategoryRows({
   serviceTitles,
 }: PortfolioCategoryRowsProps) {
   const [activeItem, setActiveItem] = useState<PortfolioItem | null>(null);
+  const [activeFilter, setActiveFilter] = useState<string>("all");
   const caseLabels = getPortfolioCaseLabels(labels);
   const scrollHint = labels.scrollRow ?? "Desliza para ver más";
+  const filterLabel = labels.filterByLine ?? labels.filterService ?? "Servicio";
 
   const rows = categories.map((category) => ({
     category,
@@ -201,6 +203,10 @@ export function PortfolioCategoryRows({
   }
 
   const visibleRows = rows.filter((r) => r.items.length > 0);
+  const filteredRows =
+    activeFilter === "all"
+      ? visibleRows
+      : visibleRows.filter((r) => r.category.id === activeFilter);
 
   if (visibleRows.length === 0) {
     return <p className="text-sm text-muted">{labels.noResults}</p>;
@@ -208,17 +214,54 @@ export function PortfolioCategoryRows({
 
   return (
     <>
-      {visibleRows.map(({ category, items: rowItems }) => (
-        <CategoryRow
-          key={category.id}
-          title={category.label}
-          items={rowItems}
-          scrollHint={scrollHint}
-          labels={labels}
-          serviceTitles={serviceTitles}
-          onOpen={setActiveItem}
-        />
-      ))}
+      <div className="mb-10 border-b border-border pb-8 md:mb-12">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted">
+          {filterLabel}
+        </p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => setActiveFilter("all")}
+            className={`rounded-full border px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.12em] transition ${
+              activeFilter === "all"
+                ? "border-accent bg-accent text-background"
+                : "border-border bg-surface text-muted hover:border-accent/50 hover:text-foreground"
+            }`}
+          >
+            {labels.filterAll}
+          </button>
+          {visibleRows.map(({ category }) => (
+            <button
+              key={category.id}
+              type="button"
+              onClick={() => setActiveFilter(category.id)}
+              className={`rounded-full border px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.08em] transition ${
+                activeFilter === category.id
+                  ? "border-accent bg-accent text-background"
+                  : "border-border bg-surface text-muted hover:border-accent/50 hover:text-foreground"
+              }`}
+            >
+              {category.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {filteredRows.length === 0 ? (
+        <p className="text-sm text-muted">{labels.noResults}</p>
+      ) : (
+        filteredRows.map(({ category, items: rowItems }) => (
+          <CategoryRow
+            key={category.id}
+            title={category.label}
+            items={rowItems}
+            scrollHint={scrollHint}
+            labels={labels}
+            serviceTitles={serviceTitles}
+            onOpen={setActiveItem}
+          />
+        ))
+      )}
 
       <PortfolioCaseModal
         item={activeItem}

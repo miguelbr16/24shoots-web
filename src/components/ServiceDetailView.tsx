@@ -79,13 +79,18 @@ export function ServiceDetailView({
             <p className="mt-5 text-base leading-relaxed text-muted md:text-lg">
               {service.description}
             </p>
+            <div className="mt-8">
+              <Button href={getRoute(locale, "contact")} showArrow>
+                {pages.services.cta}
+              </Button>
+            </div>
           </div>
 
-          <div className="border border-border bg-surface p-8 md:p-10">
+          <div className="flex flex-col border border-border bg-surface p-8 md:p-10">
             <h2 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
               {pages.services.highlights}
             </h2>
-            <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+            <ul className="mt-6 grid flex-1 gap-4 sm:grid-cols-2 lg:grid-cols-1">
               {service.highlights.map((item, i) => (
                 <li
                   key={item}
@@ -98,6 +103,15 @@ export function ServiceDetailView({
                 </li>
               ))}
             </ul>
+            <div className="mt-8 border-t border-border/60 pt-8">
+              <Button
+                href={getRoute(locale, "contact")}
+                showArrow
+                className="w-full justify-center sm:w-auto"
+              >
+                {pages.services.cta}
+              </Button>
+            </div>
           </div>
         </section>
 

@@ -79,13 +79,9 @@ export function ClientSocialProofSection({
     <section className="relative border-y border-border bg-background">
       <div className="relative overflow-hidden pb-2">
         <div
-          className="relative mx-auto h-[380px] max-w-4xl touch-none select-none md:h-[440px]"
+          className="relative mx-auto h-[420px] max-w-4xl select-none md:h-[480px]"
           role="application"
           aria-label={dragHint}
-          onPointerDown={onPointerDown}
-          onPointerMove={onPointerMove}
-          onPointerUp={endDrag}
-          onPointerCancel={endDrag}
         >
           {/* Headline above the arc */}
           <div className="pointer-events-none relative z-20 px-4 pt-6 text-center md:pt-10">
@@ -105,49 +101,54 @@ export function ClientSocialProofSection({
             </div>
           </div>
 
-          {/* Wheel — bottom half clipped */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 top-[42%] overflow-hidden md:top-[38%]">
-            <div className="absolute left-1/2 top-full h-[min(105vw,580px)] w-[min(105vw,580px)] -translate-x-1/2 -translate-y-[8%]">
+          {/* Wheel — arc visible above the fold */}
+          <div className="absolute inset-x-0 bottom-0 top-[34%] z-[12] overflow-hidden md:top-[32%]">
+            <div
+              className="absolute left-1/2 bottom-0 aspect-square w-[min(94vw,560px)] -translate-x-1/2 translate-y-[54%] touch-none"
+              onPointerDown={onPointerDown}
+              onPointerMove={onPointerMove}
+              onPointerUp={endDrag}
+              onPointerCancel={endDrag}
+            >
               <div
-                className="absolute inset-0 cursor-grab active:cursor-grabbing pointer-events-auto"
+                className="absolute inset-0 cursor-grab active:cursor-grabbing"
                 style={{ transform: `rotate(${rotation}deg)` }}
               >
                 <div
-                  className="absolute inset-[2%] rounded-full border border-border/50"
+                  className="absolute inset-[3%] rounded-full border border-border/60 bg-background/5"
                   aria-hidden
                 />
                 {clients.map((client, i) => {
                   const angle = i * step - 90;
-                  const r = "min(36vw, 240px)";
                   return (
                     <div
                       key={client.id}
-                      className="absolute left-1/2 top-1/2 w-0"
+                      className="absolute left-1/2 top-1/2 h-0 w-0"
                       style={{
-                        transform: `rotate(${angle}deg) translateY(calc(-1 * ${r}))`,
+                        transform: `rotate(${angle}deg) translateY(calc(-1 * min(38vw, 240px)))`,
                       }}
                     >
                       <div
-                        className="absolute left-1/2 top-1/2"
+                        className="absolute left-0 top-0"
                         style={{
                           transform: `rotate(${-(angle + rotation)}deg) translate(-50%, -50%)`,
                         }}
                       >
                         <div
-                          className="flex h-[3.25rem] w-[3.25rem] items-center justify-center overflow-hidden rounded-full border border-black/8 bg-white shadow-[0_10px_32px_rgba(0,0,0,0.5)] md:h-[3.5rem] md:w-[3.5rem]"
+                          className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white shadow-[0_12px_40px_rgba(0,0,0,0.55)] md:h-[3.75rem] md:w-[3.75rem]"
                           title={client.name}
                         >
                           {client.logo ? (
                             <Image
                               src={client.logo}
                               alt={client.name}
-                              width={44}
-                              height={44}
-                              loading="lazy"
-                              className="h-full w-full object-contain p-1.5"
+                              width={56}
+                              height={56}
+                              unoptimized
+                              className="h-full w-full object-contain p-2"
                             />
                           ) : (
-                            <span className="text-[9px] font-bold uppercase tracking-wide text-neutral-800">
+                            <span className="text-[10px] font-bold uppercase tracking-wide text-neutral-800">
                               {label(client)}
                             </span>
                           )}
@@ -161,7 +162,7 @@ export function ClientSocialProofSection({
           </div>
 
           <div
-            className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-t from-surface via-surface/95 to-transparent md:h-40"
+            className="pointer-events-none absolute inset-x-0 bottom-0 z-[14] h-24 bg-gradient-to-t from-surface via-surface/80 to-transparent md:h-28"
             aria-hidden
           />
         </div>

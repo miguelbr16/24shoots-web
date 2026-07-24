@@ -1,0 +1,38 @@
+[
+  {
+    "id": "completo",
+    "slug": "pack-completo",
+    "title": "Pack Completo",
+    "tagline": "Estrategia, community y producción con la misma visión creativa.",
+    "featured": true,
+    "includes": [
+      "Plan de contenido",
+      "Estrategia de contenido",
+      "Seguimiento de mensajes directos",
+      "Contenido para redes sociales",
+      "Creación audiovisual: grabación y edición",
+      "Extra opcional: servicio de dron"
+    ]
+  },
+  {
+    "id": "audiovisual",
+    "slug": "pack-audiovisual",
+    "title": "Pack Audiovisual",
+    "tagline": "Producción y postproducción para alimentar tus canales.",
+    "featured": false,
+    "includes": [
+      "Creación de contenido: grabación y edición",
+      "Extra opcional: servicio de dron"
+    ]
+  },
+  {
+    "id": "community",
+    "slug": "pack-community-management",
+    "title": "Pack Community Management",
+    "tagline": "Gestión profesional de tus redes con criterio de marca.",
+    "featured": false,
+    "includes": [
+      "Gestión de redes sociales"
+    ]
+  }
+]

@@ -5,11 +5,14 @@ import portfolioEs from "../../content/es/portfolio.json";
 import portfolioEn from "../../content/en/portfolio.json";
 import pagesEs from "../../content/es/pages.json";
 import pagesEn from "../../content/en/pages.json";
+import packsEs from "../../content/es/packs.json";
+import packsEn from "../../content/en/packs.json";
 import instagramEs from "../../content/es/instagram.json";
 import instagramEn from "../../content/en/instagram.json";
 import type {
   Locale,
   InstagramPost,
+  Pack,
   PagesContent,
   PortfolioItem,
   Service,
@@ -34,6 +37,11 @@ const pagesByLocale: Record<Locale, PagesContent> = {
 const instagramByLocale: Record<Locale, InstagramPost[]> = {
   es: instagramEs as InstagramPost[],
   en: instagramEn as InstagramPost[],
+};
+
+const packsByLocale: Record<Locale, Pack[]> = {
+  es: packsEs as Pack[],
+  en: packsEn as Pack[],
 };
 
 export function getSiteConfig(): SiteConfig {
@@ -61,6 +69,10 @@ export function getPages(locale: Locale): PagesContent {
 
 export function getInstagramPosts(locale: Locale): InstagramPost[] {
   return instagramByLocale[locale];
+}
+
+export function getPacks(locale: Locale): Pack[] {
+  return packsByLocale[locale];
 }
 
 export function getAlternateLocale(locale: Locale): Locale {

@@ -12,10 +12,12 @@ export async function POST(request: Request) {
       name: body.name,
       phone: body.phone ?? "",
       service: body.service,
+      pack: body.pack ?? "",
       sector: body.sector ?? "",
       date: body.date ?? "",
       budget: body.budget ?? "",
       message: body.message,
+      privacyAccepted: body.privacyAccepted === "yes",
       locale: body.locale ?? "es",
       receivedAt: new Date().toISOString(),
     };

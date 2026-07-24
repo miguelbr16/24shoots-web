@@ -1,20 +1,34 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
-import type { Service } from "@/lib/types";
+import type { Pack, Service } from "@/lib/types";
 import { Button } from "./ui";
 
 interface ContactFormProps {
   services: Service[];
+  packs: Pack[];
   labels: {
     form: Record<string, string>;
     budgetOptions: string[];
     sectorOptions: string[];
   };
   locale: string;
+  privacyHref: string;
+  initialPackSlug?: string;
 }
 
-export function ContactForm({ services, labels, locale }: ContactFormProps) {
+export function ContactForm({
+  services,
+  packs,
+  labels,
+  locale,
+  privacyHref,
+  initialPackSlug,
+}: ContactFormProps) {
+  const defaultPackTitle =
+    packs.find((p) => p.slug === initialPackSlug)?.title ?? "";
+
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
     "idle"
   );
@@ -55,6 +69,9 @@ export function ContactForm({ services, labels, locale }: ContactFormProps) {
     );
   }
 
+  const packLabel = labels.form.pack ?? "Pack";
+  const packNotSure = labels.form.packNotSure ?? "—";
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid gap-6 sm:grid-cols-2">
@@ -79,6 +96,23 @@ export function ContactForm({ services, labels, locale }: ContactFormProps) {
                 {s.title}
               </option>
             ))}
+          </select>
+        </div>
+        <div className="sm:col-span-2">
+          <label className={labelClass}>{packLabel}</label>
+          <select
+            name="pack"
+            defaultValue={defaultPackTitle}
+            className={inputClass}
+            key={defaultPackTitle}
+          >
+            <option value="">—</option>
+            {packs.map((p) => (
+              <option key={p.id} value={p.title}>
+                {p.title}
+              </option>
+            ))}
+            <option value={packNotSure}>{packNotSure}</option>
           </select>
         </div>
         <div>
@@ -110,6 +144,22 @@ export function ContactForm({ services, labels, locale }: ContactFormProps) {
         <div className="sm:col-span-2">
           <label className={labelClass}>{labels.form.message} *</label>
           <textarea name="message" required rows={5} className={inputClass} />
+        </div>
+        <div className="sm:col-span-2">
+          <label className={`${labelClass} !normal-case !tracking-normal`}>
+            <input
+              type="checkbox"
+              name="privacyAccepted"
+              value="yes"
+              required
+              className="mr-3 accent-accent"
+            />
+            {labels.form.privacyAccept}{" "}
+            <Link href={privacyHref} className="text-accent underline-offset-2 hover:underline">
+              {labels.form.privacyPolicyLink}
+            </Link>
+            *
+          </label>
         </div>
       </div>
 

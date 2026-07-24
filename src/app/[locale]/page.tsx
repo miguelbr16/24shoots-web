@@ -5,6 +5,7 @@ import { MediaFilmstrip } from "@/components/MediaFilmstrip";
 import { DifferentiatorSection } from "@/components/DifferentiatorSection";
 import { SectorsBand } from "@/components/SectorsBand";
 import { ProcessSteps } from "@/components/ProcessSteps";
+import { PacksSection } from "@/components/PacksSection";
 import { StatsStrip } from "@/components/StatsStrip";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { PortfolioShowcase } from "@/components/PortfolioShowcase";
@@ -21,6 +22,7 @@ import {
   getPages,
   getPortfolio,
   getServices,
+  getPacks,
   getSiteConfig,
 } from "@/lib/content";
 import { buildMetadata, buildOrganizationJsonLd } from "@/lib/seo";
@@ -51,6 +53,7 @@ export default async function HomePage({
   const site = getSiteConfig();
   const pages = getPages(locale);
   const services = getServices(locale);
+  const packs = getPacks(locale);
   const portfolio = getPortfolio(locale).filter((p) => p.featured).slice(0, 3);
   const instagramPosts = getInstagramPosts(locale);
   const { home } = pages;
@@ -154,12 +157,24 @@ export default async function HomePage({
         </div>
       </section>
 
+      <PacksSection
+        locale={locale}
+        title={home.packsSection.title}
+        subtitle={home.packsSection.subtitle}
+        priceNote={home.packsSection.quoteNote}
+        featuredBadge={home.packsSection.featuredBadge}
+        ctaLabel={home.packsSection.ctaLabel}
+        packs={packs}
+      />
+
       <InstagramGrid
         title={home.instagramSection.title}
         subtitle={home.instagramSection.subtitle}
         handle={instagramHandle}
         profileUrl={site.contact.instagram}
         followLabel={home.instagramSection.followLabel}
+        embedFallback={home.instagramSection.embedFallback}
+        embedCta={home.instagramSection.embedCta}
         posts={instagramPosts}
       />
 

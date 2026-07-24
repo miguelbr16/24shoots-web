@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { AnalyticsScripts } from "@/components/AnalyticsScripts";
 import { CookieBanner } from "@/components/CookieBanner";
 import { WhatsAppFloat } from "@/components/ui";
 import {
@@ -55,10 +56,13 @@ export default async function LocaleLayout({
         message={whatsappMessage}
       />
       <CookieBanner
+        locale={locale}
         message={pages.cookieBanner.message}
         accept={pages.cookieBanner.accept}
         reject={pages.cookieBanner.reject}
+        policyLink={pages.cookieBanner.policyLink}
       />
+      <AnalyticsScripts />
     </>
   );
 }

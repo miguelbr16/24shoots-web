@@ -1,0 +1,36 @@
+24SHOOTS — LEGAL (para el cliente)
+==================================
+
+Páginas legales en la web:
+  /es/aviso-legal   |   /en/legal-notice
+  /es/privacidad    |   /en/privacy
+  /es/cookies       |   /en/cookies
+
+Packs (sin precios, solo presupuesto):
+  /es/packs         |   /en/packs
+
+Antes de producción con datos definitivos:
+
+1) config/site.json
+   - contact.email     → hola@24shootsmedia.com (unificado)
+   - legal.companyName → razón social
+   - legal.cif         → CIF/NIF
+   - legal.address     → dirección fiscal
+   - legal.lastUpdated → fechas mostradas en legal
+
+   Los textos legales sustituyen automáticamente [RAZÓN SOCIAL], [CIF],
+   [DIRECCIÓN FISCAL], [FECHA] y el email desde site.json (ver src/lib/legal-text.ts).
+
+2) Google Analytics (opcional):
+   - Definir NEXT_PUBLIC_GA_MEASUREMENT_ID en Vercel
+   - Solo se carga si el usuario pulsa «Aceptar todas» en el banner
+
+3) Cookies Instagram embed:
+   - Los posts con embed:true solo cargan script de Meta tras aceptar cookies
+   - Hoy el grid usa vídeos locales; embed es para uso futuro
+
+4) Revisión recomendada: gestoría o abogado antes de campañas de pago.
+
+Formulario: casilla obligatoria de aceptación de privacidad (RGPD).
+
+Documentos: legal/CONTENIDO-LEGAL-24SHOOTS-ES.txt, legal/PACKS-24SHOOTS-ES.txt

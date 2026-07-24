@@ -19,6 +19,13 @@
       "title": "Services",
       "subtitle": "Everything you need to master visual impact"
     },
+    "packsSection": {
+      "title": "Packs for brands and businesses",
+      "subtitle": "Three ways to work with us: full-service, production-only, or social management only.",
+      "quoteNote": "No prices on the site — every pack is tailored. Tap «Request a quote» and we'll send a personalised proposal.",
+      "featuredBadge": "Full service",
+      "ctaLabel": "Request a quote"
+    },
     "portfolioSection": {
       "title": "Portfolio",
       "subtitle": "Projects that speak for themselves",
@@ -190,7 +197,9 @@
     "instagramSection": {
       "title": "Behind the lens",
       "subtitle": "Real moments from shoots, events and recent projects.",
-      "followLabel": "Follow"
+      "followLabel": "Follow",
+      "embedFallback": "Embedded Instagram posts (Meta) load only if you accept non-essential cookies in the banner. You can also view everything on our profile.",
+      "embedCta": "View on Instagram"
     },
     "faqSection": {
       "title": "Frequently asked questions",
@@ -203,6 +212,10 @@
         {
           "question": "Do you only do video or also manage social media?",
           "answer": "Both. We can handle production, social content and community management. One team, one visual vision."
+        },
+        {
+          "question": "What packs do you offer?",
+          "answer": "Full Pack (strategy, community, production and optional drone), Audiovisual Pack (filming and editing, drone optional) and Community Management Pack (social management). Scope and frequency are defined with you in the proposal."
         },
         {
           "question": "Do you work outside Valencia?",
@@ -242,6 +255,10 @@
       "email": "Email",
       "phone": "Phone",
       "service": "Service of interest",
+      "pack": "Pack of interest (optional)",
+      "packNotSure": "Not sure yet / Ask us",
+      "privacyAccept": "I have read and accept the",
+      "privacyPolicyLink": "privacy policy",
       "sector": "Sector / client type",
       "date": "Approximate date",
       "budget": "Estimated budget",
@@ -285,6 +302,53 @@
     "caseResult": "Result",
     "close": "Close"
   },
+  "packs": {
+    "title": "Packs for brands and businesses",
+    "subtitle": "Strategy, audiovisual production and community management. No published prices — tailored quotes.",
+    "quoteNote": "Pick the pack that fits or describe your case in the form. We'll reply with scope, timeline and a personalised quote.",
+    "featuredBadge": "Full service",
+    "ctaLabel": "Request a quote",
+    "compareTitle": "Comparison",
+    "compareYes": "Included",
+    "compareNo": "—",
+    "comparisonRows": [
+      {
+        "id": "plan",
+        "label": "Content plan",
+        "packs": { "completo": true, "audiovisual": false, "community": false }
+      },
+      {
+        "id": "strategy",
+        "label": "Content strategy",
+        "packs": { "completo": true, "audiovisual": false, "community": false }
+      },
+      {
+        "id": "dms",
+        "label": "Direct message follow-up",
+        "packs": { "completo": true, "audiovisual": false, "community": false }
+      },
+      {
+        "id": "social-content",
+        "label": "Social media content",
+        "packs": { "completo": true, "audiovisual": false, "community": true }
+      },
+      {
+        "id": "production",
+        "label": "Filming and editing",
+        "packs": { "completo": true, "audiovisual": true, "community": false }
+      },
+      {
+        "id": "drone",
+        "label": "Drone service (optional)",
+        "packs": { "completo": true, "audiovisual": true, "community": false }
+      },
+      {
+        "id": "cm",
+        "label": "Social media management",
+        "packs": { "completo": true, "audiovisual": false, "community": true }
+      }
+    ]
+  },
   "services": {
     "title": "Services",
     "subtitle": "Tailored audiovisual solutions",
@@ -298,6 +362,7 @@
   "nav": {
     "home": "Home",
     "services": "Services",
+    "packs": "Packs",
     "portfolio": "Portfolio",
     "about": "About",
     "contact": "Contact"
@@ -311,20 +376,21 @@
   "legal": {
     "notice": {
       "title": "Legal notice",
-      "content": "In compliance with applicable legislation, the owner of this website is [COMPANY NAME — PENDING], tax ID [TAX ID — PENDING], registered at [REGISTERED ADDRESS — PENDING].\n\nAccess to and use of this website attributes the condition of user and implies acceptance of these terms."
+      "content": "In compliance with Law 34/2002 on Information Society Services and Electronic Commerce (Spain), the following information is provided.\n\nWebsite owner: [COMPANY LEGAL NAME], tax ID [TAX ID], registered address [REGISTERED ADDRESS]. Contact email: hola@24shootsmedia.com. Trading name: 24Shoots.\n\nPurpose: this website provides information about audiovisual production, photography, digital content and related services offered under the 24Shoots brand.\n\nTerms of use: access and use imply acceptance of this legal notice. Users agree to lawful use of the site.\n\nIntellectual property: site content (text, images, videos, logos, design and code) belongs to the owner or licensed third parties. Reproduction or distribution without permission is prohibited. Portfolio work is shown with client authorisation or under service agreements.\n\nLiability: the owner is not liable for service interruptions, viruses or third-party linked content.\n\nApplicable law: Spanish law. Jurisdiction: courts of Valencia, Spain, unless mandatory consumer rules apply."
     },
     "privacy": {
       "title": "Privacy policy",
-      "content": "In accordance with GDPR and applicable data protection law, we inform you that personal data provided through the contact form will be processed by [COMPANY NAME — PENDING] for the purpose of managing your information or quote request.\n\nThe legal basis is your consent. We will retain your data as long as necessary to handle your request. You may exercise your rights by contacting hola@24shootsmedia.com."
+      "content": "Data controller: [COMPANY LEGAL NAME], tax ID [TAX ID], address [REGISTERED ADDRESS], email hola@24shootsmedia.com, brand 24Shoots.\n\nPurposes: (1) manage enquiries via form, email or WhatsApp; (2) communicate about your request; (3) comply with legal obligations; (4) website analytics, only if you accept non-essential cookies.\n\nLegal basis: consent (form, including the privacy policy checkbox, and non-essential cookies); pre-contractual steps; legitimate interest in site security where applicable; legal obligation.\n\nData processed: identity and contact details, project information (service, pack of interest, sector, budget range, message) and technical browsing data (IP, server logs, cookies — see cookie policy).\n\nRetention: as long as needed to handle your request and thereafter as required by law or until you request erasure where applicable.\n\nRecipients: no disclosure except legal obligation or necessary processors (Vercel Inc. hosting, email provider when active, Google Analytics or similar only if accepted). Some processors may be outside the EEA with appropriate safeguards.\n\nWhatsApp: if you use our WhatsApp link or button, you contact us via WhatsApp (Meta Platforms). That processing is also governed by WhatsApp/Meta terms and privacy policy. We only use the data you provide there to handle your enquiry.\n\nRights: access, rectification, erasure, objection, restriction and portability by emailing hola@24shootsmedia.com. You may complain to the Spanish DPA (www.aepd.es).\n\nMinors: not directed at under-14s.\n\nLast updated: [DATE]."
     },
     "cookies": {
       "title": "Cookie policy",
-      "content": "This website uses technical cookies necessary for its operation and, optionally, analytics cookies to improve user experience.\n\nYou can configure or reject non-essential cookies from the cookie banner or your browser settings."
+      "content": "Cookies are small files or identifiers stored on your device when you visit a website. We also use browser localStorage for preferences.\n\nStrictly necessary (no consent required): (1) cookie-consent in localStorage — stores whether you accepted or rejected non-essential cookies; (2) technical cookies from our host (Vercel Inc.) — security, delivery and server logs; (3) language or session preferences where applicable.\n\nAnalytics (optional): Google Analytics (e.g. _ga, _gid), only if you click «Accept all» and NEXT_PUBLIC_GA_MEASUREMENT_ID is configured. Purpose: aggregated visit measurement. You can withdraw consent by clearing site data and choosing «Necessary only».\n\nThird parties (optional): Instagram/Meta (embed.js and embedded posts) — loaded only if you accept non-essential cookies. Links to Instagram or WhatsApp do not set cookies until you interact with those services.\n\nConsent: on first visit choose «Accept all» or «Necessary only». You can change your choice by clearing browser data. More information: www.aepd.es.\n\nContact: hola@24shootsmedia.com. Last updated: [DATE]."
     }
   },
   "cookieBanner": {
-    "message": "We use cookies to improve your experience. You can accept all or only necessary ones.",
+    "message": "We use strictly necessary cookies for the site to work. With your permission, we also use analytics and embedded third-party content. See our",
     "accept": "Accept all",
-    "reject": "Necessary only"
+    "reject": "Necessary only",
+    "policyLink": "cookie policy"
   }
 }

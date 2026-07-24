@@ -26,6 +26,7 @@ export interface SiteConfig {
     companyName: string;
     cif: string;
     address: string;
+    lastUpdated?: Record<Locale, string>;
   };
   logo: string;
   heroVideo?: string | null;
@@ -42,6 +43,21 @@ export interface Service {
   featured: boolean;
   highlights: string[];
   image?: string;
+}
+
+export interface Pack {
+  id: string;
+  slug: string;
+  title: string;
+  tagline: string;
+  featured: boolean;
+  includes: string[];
+}
+
+export interface PackComparisonRow {
+  id: string;
+  label: string;
+  packs: Record<string, boolean>;
 }
 
 export interface PortfolioItem {
@@ -110,6 +126,13 @@ export interface PagesContent {
       image: string;
     };
     servicesSection: { title: string; subtitle: string };
+    packsSection: {
+      title: string;
+      subtitle: string;
+      quoteNote: string;
+      featuredBadge: string;
+      ctaLabel: string;
+    };
     portfolioSection: { title: string; subtitle: string; featuredLabel: string };
     whySection: {
       title: string;
@@ -132,7 +155,13 @@ export interface PagesContent {
     marqueeText: string;
     marqueeMedia?: string[];
     metadataTicker?: string[];
-    instagramSection: { title: string; subtitle: string; followLabel: string };
+    instagramSection: {
+      title: string;
+      subtitle: string;
+      followLabel: string;
+      embedFallback: string;
+      embedCta: string;
+    };
     faqSection: {
       title: string;
       subtitle: string;
@@ -152,9 +181,21 @@ export interface PagesContent {
     form: Record<string, string>;
     budgetOptions: string[];
     sectorOptions: string[];
+    packOptions?: string[];
   };
   portfolio: Record<string, string>;
   services: Record<string, string>;
+  packs: {
+    title: string;
+    subtitle: string;
+    quoteNote: string;
+    featuredBadge: string;
+    ctaLabel: string;
+    compareTitle: string;
+    compareYes: string;
+    compareNo: string;
+    comparisonRows: PackComparisonRow[];
+  };
   nav: Record<string, string>;
   footer: Record<string, string>;
   legal: {
@@ -162,5 +203,10 @@ export interface PagesContent {
     privacy: { title: string; content: string };
     cookies: { title: string; content: string };
   };
-  cookieBanner: { message: string; accept: string; reject: string };
+  cookieBanner: {
+    message: string;
+    accept: string;
+    reject: string;
+    policyLink: string;
+  };
 }

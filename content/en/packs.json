@@ -1,0 +1,38 @@
+[
+  {
+    "id": "completo",
+    "slug": "pack-completo",
+    "title": "Full Pack",
+    "tagline": "Strategy, community and production with one creative vision.",
+    "featured": true,
+    "includes": [
+      "Content plan",
+      "Content strategy",
+      "Direct message follow-up",
+      "Social media content",
+      "Audiovisual creation: filming and editing",
+      "Optional add-on: drone service"
+    ]
+  },
+  {
+    "id": "audiovisual",
+    "slug": "pack-audiovisual",
+    "title": "Audiovisual Pack",
+    "tagline": "Production and post-production to fuel your channels.",
+    "featured": false,
+    "includes": [
+      "Content creation: filming and editing",
+      "Optional add-on: drone service"
+    ]
+  },
+  {
+    "id": "community",
+    "slug": "pack-community-management",
+    "title": "Community Management Pack",
+    "tagline": "Professional social management with brand consistency.",
+    "featured": false,
+    "includes": [
+      "Social media management"
+    ]
+  }
+]

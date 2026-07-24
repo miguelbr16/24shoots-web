@@ -8,7 +8,7 @@
     "es": "Producción audiovisual, fotografía y contenido para redes en Valencia. Vídeo, bodas, eventos, dron y community management.",
     "en": "Audiovisual production, photography and social content in Valencia. Video, weddings, events, drone and community management."
   },
-  "url": "https://24shoots.vercel.app",
+  "url": "https://24shoots-web.vercel.app",
   "locale": {
     "default": "es",
     "supported": ["es", "en"]
@@ -25,7 +25,7 @@
   },
   "contact": {
     "whatsapp": "+34638486622",
-    "email": "mbrborrasroig@gmail.com",
+    "email": "hola@24shootsmedia.com",
     "instagram": "https://www.instagram.com/24shootsmedia/",
     "location": {
       "es": "Valencia, España",
@@ -35,7 +35,11 @@
   "legal": {
     "companyName": "[RAZÓN SOCIAL — PENDIENTE]",
     "cif": "[CIF — PENDIENTE]",
-    "address": "[DIRECCIÓN FISCAL — PENDIENTE]"
+    "address": "[DIRECCIÓN FISCAL — PENDIENTE]",
+    "lastUpdated": {
+      "es": "julio de 2026",
+      "en": "July 2026"
+    }
   },
   "logo": "/logo.svg",
   "heroVideo": "/imagenes_insta/ig-reel-2.mp4",

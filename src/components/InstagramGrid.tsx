@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import { useCookieConsent } from "@/hooks/useCookieConsent";
 import { SectionHeading } from "./ui";
 import type { InstagramPost } from "@/lib/types";
 
@@ -12,6 +13,8 @@ interface InstagramGridProps {
   handle: string;
   profileUrl: string;
   followLabel: string;
+  embedFallback: string;
+  embedCta: string;
   posts: InstagramPost[];
 }
 
@@ -103,8 +106,21 @@ function MediaTile({
   );
 }
 
-function EmbedTile({ post, large }: { post: InstagramPost; large?: boolean }) {
+function EmbedTile({
+  post,
+  large,
+  embedFallback,
+  embedCta,
+}: {
+  post: InstagramPost;
+  large?: boolean;
+  embedFallback: string;
+  embedCta: string;
+}) {
+  const { allowsMarketing, ready } = useCookieConsent();
+
   useEffect(() => {
+    if (!ready || !allowsMarketing) return;
     const existing = document.querySelector('script[src*="instagram.com/embed.js"]');
     if (existing) {
       // @ts-expect-error instgrm global from Instagram embed script
@@ -115,7 +131,35 @@ function EmbedTile({ post, large }: { post: InstagramPost; large?: boolean }) {
     script.src = "https://www.instagram.com/embed.js";
     script.async = true;
     document.body.appendChild(script);
-  }, [post.url]);
+  }, [post.url, ready, allowsMarketing]);
+
+  if (!ready) {
+    return (
+      <div
+        className={`flex aspect-square items-center justify-center bg-media ${large ? "col-span-2 row-span-2" : ""}`}
+      />
+    );
+  }
+
+  if (!allowsMarketing) {
+    return (
+      <div
+        className={`flex aspect-square flex-col items-center justify-center gap-4 border border-border bg-surface p-6 text-center ${
+          large ? "col-span-2 row-span-2" : ""
+        }`}
+      >
+        <p className="text-xs leading-relaxed text-muted">{embedFallback}</p>
+        <Link
+          href={post.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[10px] font-semibold uppercase tracking-widest text-accent hover:underline"
+        >
+          {embedCta}
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -137,6 +181,8 @@ export function InstagramGrid({
   handle,
   profileUrl,
   followLabel,
+  embedFallback,
+  embedCta,
   posts,
 }: InstagramGridProps) {
   return (
@@ -157,7 +203,13 @@ export function InstagramGrid({
         <div className="grid grid-cols-2 auto-rows-fr gap-px bg-border md:grid-cols-4">
           {posts.map((post, i) =>
             post.embed ? (
-              <EmbedTile key={post.id} post={post} large={i === 0} />
+              <EmbedTile
+                key={post.id}
+                post={post}
+                large={i === 0}
+                embedFallback={embedFallback}
+                embedCta={embedCta}
+              />
             ) : (
               <MediaTile key={post.id} post={post} large={i === 0} />
             )

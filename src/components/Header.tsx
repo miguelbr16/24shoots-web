@@ -51,6 +51,7 @@ export function Header({
   const links = [
     { href: getHomeRoute(locale), label: nav.home },
     { href: getRoute(locale, "services"), label: nav.services },
+    { href: getRoute(locale, "packs"), label: nav.packs },
     { href: getRoute(locale, "portfolio"), label: nav.portfolio },
     { href: getRoute(locale, "about"), label: nav.about },
     { href: getRoute(locale, "contact"), label: nav.contact },

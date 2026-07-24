@@ -1,5 +1,5 @@
 import { LegalContent, generateLegalMetadata } from "@/components/LegalPage";
-import { getPages } from "@/lib/content";
+import { resolveLegalContent } from "@/lib/legal-text";
 import { isValidLocale } from "@/lib/i18n";
 import { notFound } from "next/navigation";
 import type { Locale } from "@/lib/types";
@@ -21,6 +21,6 @@ export default async function PrivacyPage({
 }) {
   const { locale: localeParam } = await params;
   if (!isValidLocale(localeParam)) notFound();
-  const { legal } = getPages(localeParam as Locale);
-  return <LegalContent title={legal.privacy.title} content={legal.privacy.content} />;
+  const { title, content } = resolveLegalContent(localeParam as Locale, "privacy");
+  return <LegalContent title={title} content={content} />;
 }

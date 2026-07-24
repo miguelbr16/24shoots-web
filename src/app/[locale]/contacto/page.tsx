@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import { ContactForm } from "@/components/ContactForm";
 import { SectionHeading } from "@/components/ui";
-import { getPages, getServices, getSiteConfig } from "@/lib/content";
+import { getPages, getServices, getPacks, getSiteConfig } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
-import { isValidLocale } from "@/lib/i18n";
+import { getRoute, isValidLocale } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
 
 export async function generateMetadata({
@@ -25,11 +25,15 @@ export async function generateMetadata({
 
 export default async function ContactoPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ pack?: string }>;
 }) {
   const { locale: localeParam } = await params;
   if (!isValidLocale(localeParam)) notFound();
+
+  const { pack: packSlug } = await searchParams;
 
   const locale = localeParam as Locale;
   const pages = getPages(locale);
@@ -62,6 +66,9 @@ export default async function ContactoPage({
 
       <ContactForm
         services={getServices(locale)}
+        packs={getPacks(locale)}
+        initialPackSlug={packSlug}
+        privacyHref={getRoute(locale, "privacy")}
         labels={{
           form: pages.contact.form,
           budgetOptions: pages.contact.budgetOptions,

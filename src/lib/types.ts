@@ -160,6 +160,7 @@ export interface PagesContent {
     clientsSection: {
       headline: string;
       headlineAccent: string;
+      headlineBrand?: string;
       subline: string;
       dragHint: string;
       privacyNote: string;

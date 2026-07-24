@@ -145,10 +145,11 @@
       { "value": "24h", "label": "Typical response time" }
     ],
     "clientsSection": {
-      "headline": "+30 clients",
-      "headlineAccent": "and hundreds of private clients",
-      "subline": "Featured institutions, businesses and brands that trust 24Shoots.",
-      "dragHint": "Drag the wheel to explore",
+      "headline": "+30 clients with",
+      "headlineAccent": "mindset",
+      "headlineBrand": "24Shoots",
+      "subline": "Institutions, brands and businesses that trust our visual standard.",
+      "dragHint": "Hover to pause the wheel",
       "privacyNote": "Only featured corporate or institutional clients (with permission). Private clients are not shown on the wheel.",
       "ctaLabel": "Request a quote"
     },

@@ -222,6 +222,7 @@ export default async function HomePage({
         clients={featuredClients}
         headline={home.clientsSection.headline}
         headlineAccent={home.clientsSection.headlineAccent}
+        headlineBrand={home.clientsSection.headlineBrand}
         subline={home.clientsSection.subline}
         dragHint={home.clientsSection.dragHint}
         privacyNote={home.clientsSection.privacyNote}

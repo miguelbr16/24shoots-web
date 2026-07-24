@@ -45,6 +45,14 @@ npm run new-site -- nombre-cliente
 3. Cuando tengas dominio → Settings → Domains → añade tu dominio
 4. Actualiza `config/site.json` → `url`
 
+**24Shoots (actual):** [24shoots-web.vercel.app](https://24shoots-web.vercel.app/es) — deploy automático desde `main`.
+
+## Documentación de avances
+
+Resumen funcional, funnel, rueda de clientes, portfolio y commits recientes:
+
+→ [`docs/AVANCES-2026-07-24.md`](docs/AVANCES-2026-07-24.md)
+
 ## Formulario de contacto
 
 El MVP registra envíos en consola del servidor. Para producción, conecta Resend o SendGrid en `src/app/api/contact/route.ts`.

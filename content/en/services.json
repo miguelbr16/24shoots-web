@@ -1,114 +1,162 @@
 [
   {
-    "id": "produccion-video",
-    "slug": "video-production",
-    "title": "Video production",
-    "shortDescription": "Spots, corporate films and narrative pieces with cinema-grade edit, colour and sound.",
-    "description": "From concept to final delivery, we create audiovisual pieces that communicate, engage and convert. Spots, corporate videos, promos and brand content.",
-    "icon": "video",
-    "image": "/imagenes_insta/ig-photo-3.jpg",
-    "featured": true,
-    "highlights": [
-      "Creative script and direction",
-      "Multi-camera filming",
-      "Cinematic colour grading",
-      "Masters + web and social cuts"
-    ]
-  },
-  {
-    "id": "fotografia",
-    "slug": "photography",
-    "title": "Photography",
-    "shortDescription": "Product, events, portraits and brand imagery ready for web, catalogues and campaigns.",
-    "description": "We capture your brand's essence with standout imagery. Product shoots, corporate portraits, event coverage and editorial photography.",
-    "icon": "camera",
-    "image": "/imagenes_insta/ig-photo-5.jpg",
-    "featured": true,
-    "highlights": [
-      "Studio or on location",
-      "Retouch and visual consistency",
-      "Delivery optimized per channel",
-      "On-set art direction"
-    ]
-  },
-  {
-    "id": "contenido-redes",
-    "slug": "social-content",
-    "title": "Social content",
-    "shortDescription": "Reels and monthly packs built to stop the scroll and drive enquiries.",
-    "description": "Content that stops the scroll and drives results. Reels, carousels, stories and monthly packs tailored to each platform and audience.",
-    "icon": "social",
-    "image": "/imagenes_insta/ig-photo-4.jpg",
-    "featured": true,
-    "highlights": [
-      "Vertical reels and short-form",
-      "Editorial calendar",
-      "Hooks and viral formats",
-      "Instagram / TikTok adaptation"
-    ]
-  },
-  {
-    "id": "community-management",
-    "slug": "community-management",
-    "title": "Community management",
-    "shortDescription": "Strategy, publishing and engagement with a coherent visual line month after month.",
-    "description": "We don't just post — we build community. Strategy, content creation, publishing, engagement and monthly reporting.",
-    "icon": "community",
-    "image": "/imagenes_insta/ig-photo-2.jpg",
-    "featured": true,
-    "highlights": [
-      "Monthly content plan",
-      "Publishing and community",
-      "Performance reports",
-      "Same team that produces"
-    ]
-  },
-  {
-    "id": "eventos",
-    "slug": "events",
-    "title": "Events",
-    "shortDescription": "Corporate, concerts, launches and celebrations — pro coverage with fast delivery.",
-    "description": "We professionalize your event's image: corporate, galas, concerts, trade shows and brand launches. Multi-camera video, photo, aftermovie and social clips from one team.",
+    "id": "eventos-corporativos",
+    "slug": "corporate-events",
+    "title": "Corporate events",
+    "shortDescription": "Conferences, galas, launches and team events with video, photo and fast delivery.",
+    "description": "We elevate how your corporate event looks on camera: multi-camera coverage, clean audio, aftermovies and clips ready for LinkedIn and newsletters — one team end to end.",
     "icon": "event",
     "image": "/imagenes_insta/ig-photo-3.jpg",
     "featured": true,
     "highlights": [
-      "Multi-cam and pro audio",
-      "Dynamic aftermovie",
-      "Express delivery",
+      "Coverage plan by phase",
+      "Aftermovie and short cuts",
+      "Agreed express delivery",
       "Post-event reels"
     ]
   },
   {
-    "id": "bodas",
-    "slug": "weddings",
-    "title": "Weddings",
-    "shortDescription": "Emotional, cinematic photo and video delivered with care.",
-    "description": "Every wedding is unique. We document your day with sensitivity and cinematic quality so you can relive every moment again and again.",
+    "id": "contenido-marca",
+    "slug": "brand-content",
+    "title": "Brand content",
+    "shortDescription": "Reels, spots and visual pieces that strengthen your identity on web and social.",
+    "description": "Content built for your brand, not generic templates. We shoot, edit and adapt formats so every piece matches your tone and commercial goals.",
+    "icon": "video",
+    "image": "/imagenes_insta/ig-photo-4.jpg",
+    "featured": true,
+    "highlights": [
+      "Consistent visual line",
+      "Reels and vertical formats",
+      "Product or space photography",
+      "Masters for web and social"
+    ]
+  },
+  {
+    "id": "documental-reportaje",
+    "slug": "documentary-b2b",
+    "title": "Documentary & B2B reporting",
+    "shortDescription": "Real company stories, processes and teams with cinematic narrative.",
+    "description": "Medium or long-form pieces that humanise B2B brands: interviews, process footage, careful grading and versions for trade shows, web and sales decks.",
+    "icon": "video",
+    "image": "/imagenes_insta/ig-photo-3.jpg",
+    "featured": true,
+    "highlights": [
+      "Script and story structure",
+      "Interviews and B-roll",
+      "Cinematic colour grading",
+      "Cuts for campaigns"
+    ]
+  },
+  {
+    "id": "videoclip-musical",
+    "slug": "music-video",
+    "title": "Music video & musical production",
+    "shortDescription": "Music videos, teasers and promo content for artists and labels.",
+    "description": "Music-led production with a clear look: storyboard, direction, shoot and edit locked to the track. We deliver the full video, vertical teasers and press assets.",
+    "icon": "video",
+    "image": "/imagenes_insta/ig-photo-2.jpg",
+    "featured": true,
+    "highlights": [
+      "Visual concept upfront",
+      "Sync to the master track",
+      "Social teasers",
+      "Promo photography"
+    ]
+  },
+  {
+    "id": "bodas-celebraciones",
+    "slug": "weddings-celebrations",
+    "title": "Weddings & celebrations",
+    "shortDescription": "Emotional, cinematic video and photo with careful, handcrafted delivery.",
+    "description": "We document weddings and family celebrations with sensitivity and cinema-grade quality. Highlight films, trailers, photo galleries and same-day reels.",
     "icon": "wedding",
     "image": "/imagenes_insta/ig-photo-1.jpg",
     "featured": true,
     "highlights": [
-      "Highlight film + trailer",
-      "Artistic photography",
-      "Music and narrative pacing",
-      "Personalized delivery"
+      "Two operators on key days",
+      "Highlight + trailer",
+      "Music-driven narrative",
+      "Agreed delivery timeline"
     ]
   },
   {
-    "id": "dron",
-    "slug": "drone",
-    "title": "Drone",
-    "shortDescription": "4K aerial shots integrated into brand, event and real estate video.",
-    "description": "Unique perspectives from the sky. Certified drone aerial filming for corporate videos, weddings, events and real estate promotions.",
+    "id": "fiestas-aftermovies",
+    "slug": "parties-aftermovies",
+    "title": "Parties & aftermovies",
+    "shortDescription": "Club nights and private parties with dynamic edits and a current look.",
+    "description": "Agile coverage in tough lighting. Aftermovies, vertical reels and pieces that capture the energy of the night without sacrificing image quality.",
+    "icon": "event",
+    "image": "/imagenes_insta/ig-photo-5.jpg",
+    "featured": true,
+    "highlights": [
+      "Edit locked to the music",
+      "9:16 and 16:9 formats",
+      "Fast post-event delivery",
+      "Club / flash aesthetics"
+    ]
+  },
+  {
+    "id": "fallas-tradicion",
+    "slug": "fallas-valencia",
+    "title": "Fallas & Valencian tradition",
+    "shortDescription": "Monuments, mascletàs, offering and tradition with a local crew and fallas deadlines.",
+    "description": "We know the fallas calendar and logistics. Coverage for commissions, institutions and brands that want to tell Valencian tradition with premium imagery.",
+    "icon": "event",
+    "image": "/imagenes_insta/ig-photo-3.jpg",
+    "featured": true,
+    "highlights": [
+      "Plan by acts and milestones",
+      "Drone integration when allowed",
+      "Express delivery on key dates",
+      "Social and press assets"
+    ]
+  },
+  {
+    "id": "proyectos-personalizados",
+    "slug": "custom-projects",
+    "title": "Custom projects",
+    "shortDescription": "Open briefs, art, fashion or hybrid photo + video made to measure.",
+    "description": "When the project does not fit a standard box. Co-creative direction, prototypes and multiple deliverables with a single point of contact.",
+    "icon": "camera",
+    "image": "/imagenes_insta/ig-photo-1.jpg",
+    "featured": true,
+    "highlights": [
+      "Brief and prototypes first",
+      "Mixed formats",
+      "Master files",
+      "Flexible schedule"
+    ]
+  },
+  {
+    "id": "campanas-pago",
+    "slug": "paid-campaigns",
+    "title": "Paid campaigns",
+    "shortDescription": "Creatives for Meta, TikTok and Google with A/B-ready variations.",
+    "description": "We shoot for ads: modular hooks, 15s/30s durations, vertical and square ratios, and organised delivery so your media team can launch without friction.",
+    "icon": "social",
+    "image": "/imagenes_insta/ig-photo-4.jpg",
+    "featured": true,
+    "highlights": [
+      "Multiple hooks per shoot day",
+      "Standard ad formats",
+      "Media-ready file naming",
+      "Iterate with performance data"
+    ]
+  },
+  {
+    "id": "produccion-aerea-dron",
+    "slug": "aerial-drone",
+    "title": "Aerial production (drone)",
+    "shortDescription": "4K aerial shots integrated into brand films, events and real estate.",
+    "description": "Certified operator, flight plan and stabilised shots that match ground footage. Permits, insurance and unified colour with the rest of the piece.",
     "icon": "drone",
     "image": "/imagenes_insta/ig-photo-2.jpg",
-    "featured": false,
+    "featured": true,
     "highlights": [
       "Certified operator",
-      "Stabilized 4K",
-      "Ground video integration",
-      "Permits and insurance"
+      "Stabilised 4K",
+      "Integration with ground video",
+      "Regulations and insurance"
     ]
   }
 ]

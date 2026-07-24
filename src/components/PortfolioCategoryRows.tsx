@@ -10,7 +10,7 @@ import { ShotMetadata } from "./ShotMetadata";
 
 interface PortfolioCategoryRowsProps {
   items: PortfolioItem[];
-  sectors: Sector[];
+  categories: Sector[];
   locale: Locale;
   labels: Record<string, string>;
   serviceTitles: Record<string, string>;
@@ -175,7 +175,7 @@ function CategoryRow({
 
 export function PortfolioCategoryRows({
   items,
-  sectors,
+  categories,
   locale,
   labels,
   serviceTitles,
@@ -184,16 +184,18 @@ export function PortfolioCategoryRows({
   const caseLabels = getPortfolioCaseLabels(labels);
   const scrollHint = labels.scrollRow ?? "Desliza para ver más";
 
-  const rows = sectors.map((sector) => ({
-    sector,
-    items: items.filter((item) => item.sectors.includes(sector.id)),
+  const rows = categories.map((category) => ({
+    category,
+    items: items.filter((item) => item.categories?.includes(category.id)),
   }));
 
   const listed = new Set(rows.flatMap((r) => r.items.map((i) => i.id)));
-  const uncategorized = items.filter((item) => !listed.has(item.id));
+  const uncategorized = items.filter(
+    (item) => !item.categories?.length || !listed.has(item.id)
+  );
   if (uncategorized.length > 0) {
     rows.push({
-      sector: { id: "otros", label: labels.categoryOther ?? "Otros" },
+      category: { id: "otros", label: labels.categoryOther ?? "Otros" },
       items: uncategorized,
     });
   }
@@ -206,10 +208,10 @@ export function PortfolioCategoryRows({
 
   return (
     <>
-      {visibleRows.map(({ sector, items: rowItems }) => (
+      {visibleRows.map(({ category, items: rowItems }) => (
         <CategoryRow
-          key={sector.id}
-          title={sector.label}
+          key={category.id}
+          title={category.label}
           items={rowItems}
           scrollHint={scrollHint}
           labels={labels}

@@ -49,7 +49,7 @@ export default async function ServiceDetailEnPage({
     <ServiceDetailView
       service={service}
       locale={locale}
-      pages={{ services: pages.services, nav: pages.nav, sectors: pages.sectors }}
+      pages={{ services: pages.services, nav: pages.nav, sectors: pages.portfolioCategories }}
       relatedProjects={relatedProjects}
     />
   );

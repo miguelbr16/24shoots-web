@@ -1,10 +1,15 @@
 {
-  "sectors": [
-    { "id": "hospitality", "label": "Hospitality" },
-    { "id": "weddings", "label": "Weddings" },
-    { "id": "business", "label": "Business" },
-    { "id": "retail", "label": "Retail" },
-    { "id": "real-estate", "label": "Real estate" }
+  "portfolioCategories": [
+    { "id": "eventos-corporativos", "label": "Corporate events" },
+    { "id": "contenido-marca", "label": "Brand content" },
+    { "id": "documental-reportaje", "label": "Documentary & B2B reportage" },
+    { "id": "videoclip-musical", "label": "Music video & production" },
+    { "id": "bodas-celebraciones", "label": "Weddings & celebrations" },
+    { "id": "fiestas-aftermovies", "label": "Parties & aftermovies" },
+    { "id": "fallas-tradicion", "label": "Fallas & Valencian tradition" },
+    { "id": "proyectos-personalizados", "label": "Custom projects" },
+    { "id": "campanas-pago", "label": "Paid campaigns" },
+    { "id": "produccion-aerea-dron", "label": "Aerial production (drone)" }
   ],
   "home": {
     "hero": {
@@ -63,13 +68,13 @@
         },
         {
           "instead": "Corporate-only or one client type",
-          "with": "Weddings, hospitality, retail, business and real estate"
+          "with": "Corporate, brand, weddings, Fallas, music and paid campaigns — one team"
         }
       ],
       "pillars": [
         {
-          "title": "7 disciplines, one vision",
-          "description": "Video, photo, social, community, events, weddings and drone under the same visual and creative standard."
+          "title": "10 production lines, one vision",
+          "description": "From corporate events to drone and paid media, with the same visual standard."
         },
         {
           "title": "From idea to post",
@@ -92,7 +97,7 @@
       ]
     },
     "sectorsSection": {
-      "title": "Sectors we work with"
+      "title": "Production lines"
     },
     "beforeAfterSection": {
       "title": "From RAW to impact",

@@ -1,114 +1,162 @@
 [
   {
-    "id": "produccion-video",
-    "slug": "produccion-video",
-    "title": "Producción de vídeo",
-    "shortDescription": "Spots, corporativos y piezas narrativas con montaje, color y sonido a nivel cine.",
-    "description": "Desde el concepto hasta la entrega final, creamos piezas audiovisuales que comunican, emocionan y convierten. Spots, vídeos corporativos, promos y contenido de marca.",
-    "icon": "video",
-    "image": "/imagenes_insta/ig-photo-3.jpg",
-    "featured": true,
-    "highlights": [
-      "Guion y dirección creativa",
-      "Rodaje multicámara",
-      "Color grading cinematográfico",
-      "Masters + versiones para web y redes"
-    ]
-  },
-  {
-    "id": "fotografia",
-    "slug": "fotografia",
-    "title": "Fotografía",
-    "shortDescription": "Producto, eventos, retrato y marca. Imágenes listas para web, catálogo y campañas.",
-    "description": "Capturamos la esencia de tu marca con imágenes que destacan. Sesiones de producto, retratos corporativos, cobertura de eventos y fotografía editorial.",
-    "icon": "camera",
-    "image": "/imagenes_insta/ig-photo-5.jpg",
-    "featured": true,
-    "highlights": [
-      "Estudio o exterior",
-      "Retoque y unificación visual",
-      "Entrega optimizada para cada canal",
-      "Dirección de arte en set"
-    ]
-  },
-  {
-    "id": "contenido-redes",
-    "slug": "contenido-redes",
-    "title": "Contenido para redes",
-    "shortDescription": "Reels y packs mensuales pensados para parar el scroll y generar consultas.",
-    "description": "Contenido que para el scroll y genera resultados. Reels, carruseles, stories y packs mensuales adaptados a cada plataforma y audiencia.",
-    "icon": "social",
-    "image": "/imagenes_insta/ig-photo-4.jpg",
-    "featured": true,
-    "highlights": [
-      "Reels vertical y short-form",
-      "Calendario editorial",
-      "Hooks y formatos virales",
-      "Adaptación Instagram / TikTok"
-    ]
-  },
-  {
-    "id": "community-management",
-    "slug": "community-management",
-    "title": "Community management",
-    "shortDescription": "Estrategia, publicación e interacción con una línea visual coherente mes a mes.",
-    "description": "No solo publicamos: construimos comunidad. Estrategia, creación de contenido, publicación, interacción y reporting mensual.",
-    "icon": "community",
-    "image": "/imagenes_insta/ig-photo-2.jpg",
-    "featured": true,
-    "highlights": [
-      "Plan de contenido mensual",
-      "Publicación y community",
-      "Informes de rendimiento",
-      "Mismo equipo que produce"
-    ]
-  },
-  {
-    "id": "eventos",
-    "slug": "eventos",
-    "title": "Eventos",
-    "shortDescription": "Corporativos, conciertos, lanzamientos y celebraciones — cobertura pro con entrega rápida.",
-    "description": "Profesionalizamos la imagen de tu evento: corporativos, galas, conciertos, ferias y lanzamientos de marca. Vídeo multicámara, foto, aftermovie y clips para redes con el mismo equipo de principio a fin.",
+    "id": "eventos-corporativos",
+    "slug": "eventos-corporativos",
+    "title": "Eventos corporativos",
+    "shortDescription": "Congresos, galas, presentaciones y team building con vídeo, foto y entrega express.",
+    "description": "Profesionalizamos la imagen de tu evento corporativo: multicámara, audio limpio, aftermovie y clips listos para LinkedIn y newsletter. Un equipo de principio a fin, con plazos acordados antes del rodaje.",
     "icon": "event",
     "image": "/imagenes_insta/ig-photo-3.jpg",
     "featured": true,
     "highlights": [
-      "Multicámara y audio pro",
-      "Aftermovie dinámico",
-      "Entrega express",
+      "Plan de cobertura por fases",
+      "Aftermovie y resúmenes cortos",
+      "Entrega express acordada",
       "Reels post-evento"
     ]
   },
   {
-    "id": "bodas",
-    "slug": "bodas",
-    "title": "Bodas",
+    "id": "contenido-marca",
+    "slug": "contenido-marca",
+    "title": "Contenido de marca",
+    "shortDescription": "Reels, spots y piezas visuales que refuerzan tu identidad en web y redes.",
+    "description": "Contenido pensado para tu marca, no plantillas genéricas. Rodamos, editamos y adaptamos formatos para que cada pieza encaje con tu tono y tus objetivos comerciales.",
+    "icon": "video",
+    "image": "/imagenes_insta/ig-photo-4.jpg",
+    "featured": true,
+    "highlights": [
+      "Línea visual coherente",
+      "Reels y formatos vertical",
+      "Foto de producto o espacio",
+      "Masters para web y RRSS"
+    ]
+  },
+  {
+    "id": "documental-reportaje",
+    "slug": "documental-reportaje",
+    "title": "Documental & reportaje (B2B)",
+    "shortDescription": "Historias reales de empresa, procesos y equipos con narrativa cinematográfica.",
+    "description": "Piezas largas o medias que humanizan tu marca B2B: entrevistas, metraje de proceso, grading cuidado y versiones para ferias, web y presentaciones comerciales.",
+    "icon": "video",
+    "image": "/imagenes_insta/ig-photo-3.jpg",
+    "featured": true,
+    "highlights": [
+      "Guion y estructura narrativa",
+      "Entrevistas y B-roll",
+      "Color grading cinematográfico",
+      "Cortes para campañas"
+    ]
+  },
+  {
+    "id": "videoclip-musical",
+    "slug": "videoclip-musical",
+    "title": "Videoclip & producción musical",
+    "shortDescription": "Videoclips, teasers y contenido promo para artistas y sellos.",
+    "description": "Producción musical con estética definida: storyboard, dirección, rodaje y edición al ritmo del tema. Entregamos videoclip, teasers verticales y material para prensa.",
+    "icon": "video",
+    "image": "/imagenes_insta/ig-photo-2.jpg",
+    "featured": true,
+    "highlights": [
+      "Concepto visual previo",
+      "Sincronía con el master",
+      "Teasers para redes",
+      "Fotografía promo"
+    ]
+  },
+  {
+    "id": "bodas-celebraciones",
+    "slug": "bodas-celebraciones",
+    "title": "Bodas & celebraciones",
     "shortDescription": "Vídeo y foto emotivos, cinematográficos y entregados con cuidado artesanal.",
-    "description": "Cada boda es única. Documentamos vuestro día con sensibilidad y calidad cinematográfica para que reviváis cada momento una y otra vez.",
+    "description": "Documentamos bodas y celebraciones familiares con sensibilidad y calidad de cine. Highlight, trailer, galería foto y reels para compartir el mismo día.",
     "icon": "wedding",
     "image": "/imagenes_insta/ig-photo-1.jpg",
     "featured": true,
     "highlights": [
-      "Vídeo highlight + trailer",
-      "Fotografía artística",
+      "Dos operadores en día clave",
+      "Highlight + trailer",
       "Música y ritmo narrativo",
-      "Entrega personalizada"
+      "Entrega acordada"
     ]
   },
   {
-    "id": "dron",
-    "slug": "dron",
-    "title": "Dron",
+    "id": "fiestas-aftermovies",
+    "slug": "fiestas-aftermovies",
+    "title": "Fiestas & aftermovies",
+    "shortDescription": "Noches, clubs y fiestas privadas con edición dinámica y estética actual.",
+    "description": "Cobertura ágil en condiciones de luz exigentes. Aftermovies, reels verticales y piezas que capturan la energía de la noche sin perder calidad de imagen.",
+    "icon": "event",
+    "image": "/imagenes_insta/ig-photo-5.jpg",
+    "featured": true,
+    "highlights": [
+      "Edición al ritmo de la música",
+      "Formatos 9:16 y 16:9",
+      "Entrega rápida post-evento",
+      "Estética club / flash"
+    ]
+  },
+  {
+    "id": "fallas-tradicion",
+    "slug": "fallas-tradicion",
+    "title": "Fallas & tradición valenciana",
+    "shortDescription": "Monumentos, mascletàs, ofrenda y tradición con equipo local y plazos falleros.",
+    "description": "Conocemos el calendario y la logística fallera. Cobertura para comisiones, entidades y marcas que quieren contar la tradición valenciana con imagen de calidad.",
+    "icon": "event",
+    "image": "/imagenes_insta/ig-photo-3.jpg",
+    "featured": true,
+    "highlights": [
+      "Plan por actos y hitos",
+      "Integración con dron cuando procede",
+      "Entrega express en fechas clave",
+      "Material para redes y prensa"
+    ]
+  },
+  {
+    "id": "proyectos-personalizados",
+    "slug": "proyectos-personalizados",
+    "title": "Proyectos personalizados",
+    "shortDescription": "Briefs abiertos, arte, moda o piezas híbridas foto + vídeo a medida.",
+    "description": "Cuando el proyecto no encaja en una caja estándar. Co-dirección creativa, prototipos y entregables múltiples con un solo interlocutor.",
+    "icon": "camera",
+    "image": "/imagenes_insta/ig-photo-1.jpg",
+    "featured": true,
+    "highlights": [
+      "Brief y prototipos previos",
+      "Formatos mixtos",
+      "Archivos master",
+      "Calendario flexible"
+    ]
+  },
+  {
+    "id": "campanas-pago",
+    "slug": "campanas-pago",
+    "title": "Campañas de pagos",
+    "shortDescription": "Creatividades para Meta, TikTok y Google con variaciones listas para test A/B.",
+    "description": "Rodamos pensando en ads: hooks modulares, duraciones 15s/30s, ratios vertical y cuadrado, y entrega organizada para que tu equipo de medios publique sin fricción.",
+    "icon": "social",
+    "image": "/imagenes_insta/ig-photo-4.jpg",
+    "featured": true,
+    "highlights": [
+      "Varios hooks por jornada",
+      "Formatos ads estándar",
+      "Entrega nombrada para medios",
+      "Iteración con datos"
+    ]
+  },
+  {
+    "id": "produccion-aerea-dron",
+    "slug": "produccion-aerea-dron",
+    "title": "Producción aérea (dron)",
     "shortDescription": "Tomas aéreas 4K integradas en vídeos de marca, eventos e inmobiliaria.",
-    "description": "Perspectivas únicas desde el cielo. Grabación aérea con dron certificado para vídeos corporativos, bodas, eventos y promociones inmobiliarias.",
+    "description": "Operador certificado, plan de vuelo y tomas estabilizadas que se integran con metraje terrestre. Permisos, seguros y color unificado con el resto de la pieza.",
     "icon": "drone",
     "image": "/imagenes_insta/ig-photo-2.jpg",
-    "featured": false,
+    "featured": true,
     "highlights": [
       "Operador certificado",
       "4K estabilizado",
-      "Integración con vídeo terrestre",
-      "Permisos y seguros"
+      "Integración con vídeo tierra",
+      "Normativa y seguros"
     ]
   }
 ]

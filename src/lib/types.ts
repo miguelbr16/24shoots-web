@@ -74,7 +74,9 @@ export interface PortfolioItem {
   title: string;
   description: string;
   services: string[];
+  /** @deprecated use categories — kept for legacy filters */
   sectors: string[];
+  categories: string[];
   type: "video" | "photo";
   thumbnail: string;
   videoUrl: string | null;
@@ -107,7 +109,8 @@ export interface InstagramPost {
 }
 
 export interface PagesContent {
-  sectors: Sector[];
+  sectors?: Sector[];
+  portfolioCategories: Sector[];
   home: {
     hero: {
       title: string;

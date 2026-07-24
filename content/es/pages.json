@@ -1,10 +1,15 @@
 {
-  "sectors": [
-    { "id": "hosteleria", "label": "Hostelería" },
-    { "id": "bodas", "label": "Bodas" },
-    { "id": "empresas", "label": "Empresas" },
-    { "id": "retail", "label": "Retail" },
-    { "id": "inmobiliaria", "label": "Inmobiliaria" }
+  "portfolioCategories": [
+    { "id": "eventos-corporativos", "label": "Eventos corporativos" },
+    { "id": "contenido-marca", "label": "Contenido de marca" },
+    { "id": "documental-reportaje", "label": "Documental & reportaje (B2B)" },
+    { "id": "videoclip-musical", "label": "Videoclip & producción musical" },
+    { "id": "bodas-celebraciones", "label": "Bodas & celebraciones" },
+    { "id": "fiestas-aftermovies", "label": "Fiestas & aftermovies" },
+    { "id": "fallas-tradicion", "label": "Fallas & tradición valenciana" },
+    { "id": "proyectos-personalizados", "label": "Proyectos personalizados" },
+    { "id": "campanas-pago", "label": "Campañas de pagos" },
+    { "id": "produccion-aerea-dron", "label": "Producción aérea (dron)" }
   ],
   "home": {
     "hero": {
@@ -63,13 +68,13 @@
         },
         {
           "instead": "Solo corporativo o solo un tipo de cliente",
-          "with": "Bodas, hostelería, retail, empresas e inmobiliaria"
+          "with": "Corporativo, marca, bodas, fallas, música y campañas en un solo equipo"
         }
       ],
       "pillars": [
         {
-          "title": "7 disciplinas, una visión",
-          "description": "Vídeo, foto, redes, community, eventos, bodas y dron bajo el mismo estándar visual y creativo."
+          "title": "10 líneas, una visión",
+          "description": "Desde eventos corporativos hasta dron y campañas de pago, con el mismo estándar visual."
         },
         {
           "title": "De la idea al post",
@@ -92,7 +97,7 @@
       ]
     },
     "sectorsSection": {
-      "title": "Sectores con los que trabajamos"
+      "title": "Líneas de producción"
     },
     "beforeAfterSection": {
       "title": "Del RAW al impacto",

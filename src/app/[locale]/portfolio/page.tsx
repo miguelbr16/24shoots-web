@@ -44,7 +44,7 @@ export default async function PortfolioPage({
       />
       <PortfolioCategoryRows
         items={getPortfolio(locale)}
-        sectors={pages.sectors}
+        categories={pages.portfolioCategories}
         locale={locale}
         labels={pages.portfolio}
         serviceTitles={Object.fromEntries(services.map((s) => [s.id, s.title]))}

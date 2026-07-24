@@ -1,20 +1,13 @@
+import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import { ScrollHero } from "@/components/ScrollHero";
 import { Marquee } from "@/components/Marquee";
-import { MediaFilmstrip } from "@/components/MediaFilmstrip";
 import { DifferentiatorSection } from "@/components/DifferentiatorSection";
 import { SectorsBand } from "@/components/SectorsBand";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { PacksSection } from "@/components/PacksSection";
 import { StatsStrip } from "@/components/StatsStrip";
-import { ClientSocialProofSection } from "@/components/ClientSocialProofSection";
-import { PortfolioShowcase } from "@/components/PortfolioShowcase";
-import { ReelBand } from "@/components/ReelBand";
 import { ServiceCard } from "@/components/ServiceCard";
-import { InstagramGrid } from "@/components/InstagramGrid";
-import { BeforeAfterSection } from "@/components/BeforeAfterSection";
-import { FaqSection } from "@/components/FaqSection";
-import { MetadataTicker } from "@/components/MetadataTicker";
 import { SectionHeading, Button } from "@/components/ui";
 import { getPortfolioCaseLabels } from "@/lib/portfolio-labels";
 import {
@@ -29,6 +22,51 @@ import {
 import { buildMetadata, buildOrganizationJsonLd } from "@/lib/seo";
 import { getRoute, isValidLocale } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
+
+const sectionFallback = (minHeight: string) =>
+  function SectionFallback() {
+    return <div className={`${minHeight} bg-transparent`} aria-hidden />;
+  };
+
+const PortfolioShowcase = dynamic(
+  () =>
+    import("@/components/PortfolioShowcase").then((m) => ({
+      default: m.PortfolioShowcase,
+    })),
+  { loading: sectionFallback("min-h-[540px]") }
+);
+
+const BeforeAfterSection = dynamic(
+  () =>
+    import("@/components/BeforeAfterSection").then((m) => ({
+      default: m.BeforeAfterSection,
+    })),
+  { loading: sectionFallback("min-h-[420px]") }
+);
+
+const InstagramGrid = dynamic(
+  () =>
+    import("@/components/InstagramGrid").then((m) => ({
+      default: m.InstagramGrid,
+    })),
+  { loading: sectionFallback("min-h-[480px]") }
+);
+
+const ClientSocialProofSection = dynamic(
+  () =>
+    import("@/components/ClientSocialProofSection").then((m) => ({
+      default: m.ClientSocialProofSection,
+    })),
+  { loading: sectionFallback("min-h-[640px]") }
+);
+
+const FaqSection = dynamic(
+  () =>
+    import("@/components/FaqSection").then((m) => ({
+      default: m.FaqSection,
+    })),
+  { loading: sectionFallback("min-h-[320px]") }
+);
 
 export async function generateMetadata({
   params,
@@ -74,6 +112,7 @@ export default async function HomePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
+      {/* 1. Gancho */}
       <ScrollHero
         locale={locale}
         eyebrow={home.hero.eyebrow}
@@ -85,19 +124,7 @@ export default async function HomePage({
         videoSrc={site.heroVideo}
         posterSrc={site.heroPoster}
       />
-
       <Marquee text={home.marqueeText} />
-      {home.marqueeMedia && home.marqueeMedia.length > 0 && (
-        <MediaFilmstrip
-          items={home.marqueeMedia.map((src) => ({ src }))}
-          reverse
-        />
-      )}
-
-      {home.metadataTicker && home.metadataTicker.length > 0 && (
-        <MetadataTicker items={home.metadataTicker} />
-      )}
-
       <DifferentiatorSection
         eyebrow={home.differentiatorSection.eyebrow}
         title={home.differentiatorSection.title}
@@ -107,33 +134,13 @@ export default async function HomePage({
         media={home.differentiatorSection.media}
       />
 
-      <SectorsBand title={home.sectorsSection.title} sectors={pages.sectors} />
-
-      <BeforeAfterSection
-        title={home.beforeAfterSection.title}
-        subtitle={home.beforeAfterSection.subtitle}
-        rawLabel={home.beforeAfterSection.rawLabel}
-        editedLabel={home.beforeAfterSection.editedLabel}
-        dragHint={home.beforeAfterSection.dragHint}
-        image={home.beforeAfterSection.image}
+      {/* 2. Mapa mental */}
+      <SectorsBand
+        title={home.sectorsSection.title}
+        sectors={pages.portfolioCategories}
       />
 
-      <StatsStrip stats={home.statsSection} />
-
-      <ClientSocialProofSection
-        locale={locale}
-        clients={featuredClients}
-        headline={home.clientsSection.headline}
-        headlineAccent={home.clientsSection.headlineAccent}
-        subline={home.clientsSection.subline}
-        dragHint={home.clientsSection.dragHint}
-        privacyNote={home.clientsSection.privacyNote}
-        ctaLabel={home.clientsSection.ctaLabel}
-        reviewsTitle={home.reviewsSection.title}
-        reviewsSubtitle={home.reviewsSection.subtitle}
-        reviews={home.reviewsSection.items}
-      />
-
+      {/* 3. Prueba visual */}
       <section className="border-b border-border py-28 md:py-36">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <SectionHeading
@@ -154,17 +161,16 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* 4. Catálogo */}
       <section className="mx-auto max-w-6xl px-4 py-24 md:px-6 md:py-32">
         <SectionHeading
           title={home.servicesSection.title}
           subtitle={home.servicesSection.subtitle}
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {services
-            .filter((s) => s.featured)
-            .map((service, i) => (
-              <ServiceCard key={service.id} service={service} locale={locale} index={i} />
-            ))}
+          {services.map((service, i) => (
+            <ServiceCard key={service.id} service={service} locale={locale} index={i} />
+          ))}
         </div>
         <div className="mt-12 text-center">
           <Button href={getRoute(locale, "services")} variant="secondary" showArrow>
@@ -173,6 +179,7 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* 5. Cómo contratar */}
       <PacksSection
         locale={locale}
         title={home.packsSection.title}
@@ -182,7 +189,21 @@ export default async function HomePage({
         ctaLabel={home.packsSection.ctaLabel}
         packs={packs}
       />
+      <ProcessSteps
+        title={home.processSection.title}
+        subtitle={home.processSection.subtitle}
+        steps={home.processSection.steps}
+      />
 
+      {/* 6. Calidad */}
+      <BeforeAfterSection
+        title={home.beforeAfterSection.title}
+        subtitle={home.beforeAfterSection.subtitle}
+        rawLabel={home.beforeAfterSection.rawLabel}
+        editedLabel={home.beforeAfterSection.editedLabel}
+        dragHint={home.beforeAfterSection.dragHint}
+        image={home.beforeAfterSection.image}
+      />
       <InstagramGrid
         title={home.instagramSection.title}
         subtitle={home.instagramSection.subtitle}
@@ -193,22 +214,24 @@ export default async function HomePage({
         embedCta={home.instagramSection.embedCta}
         posts={instagramPosts}
       />
+      <StatsStrip stats={home.statsSection} />
 
-      <ReelBand
-        title={home.reelSection.title}
-        subtitle={home.reelSection.subtitle}
-        cta={home.reelSection.cta}
-        href={getRoute(locale, "portfolio")}
-        image={home.reelSection.image}
-        video={home.reelSection.video}
+      {/* 7. Confianza social */}
+      <ClientSocialProofSection
+        locale={locale}
+        clients={featuredClients}
+        headline={home.clientsSection.headline}
+        headlineAccent={home.clientsSection.headlineAccent}
+        subline={home.clientsSection.subline}
+        dragHint={home.clientsSection.dragHint}
+        privacyNote={home.clientsSection.privacyNote}
+        ctaLabel={home.clientsSection.ctaLabel}
+        reviewsTitle={home.reviewsSection.title}
+        reviewsSubtitle={home.reviewsSection.subtitle}
+        reviews={home.reviewsSection.items}
       />
 
-      <ProcessSteps
-        title={home.processSection.title}
-        subtitle={home.processSection.subtitle}
-        steps={home.processSection.steps}
-      />
-
+      {/* 8. Argumentos */}
       <section className="mx-auto max-w-6xl px-4 py-24 md:px-6 md:py-32">
         <SectionHeading title={home.whySection.title} />
         <div className="grid gap-12 md:grid-cols-3">
@@ -226,12 +249,14 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* 9. Fricción final */}
       <FaqSection
         title={home.faqSection.title}
         subtitle={home.faqSection.subtitle}
         items={home.faqSection.items}
       />
 
+      {/* 10. Cierre */}
       <section className="border-t border-border bg-panel py-24 md:py-32">
         <div className="mx-auto max-w-2xl px-4 text-center md:px-6">
           <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-accent">

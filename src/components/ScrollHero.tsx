@@ -173,12 +173,21 @@ export function ScrollHero({
   );
 
   useEffect(() => {
+    let frame = 0;
+    const onScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        updateProgress();
+      });
+    };
     updateProgress();
-    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", updateProgress);
     return () => {
-      window.removeEventListener("scroll", updateProgress);
+      window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", updateProgress);
+      if (frame) window.cancelAnimationFrame(frame);
     };
   }, [updateProgress, pathname]);
 
@@ -230,7 +239,7 @@ export function ScrollHero({
             src={videoSrc}
             muted
             playsInline
-            preload="auto"
+            preload="metadata"
             poster={posterSrc ?? undefined}
             className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
             style={{ opacity: videoOpacity }}

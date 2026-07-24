@@ -145,10 +145,10 @@
       { "value": "24h", "label": "Respuesta orientativa" }
     ],
     "clientsSection": {
-      "headline": "+30 clientes con",
-      "headlineAccent": "mentalidad",
+      "headline": "+30 clientes eligen",
+      "headlineAccent": "el mismo estándar visual de",
       "headlineBrand": "24Shoots",
-      "subline": "Marcas e instituciones en la rueda — y cientos de particulares que confían en nosotros.",
+      "subline": "Marcas e instituciones en la rueda. Cientos de particulares, un solo equipo.",
       "dragHint": "Pasa el cursor para pausar la rueda",
       "privacyNote": "Solo clientes corporativos o institucionales destacados (con permiso). Los particulares no se muestran en la rueda.",
       "ctaLabel": "Pedir presupuesto"

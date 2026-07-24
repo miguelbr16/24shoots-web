@@ -44,22 +44,21 @@ export function ClientSocialProofSection({
 }: ClientSocialProofSectionProps) {
   const center = (
     <>
-      <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-muted">
-        Valencia · España
-      </p>
-      <h2 className="mt-3 text-balance leading-[1.15] tracking-tight">
-        <span className="block text-[clamp(1.25rem,3.2vw,2rem)] font-semibold text-foreground">
+      <h2 className="text-balance leading-[1.12] tracking-tight">
+        <span className="block text-[clamp(1.2rem,2.8vw,1.85rem)] font-semibold text-foreground">
           {headline}
         </span>
-        <span className="mt-0.5 block text-[clamp(1.25rem,3.2vw,2rem)]">
-          <span className="font-light text-foreground/85">{headlineAccent}</span>{" "}
-          <span className="font-serif text-[1.05em] italic text-accent">{headlineBrand}</span>
+        <span className="mt-1 block text-[clamp(1.2rem,2.8vw,1.85rem)] font-light text-foreground/90">
+          {headlineAccent}{" "}
+          <span className="font-serif text-[1.08em] font-normal italic text-accent">
+            {headlineBrand}
+          </span>
         </span>
       </h2>
-      <p className="mx-auto mt-3 max-w-[16rem] text-pretty text-xs leading-relaxed text-muted sm:max-w-xs md:max-w-sm md:text-sm">
+      <p className="mx-auto mt-3 max-w-[15rem] text-pretty text-[11px] leading-relaxed text-muted sm:max-w-xs md:text-xs">
         {subline}
       </p>
-      <div className="mt-5 md:mt-6">
+      <div className="mt-5">
         <Button
           href={getRoute(locale, "contact")}
           showArrow

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "generalitat-valenciana",
+    "name": "Generalitat Valenciana",
+    "monogram": "GVA",
+    "logo": null,
+    "featured": true,
+    "url": null
+  },
+  {
+    "id": "ayuntamiento-valencia",
+    "name": "Ayuntamiento de Valencia",
+    "monogram": "AVV",
+    "logo": null,
+    "featured": true,
+    "url": null
+  },
+  {
+    "id": "ayuntamiento-manises",
+    "name": "Ayuntamiento de Manises",
+    "monogram": "MAN",
+    "logo": null,
+    "featured": true,
+    "url": null
+  },
+  {
+    "id": "cliente-empresa-1",
+    "name": "Empresa B2B",
+    "monogram": "B2B",
+    "logo": null,
+    "featured": true,
+    "url": null
+  },
+  {
+    "id": "cliente-retail",
+    "name": "Marca retail",
+    "monogram": "RTL",
+    "logo": null,
+    "featured": true,
+    "url": null
+  },
+  {
+    "id": "cliente-hosteleria",
+    "name": "Hostelería",
+    "monogram": "HOS",
+    "logo": null,
+    "featured": true,
+    "url": null
+  },
+  {
+    "id": "cliente-inmobiliaria",
+    "name": "Inmobiliaria",
+    "monogram": "INM",
+    "logo": null,
+    "featured": true,
+    "url": null
+  },
+  {
+    "id": "cliente-eventos",
+    "name": "Eventos",
+    "monogram": "EVT",
+    "logo": null,
+    "featured": true,
+    "url": null
+  }
+]

@@ -34,3 +34,4 @@ Antes de producción con datos definitivos:
 Formulario: casilla obligatoria de aceptación de privacidad (RGPD).
 
 Documentos: legal/CONTENIDO-LEGAL-24SHOOTS-ES.txt, legal/PACKS-24SHOOTS-ES.txt
+           legal/PEDIR-AL-CLIENTE-24SHOOTS.txt  ← checklist para pedir al cliente

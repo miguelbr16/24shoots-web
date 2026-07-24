@@ -60,6 +60,15 @@ export interface PackComparisonRow {
   packs: Record<string, boolean>;
 }
 
+export interface ClientLogo {
+  id: string;
+  name: string;
+  monogram?: string;
+  logo: string | null;
+  featured?: boolean;
+  url?: string | null;
+}
+
 export interface PortfolioItem {
   id: string;
   title: string;
@@ -145,6 +154,14 @@ export interface PagesContent {
       steps: { title: string; description: string; image?: string }[];
     };
     statsSection: { value: string; label: string }[];
+    clientsSection: {
+      headline: string;
+      headlineAccent: string;
+      subline: string;
+      dragHint: string;
+      privacyNote: string;
+      ctaLabel: string;
+    };
     testimonialSection: { label: string; quote: string; author: string; role: string };
     reviewsSection: {
       title: string;

@@ -1,0 +1,164 @@
+================================================================================
+  24SHOOTS MEDIA — QUÉ PEDIR AL CLIENTE (checklist para ti / WhatsApp)
+  Usa este listado para no olvidar nada antes de “web en producción”.
+  Cuestionario ampliado: CUESTIONARIO-CLIENTE-24SHOOTS.txt (misma carpeta repo)
+================================================================================
+
+
+────────────────────────────────────────────────────────────────────────────────
+A) LEGAL Y PUBLICACIÓN [OBLIGATORIO antes de dominio definitivo y anuncios]
+────────────────────────────────────────────────────────────────────────────────
+
+Pedir datos EXACTOS (como aparecen en factura / alta autónomo o SL):
+
+  □ Razón social completa
+  □ CIF / NIF
+  □ Domicilio fiscal (calle, número, CP, ciudad, provincia)
+  □ Confirmar email oficial de contacto y formulario
+        (ahora en web: hola@24shootsmedia.com — ¿es el definitivo?)
+  □ Confirmar WhatsApp Business (+34…) que debe salir en la web
+  □ Nombre comercial: ¿“24Shoots” / “24Shoots Media” u otro?
+
+Pedir CONFIRMACIÓN (sí/no):
+
+  □ ¿Los textos legales (aviso legal, privacidad, cookies) os valen en borrador
+    o los revisáis con gestoría / abogado antes de campaña de pago?
+  □ ¿Autorizáis mostrar en portfolio los trabajos que vayáis a subir?
+    (ver apartado D — permisos)
+
+Opcional pero recomendable:
+
+  □ ¿Tenéis asesoría que quiera revisar la web antes de publicar?
+  □ ¿Queréis Google Analytics? (si sí, ellos no tienen que hacer nada técnico;
+    vosotros pedís ID o lo configuráis; solo decidir si lo queréis)
+
+
+────────────────────────────────────────────────────────────────────────────────
+B) MARCA Y TEXTOS
+────────────────────────────────────────────────────────────────────────────────
+
+  □ Logo en alta resolución (PNG/SVG fondo transparente + versión clara/oscura)
+  □ Favicon o icono cuadrado si lo tienen
+  □ Eslogan confirmado: “Domina el impacto” ¿definitivo?
+  □ Texto “Sobre nosotros” (quiénes sois, equipo, Valencia, enfoque)
+  □ Revisión de packs y servicios (¿los 3 packs y 7 servicios cuadran?)
+  □ Testimonios: solo si son REALES (nombre, rol, empresa, texto, permiso por escrito)
+  □ FAQ: ¿alguna pregunta más típica de vuestros clientes?
+
+
+────────────────────────────────────────────────────────────────────────────────
+C) VÍDEOS Y FOTOS PARA LA WEB [MUY IMPORTANTE — calidad = impacto]
+────────────────────────────────────────────────────────────────────────────────
+
+Explicar al cliente: la web ya puede usar material de Instagram, pero para
+verse PRO conviene pasar archivos ORIGINALES (no solo capturas de pantalla).
+
+Carpeta recomendada (Drive / WeTransfer / disco):
+  24shoots-web-assets/
+    logo/
+    hero/          → vídeo o foto principal de la home
+    servicios/     → 1 imagen o clip por servicio (7)
+    portfolio/     → por proyecto (ver D)
+    instagram/     → reels y fotos para la franja de Instagram en home
+    about/         → foto del equipo o behind the scenes
+
+HERO (portada):
+  □ Vídeo horizontal o vertical en MP4, mínimo 1080p, sin marca de agua
+  □ O foto hero en JPG/WebP, alta resolución (≥ 2000 px lado largo)
+  □ ¿Tienen ya un reel “flagship” que quieran de fondo?
+
+INSTAGRAM / REELS en home (8–12 piezas):
+  □ MP4 de reels (exportación original o máxima calidad de IG)
+  □ Fotos en JPG buena calidad
+  □ Texto opcional: caption corto por pieza (para accesibilidad / SEO interno)
+
+SERVICIOS (7):
+  □ Al menos 1 foto o frame de vídeo por servicio
+  □ Coherentes con el estilo oscuro + naranja de la web
+
+PORTFOLIO (proyectos destacados):
+  □ Mínimo 6–12 casos bien documentados (objetivo: 15–20 con el tiempo)
+  □ Por cada caso pedir:
+      - Título del proyecto
+      - Cliente (nombre o “Cliente privado” si no puede publicarse)
+      - Tipo: vídeo / foto
+      - Servicios (bodas, corporativo, dron, etc.)
+      - Sector (hostelería, boda, empresa…)
+      - Mini texto: reto + enfoque + resultado (2–3 frases)
+      - Vídeo MP4 en web O enlace YouTube/Vimeo (preferible MP4 en vuestra nube)
+      - Miniatura (thumbnail) si el vídeo no tiene frame bueno
+      - Enlace al post de Instagram (opcional)
+
+CALIDAD TÉCNICA (decírselo claro):
+  □ Sin logos de terceros encima si no hay permiso
+  □ Evitar vídeos pixelados re-grabados desde el móvil a otra pantalla
+  □ Formato preferido: MP4 H.264; fotos JPG o PNG
+  □ Si el archivo pesa mucho, WeTransfer / Google Drive / Dropbox enlace
+
+DRON (copy, no solo legal):
+  □ ¿Qué podéis decir con verdad sobre permisos / operativa aérea?
+  □ NO inventar licencias AESA si no aplican — la web ya está redactada en consecuencia
+
+
+────────────────────────────────────────────────────────────────────────────────
+D) PERMISOS Y DERECHOS (evita líos después)
+────────────────────────────────────────────────────────────────────────────────
+
+  □ Por cada vídeo/foto en portfolio: “¿Podemos publicarlo en web e Instagram
+    comercial de 24Shoots?” (sí / anonimizado / no)
+  □ Bodas y eventos: ¿hay autorización de los protagonistas para web?
+  □ Marcas de clientes visibles: ¿cesión o solo uso interno?
+  □ Música con derechos: ¿tenéis licencia para uso web en esos clips?
+
+
+────────────────────────────────────────────────────────────────────────────────
+E) DOMINIO Y EMAIL (cuando toque salir de vercel.app)
+────────────────────────────────────────────────────────────────────────────────
+
+  □ Dominio deseado (ej. 24shootsmedia.com) ¿comprado?
+  □ Acceso al registrador o que ellos apunten DNS a Vercel
+  □ Email hola@… configurado y que reciba el formulario (Resend u otro)
+
+
+────────────────────────────────────────────────────────────────────────────────
+F) PACKS Y PRECIOS (recordatorio)
+────────────────────────────────────────────────────────────────────────────────
+
+  □ En web NO hay precios — solo “Pedir presupuesto”
+  □ Confirmar que los 3 packs (Completo, Audiovisual, Community) describen bien
+    lo que vendéis; cambios de copy = nos los pasan por escrito
+
+
+────────────────────────────────────────────────────────────────────────────────
+H) RUEDA DE CLIENTES (home, estilo referencia Surfly)
+────────────────────────────────────────────────────────────────────────────────
+
+  □ Logos PNG/SVG (≥400 px, fondo transparente o blanco) — solo instituciones y
+    empresas destacadas, NO particulares.
+  □ Lista acordada (~8–12 logos max en rueda): Generalitat Valenciana,
+    Ayuntamiento de Valencia, Ayuntamiento de Manises + otras marcas clave.
+  □ Permiso por escrito para usar cada logo en web.
+  □ Nombre oficial de cada cliente (texto alternativo / accesibilidad).
+
+
+────────────────────────────────────────────────────────────────────────────────
+G) MENSAJE CORTO PARA ENVIAR POR WHATSAPP (copiar/pegar)
+────────────────────────────────────────────────────────────────────────────────
+
+Hola! Para dejar la web de 24Shoots lista para producción necesitamos:
+
+1) Datos legales: razón social, CIF y dirección fiscal + confirmar email y WhatsApp.
+2) Logo en alta calidad (PNG/SVG).
+3) Material visual: vídeos MP4 y fotos en buena calidad (hero, portfolio, reels
+   para la home) — mejor originales, no capturas de Instagram.
+4) Lista de proyectos para portfolio (título, sector, servicio, texto breve y archivo).
+5) Confirmación de que podemos mostrar esos trabajos en la web.
+6) Logos de clientes destacados para la rueda de la home (instituciones y
+   empresas, no particulares): Generalitat, Ayuntamientos, etc.
+
+Os paso el cuestionario completo si queréis más detalle. ¡Gracias!
+
+
+================================================================================
+  FIN — Guardar respuestas del cliente y subir assets a una carpeta compartida.
+================================================================================

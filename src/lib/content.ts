@@ -7,6 +7,7 @@ import pagesEs from "../../content/es/pages.json";
 import pagesEn from "../../content/en/pages.json";
 import packsEs from "../../content/es/packs.json";
 import packsEn from "../../content/en/packs.json";
+import clientsData from "../../content/clients.json";
 import instagramEs from "../../content/es/instagram.json";
 import instagramEn from "../../content/en/instagram.json";
 import type {
@@ -17,6 +18,7 @@ import type {
   PortfolioItem,
   Service,
   SiteConfig,
+  ClientLogo,
 } from "./types";
 
 const servicesByLocale: Record<Locale, Service[]> = {
@@ -73,6 +75,12 @@ export function getInstagramPosts(locale: Locale): InstagramPost[] {
 
 export function getPacks(locale: Locale): Pack[] {
   return packsByLocale[locale];
+}
+
+const clients = clientsData as ClientLogo[];
+
+export function getFeaturedClients(): ClientLogo[] {
+  return clients.filter((c) => c.featured !== false);
 }
 
 export function getAlternateLocale(locale: Locale): Locale {

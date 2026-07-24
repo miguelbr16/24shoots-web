@@ -139,6 +139,14 @@
       { "value": "7", "label": "Service lines" },
       { "value": "24h", "label": "Typical response time" }
     ],
+    "clientsSection": {
+      "headline": "+30 clients",
+      "headlineAccent": "and hundreds of private clients",
+      "subline": "Featured institutions, businesses and brands that trust 24Shoots.",
+      "dragHint": "Drag the wheel to explore",
+      "privacyNote": "Only featured corporate or institutional clients (with permission). Private clients are not shown on the wheel.",
+      "ctaLabel": "Request a quote"
+    },
     "testimonialSection": {
       "label": "Testimonial",
       "quote": "They didn't just deliver a video — they understood the story we wanted to tell and translated it into imagery with real character.",

@@ -139,6 +139,14 @@
       { "value": "7", "label": "Líneas de servicio" },
       { "value": "24h", "label": "Respuesta orientativa" }
     ],
+    "clientsSection": {
+      "headline": "+30 clientes",
+      "headlineAccent": "y cientos de particulares",
+      "subline": "Instituciones, empresas y marcas destacadas que confían en 24Shoots.",
+      "dragHint": "Arrastra la rueda para explorar",
+      "privacyNote": "Solo clientes corporativos o institucionales destacados (con permiso). Los particulares no se muestran en la rueda.",
+      "ctaLabel": "Pedir presupuesto"
+    },
     "testimonialSection": {
       "label": "Testimonio",
       "quote": "No solo entregaron un vídeo: entendieron la historia que queríamos contar y la tradujeron en imágenes con personalidad.",

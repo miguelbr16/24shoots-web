@@ -7,6 +7,7 @@ import { SectorsBand } from "@/components/SectorsBand";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { PacksSection } from "@/components/PacksSection";
 import { StatsStrip } from "@/components/StatsStrip";
+import { ClientLogoWheel } from "@/components/ClientLogoWheel";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { PortfolioShowcase } from "@/components/PortfolioShowcase";
 import { ReelBand } from "@/components/ReelBand";
@@ -18,6 +19,7 @@ import { MetadataTicker } from "@/components/MetadataTicker";
 import { SectionHeading, Button } from "@/components/ui";
 import { getPortfolioCaseLabels } from "@/lib/portfolio-labels";
 import {
+  getFeaturedClients,
   getInstagramPosts,
   getPages,
   getPortfolio,
@@ -56,6 +58,7 @@ export default async function HomePage({
   const packs = getPacks(locale);
   const portfolio = getPortfolio(locale).filter((p) => p.featured).slice(0, 3);
   const instagramPosts = getInstagramPosts(locale);
+  const featuredClients = getFeaturedClients();
   const { home } = pages;
 
   const jsonLd = buildOrganizationJsonLd(locale);
@@ -118,6 +121,23 @@ export default async function HomePage({
 
       <StatsStrip stats={home.statsSection} />
 
+      <ClientLogoWheel
+        locale={locale}
+        clients={featuredClients}
+        headline={home.clientsSection.headline}
+        headlineAccent={home.clientsSection.headlineAccent}
+        subline={home.clientsSection.subline}
+        dragHint={home.clientsSection.dragHint}
+        privacyNote={home.clientsSection.privacyNote}
+        ctaLabel={home.clientsSection.ctaLabel}
+      />
+
+      <ReviewsSection
+        title={home.reviewsSection.title}
+        subtitle={home.reviewsSection.subtitle}
+        items={home.reviewsSection.items}
+      />
+
       <section className="border-b border-border py-28 md:py-36">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <SectionHeading
@@ -176,12 +196,6 @@ export default async function HomePage({
         embedFallback={home.instagramSection.embedFallback}
         embedCta={home.instagramSection.embedCta}
         posts={instagramPosts}
-      />
-
-      <ReviewsSection
-        title={home.reviewsSection.title}
-        subtitle={home.reviewsSection.subtitle}
-        items={home.reviewsSection.items}
       />
 
       <ReelBand

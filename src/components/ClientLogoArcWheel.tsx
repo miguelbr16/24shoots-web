@@ -12,7 +12,7 @@ interface ClientLogoArcWheelProps {
 }
 
 const TARGET_LOGO_COUNT = 22;
-const LOGO_RADIUS = "min(71vw, 28.5rem)";
+const LOGO_RADIUS = "min(50vw, 20rem)";
 
 function monogram(client: ClientLogo): string {
   return client.monogram ?? client.name.slice(0, 3).toUpperCase();
@@ -38,13 +38,13 @@ export function ClientLogoArcWheel({ clients, ariaLabel, center }: ClientLogoArc
 
   return (
     <div
-      className="client-wheel-group relative mx-auto w-full max-w-[64rem]"
+      className="client-wheel-group relative mx-auto w-full max-w-[48rem]"
       aria-label={ariaLabel}
     >
-      <div className="relative h-[clamp(22rem,68vw,32rem)] overflow-hidden md:h-[32rem]">
-        {/* Large wheel — center aligned with copy; top/bottom clipped */}
+      <div className="relative h-[clamp(20rem,60vw,28rem)] overflow-hidden md:h-[29rem]">
+        {/* Wheel — tighter diameter; clipped top/bottom */}
         <div
-          className="pointer-events-auto absolute left-1/2 top-[48%] z-0 aspect-square w-[min(200vw,64rem)] -translate-x-1/2 -translate-y-[44%]"
+          className="pointer-events-auto absolute left-1/2 top-[48%] z-0 aspect-square w-[min(155vw,46rem)] -translate-x-1/2 -translate-y-[44%]"
           aria-hidden
         >
           <div className="client-wheel-spin relative h-full w-full origin-center">
@@ -67,7 +67,7 @@ export function ClientLogoArcWheel({ clients, ariaLabel, center }: ClientLogoArc
                   >
                     <div className="client-wheel-counter">
                       <div
-                        className="flex h-[3.75rem] w-[3.75rem] items-center justify-center overflow-hidden rounded-full border border-border/80 bg-elevated shadow-[0_12px_32px_rgba(0,0,0,0.5)] ring-1 ring-accent/20 sm:h-16 sm:w-16 md:h-[4.25rem] md:w-[4.25rem]"
+                        className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border border-border/80 bg-elevated shadow-[0_12px_32px_rgba(0,0,0,0.5)] ring-1 ring-accent/20 sm:h-[4.5rem] sm:w-[4.5rem] md:h-24 md:w-24"
                         title={client.name}
                         aria-hidden={isDuplicate}
                       >
@@ -75,10 +75,10 @@ export function ClientLogoArcWheel({ clients, ariaLabel, center }: ClientLogoArc
                           <Image
                             src={client.logo}
                             alt={isDuplicate ? "" : client.name}
-                            width={68}
-                            height={68}
+                            width={80}
+                            height={80}
                             unoptimized
-                            className="h-[72%] w-[72%] object-contain"
+                            className="h-[76%] w-[76%] object-contain"
                           />
                         ) : (
                           <span className="text-[9px] font-bold uppercase tracking-wide text-foreground/90">

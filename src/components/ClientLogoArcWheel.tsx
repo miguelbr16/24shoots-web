@@ -14,8 +14,8 @@ function monogram(client: ClientLogo): string {
   return client.monogram ?? client.name.slice(0, 3).toUpperCase();
 }
 
-/** Radius matches ~44% of wheel diameter (see --wheel-diam in styles). */
-const LOGO_RADIUS = "min(62vw, 24.5rem)";
+/** Outer rim of the wheel (~48% of diameter) — keeps logos away from center copy. */
+const LOGO_RADIUS = "min(68vw, 27rem)";
 
 export function ClientLogoArcWheel({ clients, ariaLabel, center }: ClientLogoArcWheelProps) {
   const n = clients.length;
@@ -28,10 +28,10 @@ export function ClientLogoArcWheel({ clients, ariaLabel, center }: ClientLogoArc
       className="client-wheel-group relative mx-auto w-full max-w-[56rem] px-2"
       aria-label={ariaLabel}
     >
-      <div className="relative h-[clamp(19rem,52vw,30rem)] overflow-hidden">
+      <div className="relative h-[clamp(21rem,56vw,33rem)] overflow-hidden">
         <div
-          className="pointer-events-auto absolute left-1/2 bottom-0 aspect-square w-[min(148vw,56rem)] -translate-x-1/2 translate-y-[56%]"
-          style={{ ["--wheel-diam" as string]: "min(148vw, 56rem)" }}
+          className="pointer-events-auto absolute left-1/2 bottom-0 z-0 aspect-square w-[min(152vw,58rem)] -translate-x-1/2 translate-y-[68%]"
+          style={{ ["--wheel-diam" as string]: "min(152vw, 58rem)" }}
           aria-hidden
         >
           <div className="client-wheel-spin relative h-full w-full origin-center">
@@ -53,17 +53,17 @@ export function ClientLogoArcWheel({ clients, ariaLabel, center }: ClientLogoArc
                   >
                     <div className="client-wheel-counter">
                       <div
-                        className="flex h-[4.25rem] w-[4.25rem] items-center justify-center overflow-hidden rounded-full border border-border bg-elevated shadow-[0_14px_36px_rgba(0,0,0,0.55)] ring-1 ring-accent/25 sm:h-[4.5rem] sm:w-[4.5rem] md:h-20 md:w-20"
+                        className="flex h-[4.75rem] w-[4.75rem] items-center justify-center overflow-hidden rounded-full border border-border bg-elevated shadow-[0_14px_36px_rgba(0,0,0,0.55)] ring-1 ring-accent/25 sm:h-20 sm:w-20 md:h-[5.25rem] md:w-[5.25rem] lg:h-24 lg:w-24"
                         title={client.name}
                       >
                         {client.logo ? (
                           <Image
                             src={client.logo}
                             alt={client.name}
-                            width={72}
-                            height={72}
+                            width={80}
+                            height={80}
                             unoptimized
-                            className="h-[72%] w-[72%] object-contain"
+                            className="h-[74%] w-[74%] object-contain"
                           />
                         ) : (
                           <span className="text-[10px] font-bold uppercase tracking-wide text-foreground/90 md:text-[11px]">
@@ -79,8 +79,15 @@ export function ClientLogoArcWheel({ clients, ariaLabel, center }: ClientLogoArc
           </div>
         </div>
 
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-center px-4 pt-[clamp(1.5rem,8vw,3.5rem)]">
-          <div className="pointer-events-auto max-w-md text-center">{center}</div>
+        <div
+          className="pointer-events-none absolute inset-0 z-[15] bg-[radial-gradient(ellipse_58%_48%_at_50%_36%,var(--color-background)_0%,var(--color-background)_42%,transparent_78%)]"
+          aria-hidden
+        />
+
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-center px-4 pt-3 sm:pt-4 md:pt-5">
+          <div className="pointer-events-auto max-w-[18rem] text-center sm:max-w-xs md:max-w-sm">
+            {center}
+          </div>
         </div>
 
         <div

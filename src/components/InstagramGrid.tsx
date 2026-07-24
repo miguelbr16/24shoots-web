@@ -186,7 +186,7 @@ export function InstagramGrid({
   posts,
 }: InstagramGridProps) {
   return (
-    <section className="border-y border-border bg-panel py-24 md:py-32">
+    <section className="border-y border-border bg-panel py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <SectionHeading title={title} subtitle={subtitle} />

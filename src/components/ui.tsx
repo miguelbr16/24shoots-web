@@ -75,7 +75,7 @@ export function SectionHeading({
   const alignClass = align === "center" ? "mx-auto text-center" : "";
 
   return (
-    <div className={`mb-14 max-w-2xl ${alignClass} ${className}`}>
+    <div className={`mb-10 max-w-2xl ${alignClass} ${className}`}>
       <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-accent">
         24Shoots
       </p>

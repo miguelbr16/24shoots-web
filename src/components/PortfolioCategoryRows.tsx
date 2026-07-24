@@ -122,8 +122,8 @@ function CategoryRow({
   if (items.length === 0) return null;
 
   return (
-    <section className="border-b border-border py-8 last:border-b-0 md:py-10">
-      <div className="mb-5 flex items-end justify-between gap-4 md:mb-6">
+    <section className="border-b border-border py-5 last:border-b-0 md:py-7">
+      <div className="mb-4 flex items-end justify-between gap-4 md:mb-5">
         <div>
           <h2 className="text-xl font-light tracking-tight text-foreground md:text-2xl">{title}</h2>
           <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-muted/80">{scrollHint}</p>
@@ -182,9 +182,10 @@ export function PortfolioCategoryRows({
 }: PortfolioCategoryRowsProps) {
   const [activeItem, setActiveItem] = useState<PortfolioItem | null>(null);
   const [activeFilter, setActiveFilter] = useState<string>("all");
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const caseLabels = getPortfolioCaseLabels(labels);
   const scrollHint = labels.scrollRow ?? "Desliza para ver más";
-  const filterLabel = labels.filterByLine ?? labels.filterService ?? "Servicio";
+  const filterToggleLabel = labels.filterToggle ?? "Filtros";
 
   const rows = categories.map((category) => ({
     category,
@@ -212,40 +213,75 @@ export function PortfolioCategoryRows({
     return <p className="text-sm text-muted">{labels.noResults}</p>;
   }
 
+  const activeFilterLabel =
+    activeFilter === "all"
+      ? labels.filterAll
+      : (visibleRows.find((r) => r.category.id === activeFilter)?.category.label ??
+        labels.filterAll);
+
+  function selectFilter(id: string) {
+    setActiveFilter(id);
+    setFiltersOpen(false);
+  }
+
   return (
     <>
-      <div className="mb-5 border-b border-border pb-5 md:mb-6 md:pb-6">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted">
-          {filterLabel}
-        </p>
-        <div className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] md:-mx-0 md:flex-wrap md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden">
-          <button
-            type="button"
-            onClick={() => setActiveFilter("all")}
-            className={`shrink-0 rounded-full border px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[0.1em] transition md:px-4 ${
-              activeFilter === "all"
-                ? "border-accent bg-accent text-background"
-                : "border-border bg-surface text-muted hover:border-accent/50 hover:text-foreground"
-            }`}
+      <div className="mb-4 border-b border-border pb-4">
+        <button
+          type="button"
+          onClick={() => setFiltersOpen((open) => !open)}
+          aria-expanded={filtersOpen}
+          className="flex w-full items-center justify-between gap-3 rounded-sm border border-border bg-surface px-4 py-3 text-left transition hover:border-accent/40"
+        >
+          <span className="flex min-w-0 flex-col gap-0.5 sm:flex-row sm:items-center sm:gap-3">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-foreground">
+              {filterToggleLabel}
+            </span>
+            <span className="truncate text-[10px] uppercase tracking-[0.08em] text-muted">
+              {activeFilterLabel}
+            </span>
+          </span>
+          <svg
+            viewBox="0 0 24 24"
+            className={`h-4 w-4 shrink-0 text-muted transition ${filtersOpen ? "rotate-180" : ""}`}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            aria-hidden
           >
-            {labels.filterAll}
-          </button>
-          {visibleRows.map(({ category }) => (
+            <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+
+        {filtersOpen && (
+          <div className="mt-3 flex max-h-[min(40vh,16rem)] flex-wrap gap-2 overflow-y-auto rounded-sm border border-border/80 bg-background p-3">
             <button
-              key={category.id}
               type="button"
-              onClick={() => setActiveFilter(category.id)}
-              className={`max-w-[14rem] shrink-0 truncate rounded-full border px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[0.06em] transition md:max-w-none md:px-4 md:whitespace-normal ${
-                activeFilter === category.id
+              onClick={() => selectFilter("all")}
+              className={`rounded-full border px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[0.1em] transition ${
+                activeFilter === "all"
                   ? "border-accent bg-accent text-background"
                   : "border-border bg-surface text-muted hover:border-accent/50 hover:text-foreground"
               }`}
-              title={category.label}
             >
-              {category.label}
+              {labels.filterAll}
             </button>
-          ))}
-        </div>
+            {visibleRows.map(({ category }) => (
+              <button
+                key={category.id}
+                type="button"
+                onClick={() => selectFilter(category.id)}
+                className={`rounded-full border px-3.5 py-2 text-left text-[10px] font-semibold uppercase tracking-[0.06em] transition ${
+                  activeFilter === category.id
+                    ? "border-accent bg-accent text-background"
+                    : "border-border bg-surface text-muted hover:border-accent/50 hover:text-foreground"
+                }`}
+              >
+                {category.label}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
       {filteredRows.length === 0 ? (

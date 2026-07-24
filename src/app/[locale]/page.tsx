@@ -141,7 +141,7 @@ export default async function HomePage({
       />
 
       {/* 3. Prueba visual */}
-      <section className="border-b border-border py-28 md:py-36">
+      <section className="border-b border-border py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <SectionHeading
             title={home.portfolioSection.title}
@@ -162,7 +162,7 @@ export default async function HomePage({
       </section>
 
       {/* 4. Catálogo */}
-      <section className="mx-auto max-w-6xl px-4 py-24 md:px-6 md:py-32">
+      <section className="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
         <SectionHeading
           title={home.servicesSection.title}
           subtitle={home.servicesSection.subtitle}
@@ -233,7 +233,7 @@ export default async function HomePage({
       />
 
       {/* 8. Argumentos */}
-      <section className="mx-auto max-w-6xl px-4 py-24 md:px-6 md:py-32">
+      <section className="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
         <SectionHeading title={home.whySection.title} />
         <div className="grid gap-12 md:grid-cols-3">
           {home.whySection.items.map((item, i) => (
@@ -258,7 +258,7 @@ export default async function HomePage({
       />
 
       {/* 10. Cierre */}
-      <section className="border-t border-border bg-panel py-24 md:py-32">
+      <section className="border-t border-border bg-panel py-16 md:py-20">
         <div className="mx-auto max-w-2xl px-4 text-center md:px-6">
           <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-accent">
             24Shoots

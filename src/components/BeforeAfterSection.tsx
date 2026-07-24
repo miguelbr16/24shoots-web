@@ -49,7 +49,7 @@ export function BeforeAfterSection({
   };
 
   return (
-    <section className="border-y border-border bg-surface py-16 md:py-24 lg:py-32">
+    <section className="border-y border-border bg-surface py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <SectionHeading title={title} subtitle={subtitle} />
 

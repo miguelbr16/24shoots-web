@@ -18,7 +18,7 @@ export function FaqSection({ title, subtitle, items }: FaqSectionProps) {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-24 md:px-6 md:py-32">
+    <section className="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
       <SectionHeading title={title} subtitle={subtitle} />
       <div className="divide-y divide-border border-y border-border">
         {items.map((item, i) => {

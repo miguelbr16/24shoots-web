@@ -38,7 +38,7 @@ export function DifferentiatorSection({
 
   return (
 
-    <section className="border-b border-border bg-background py-24 md:py-32">
+    <section className="border-b border-border bg-background py-16 md:py-20">
 
       <div className="mx-auto max-w-6xl px-4 md:px-6">
 

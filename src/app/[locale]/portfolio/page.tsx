@@ -37,11 +37,11 @@ export default async function PortfolioPage({
   const services = getServices(locale);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-24">
+    <div className="mx-auto max-w-6xl px-4 py-10 md:px-6 md:py-14">
       <SectionHeading
         title={pages.portfolio.title}
         subtitle={pages.portfolio.subtitle}
-        className="!mb-6 md:!mb-8"
+        className="!mb-4 md:!mb-5"
       />
       <PortfolioCategoryRows
         items={getPortfolio(locale)}

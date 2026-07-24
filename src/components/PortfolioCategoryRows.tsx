@@ -122,7 +122,7 @@ function CategoryRow({
   if (items.length === 0) return null;
 
   return (
-    <section className="border-b border-border py-10 last:border-b-0 md:py-14">
+    <section className="border-b border-border py-8 last:border-b-0 md:py-10">
       <div className="mb-5 flex items-end justify-between gap-4 md:mb-6">
         <div>
           <h2 className="text-xl font-light tracking-tight text-foreground md:text-2xl">{title}</h2>
@@ -214,15 +214,15 @@ export function PortfolioCategoryRows({
 
   return (
     <>
-      <div className="mb-10 border-b border-border pb-8 md:mb-12">
+      <div className="mb-5 border-b border-border pb-5 md:mb-6 md:pb-6">
         <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted">
           {filterLabel}
         </p>
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] md:-mx-0 md:flex-wrap md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden">
           <button
             type="button"
             onClick={() => setActiveFilter("all")}
-            className={`rounded-full border px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.12em] transition ${
+            className={`shrink-0 rounded-full border px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[0.1em] transition md:px-4 ${
               activeFilter === "all"
                 ? "border-accent bg-accent text-background"
                 : "border-border bg-surface text-muted hover:border-accent/50 hover:text-foreground"
@@ -235,11 +235,12 @@ export function PortfolioCategoryRows({
               key={category.id}
               type="button"
               onClick={() => setActiveFilter(category.id)}
-              className={`rounded-full border px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.08em] transition ${
+              className={`max-w-[14rem] shrink-0 truncate rounded-full border px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[0.06em] transition md:max-w-none md:px-4 md:whitespace-normal ${
                 activeFilter === category.id
                   ? "border-accent bg-accent text-background"
                   : "border-border bg-surface text-muted hover:border-accent/50 hover:text-foreground"
               }`}
+              title={category.label}
             >
               {category.label}
             </button>

@@ -87,6 +87,35 @@ body {
   animation: glow-drift 8s ease-in-out infinite;
 }
 
+@keyframes client-wheel-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.client-wheel-spin {
+  animation: client-wheel-spin 52s linear infinite;
+}
+
+.client-wheel-counter {
+  animation: client-wheel-spin 52s linear infinite reverse;
+}
+
+.client-wheel-group:hover .client-wheel-spin,
+.client-wheel-group:hover .client-wheel-counter {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-wheel-spin,
+  .client-wheel-counter {
+    animation: none;
+  }
+}
+
 .text-balance {
   text-wrap: balance;
 }

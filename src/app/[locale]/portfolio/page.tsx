@@ -41,6 +41,7 @@ export default async function PortfolioPage({
       <SectionHeading
         title={pages.portfolio.title}
         subtitle={pages.portfolio.subtitle}
+        className="!mb-6 md:!mb-8"
       />
       <PortfolioCategoryRows
         items={getPortfolio(locale)}

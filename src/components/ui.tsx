@@ -65,15 +65,17 @@ export function SectionHeading({
   title,
   subtitle,
   align = "left",
+  className = "",
 }: {
   title: string;
   subtitle?: string;
   align?: "left" | "center";
+  className?: string;
 }) {
   const alignClass = align === "center" ? "mx-auto text-center" : "";
 
   return (
-    <div className={`mb-14 max-w-2xl ${alignClass}`}>
+    <div className={`mb-14 max-w-2xl ${alignClass} ${className}`}>
       <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-accent">
         24Shoots
       </p>

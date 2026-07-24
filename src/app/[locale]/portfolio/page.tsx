@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { PortfolioGrid } from "@/components/PortfolioGrid";
+import { PortfolioCategoryRows } from "@/components/PortfolioCategoryRows";
 import { SectionHeading } from "@/components/ui";
 import { getPages, getPortfolio, getServices } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
@@ -34,18 +34,20 @@ export default async function PortfolioPage({
   const locale = localeParam as Locale;
   const pages = getPages(locale);
 
+  const services = getServices(locale);
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-24">
       <SectionHeading
         title={pages.portfolio.title}
         subtitle={pages.portfolio.subtitle}
       />
-      <PortfolioGrid
+      <PortfolioCategoryRows
         items={getPortfolio(locale)}
-        services={getServices(locale)}
         sectors={pages.sectors}
         locale={locale}
         labels={pages.portfolio}
+        serviceTitles={Object.fromEntries(services.map((s) => [s.id, s.title]))}
       />
     </div>
   );

@@ -3,64 +3,87 @@
     "id": "generalitat-valenciana",
     "name": "Generalitat Valenciana",
     "monogram": "GVA",
-    "logo": null,
-    "featured": true,
-    "url": null
+    "logo": "/clients/placeholders/p-01.svg",
+    "featured": true
   },
   {
     "id": "ayuntamiento-valencia",
     "name": "Ayuntamiento de Valencia",
     "monogram": "AVV",
-    "logo": null,
-    "featured": true,
-    "url": null
+    "logo": "/clients/placeholders/p-02.svg",
+    "featured": true
   },
   {
     "id": "ayuntamiento-manises",
     "name": "Ayuntamiento de Manises",
     "monogram": "MAN",
-    "logo": null,
-    "featured": true,
-    "url": null
+    "logo": "/clients/placeholders/p-03.svg",
+    "featured": true
   },
   {
     "id": "cliente-empresa-1",
     "name": "Empresa B2B",
-    "monogram": "B2B",
-    "logo": null,
-    "featured": true,
-    "url": null
+    "logo": "/clients/placeholders/p-04.svg",
+    "featured": true
   },
   {
     "id": "cliente-retail",
     "name": "Marca retail",
-    "monogram": "RTL",
-    "logo": null,
-    "featured": true,
-    "url": null
+    "logo": "/clients/placeholders/p-05.svg",
+    "featured": true
   },
   {
     "id": "cliente-hosteleria",
     "name": "Hostelería",
-    "monogram": "HOS",
-    "logo": null,
-    "featured": true,
-    "url": null
+    "logo": "/clients/placeholders/p-06.svg",
+    "featured": true
   },
   {
     "id": "cliente-inmobiliaria",
     "name": "Inmobiliaria",
-    "monogram": "INM",
-    "logo": null,
-    "featured": true,
-    "url": null
+    "logo": "/clients/placeholders/p-07.svg",
+    "featured": true
   },
   {
     "id": "cliente-eventos",
     "name": "Eventos",
-    "monogram": "EVT",
-    "logo": null,
-    "featured": true,
-    "url": null
+    "logo": "/clients/placeholders/p-08.svg",
+    "featured": true
+  },
+  {
+    "id": "cliente-marca-9",
+    "name": "Marca corporativa",
+    "logo": "/clients/placeholders/p-09.svg",
+    "featured": true
+  },
+  {
+    "id": "cliente-marca-10",
+    "name": "Retail premium",
+    "logo": "/clients/placeholders/p-10.svg",
+    "featured": true
+  },
+  {
+    "id": "cliente-marca-11",
+    "name": "Grupo empresarial",
+    "logo": "/clients/placeholders/p-11.svg",
+    "featured": true
+  },
+  {
+    "id": "cliente-marca-12",
+    "name": "Institución cultural",
+    "logo": "/clients/placeholders/p-12.svg",
+    "featured": true
+  },
+  {
+    "id": "cliente-marca-13",
+    "name": "Deporte y eventos",
+    "logo": "/clients/placeholders/p-13.svg",
+    "featured": true
+  },
+  {
+    "id": "cliente-marca-14",
+    "name": "Horeca premium",
+    "logo": "/clients/placeholders/p-14.svg",
+    "featured": true
   }
 ]

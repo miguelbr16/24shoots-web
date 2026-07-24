@@ -301,6 +301,8 @@
     "filterSector": "Sector",
     "viewInstagram": "View on Instagram",
     "noResults": "No projects match these filters.",
+    "scrollRow": "Swipe to see more",
+    "categoryOther": "Other projects",
     "openProject": "View project",
     "caseHint": "Challenge · Approach · Result",
     "caseClient": "Client",

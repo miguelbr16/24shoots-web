@@ -7,8 +7,7 @@ import { SectorsBand } from "@/components/SectorsBand";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { PacksSection } from "@/components/PacksSection";
 import { StatsStrip } from "@/components/StatsStrip";
-import { ClientLogoWheel } from "@/components/ClientLogoWheel";
-import { ReviewsSection } from "@/components/ReviewsSection";
+import { ClientSocialProofSection } from "@/components/ClientSocialProofSection";
 import { PortfolioShowcase } from "@/components/PortfolioShowcase";
 import { ReelBand } from "@/components/ReelBand";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -121,7 +120,7 @@ export default async function HomePage({
 
       <StatsStrip stats={home.statsSection} />
 
-      <ClientLogoWheel
+      <ClientSocialProofSection
         locale={locale}
         clients={featuredClients}
         headline={home.clientsSection.headline}
@@ -130,12 +129,9 @@ export default async function HomePage({
         dragHint={home.clientsSection.dragHint}
         privacyNote={home.clientsSection.privacyNote}
         ctaLabel={home.clientsSection.ctaLabel}
-      />
-
-      <ReviewsSection
-        title={home.reviewsSection.title}
-        subtitle={home.reviewsSection.subtitle}
-        items={home.reviewsSection.items}
+        reviewsTitle={home.reviewsSection.title}
+        reviewsSubtitle={home.reviewsSection.subtitle}
+        reviews={home.reviewsSection.items}
       />
 
       <section className="border-b border-border py-28 md:py-36">

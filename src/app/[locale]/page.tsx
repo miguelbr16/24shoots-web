@@ -161,7 +161,7 @@ export default async function HomePage({
         locale={locale}
         title={home.packsSection.title}
         subtitle={home.packsSection.subtitle}
-        priceNote={home.packsSection.quoteNote}
+        quoteNote={home.packsSection.quoteNote}
         featuredBadge={home.packsSection.featuredBadge}
         ctaLabel={home.packsSection.ctaLabel}
         packs={packs}
